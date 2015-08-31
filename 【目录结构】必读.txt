@@ -1,4 +1,4 @@
-Copyright£ºh-ui.net	Last Modify£ºguojunhui	13:14 2015/8/3
+Copyright£ºh-ui.net	Last Modify£ºguojunhui	13:14 2015/9/1
 ===================================================================
 Lib/	¿âÎÄ¼þ
 ©À©¤©¤ jquery				jQueryÀà¿â£¨v1.9.1£©
