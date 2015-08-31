@@ -1,0 +1,276 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<!--[if lt IE 9]>
+<script type="text/javascript" src="lib/html5.js"></script>
+<script type="text/javascript" src="lib/respond.min.js"></script>
+<script type="text/javascript" src="lib/PIE_IE678.js"></script>
+<![endif]-->
+<link href="static/h-ui/css/H-ui.min.css" rel="stylesheet" type="text/css" />
+<link href="static/h-ui/css/style.css" rel="stylesheet" type="text/css" />
+<link href="lib/icheck/icheck.css" rel="stylesheet" type="text/css" />
+<link href="lib/bootstrap-Switch/bootstrapSwitch.css" rel="stylesheet" type="text/css" />
+<link href="lib/Hui-iconfont/1.0.1/iconfont.css" rel="stylesheet" type="text/css" />
+<!--[if IE 6]>
+<script type="text/javascript" src="lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('*');</script>
+<![endif]-->
+
+<title>Hi，H-ui</title>
+<meta name="keywords" content="关键词,5个左右,单个8汉字以内">
+<meta name="description" content="网站描述，字数尽量空制在80个汉字，160个字符以内！">
+</head>
+<body>
+<header class="header">
+	<nav class="mainnav Hui-wraper">
+		<ul class="cl">
+			<li class="current"><a href="#">首页</a></li>
+			<li><a href="#">核心</a></li>
+			<li><a href="#">扩展</a></li>
+			<li class="dropDown dropDown_hover"><a href="#" class="dropDown_A">一级导航 <i class="Hui-iconfont">&#xf02a9;</i></a>
+				<ul class="dropDown-menu radius box-shadow">
+					<li><a href="#">二级导航</a></li>
+					<li><a href="#">二级导航</a></li>
+					<li><a href="#">二级导航</a></li>
+				</ul>
+			</li>
+			<li><a href="#">联系我们</a></li>
+		</ul>
+	</nav>
+</header>
+<section class="Hui-container">
+	<nav class="breadcrumb"><i class="Hui-iconfont">&#xf012b;</i> <a href="/" class="c-primary">首页</a><span class="c-gray en">&gt;</span><a href="#">组件</a><span class="c-gray en">&gt;</span><span class="c-gray">当前页面</span></nav>
+	<div class="Hui-wraper">
+		<h1>Hi,H-ui!</h1>
+		<p>开始前端之旅！</p>
+		<h2>表单</h2>
+		<div class="line"></div>
+		<form action="" method="post" class="form form-horizontal responsive" id="demoform">
+			<div class="row cl">
+				<label class="form-label col-2">邮箱：</label>
+				<div class="formControls col-5">
+					<input type="text" class="input-text" placeholder="@" name="email" id="email" datatype="e" nullmsg="请输入邮箱！">
+				</div>
+				<div class="col-5"> </div>
+			</div>
+			<div class="row cl">
+				<label class="form-label col-2">用户名：</label>
+				<div class="formControls col-5">
+					<input type="text" class="input-text" placeholder="4~16个字符，字母/中文/数字/下划线" name="username" id="username" datatype="*4-16" nullmsg="用户名不能为空">
+				</div>
+				<div class="col-5"> </div>
+			</div>
+			<div class="row cl">
+				<label class="form-label col-2">账户：</label>
+				<div class="formControls col-5">
+					<input type="text" class="input-text" autocomplete="off" placeholder="手机/邮箱" name="username" id="username" datatype="m|e" nullmsg="账户不能为空">
+				</div>
+				<div class="col-5"> </div>
+			</div>
+			<div class="row cl">
+				<label class="form-label col-2">密码：</label>
+				<div class="formControls col-5">
+					<input type="password" class="input-text" autocomplete="off" placeholder="密码" name="password" id="password" datatype="*6-18" nullmsg="请输入密码！" >
+				</div>
+				<div class="col-5"> </div>
+			</div>
+			<div class="row cl">
+				<label class="form-label col-2">密码验证：</label>
+				<div class="formControls col-5">
+					<input type="password" class="input-text" autocomplete="off" placeholder="密码" name="password2" id="password2" recheck="password" datatype="*6-18" nullmsg="请再输入一次密码！" errormsg="您两次输入的密码不一致！" >
+				</div>
+				<div class="col-5"> </div>
+			</div>
+			<div class="row cl">
+				<label class="form-label col-2">单选框：</label>
+				<div class="formControls skin-minimal col-5">
+					<div class="radio-box">
+						<input type="radio" id="sex-1" name="sex" datatype="*" nullmsg="请选择性别！">
+						<label for="sex-1">男</label>
+					</div>
+					<div class="radio-box">
+						<input type="radio" id="sex-2" name="sex">
+						<label for="sex-2">女</label>
+					</div>
+					<div class="radio-box">
+						<input type="radio" id="sex-3" name="sex">
+						<label for="sex-3">保密</label>
+					</div>
+				</div>
+				<div class="col-5"> </div>
+			</div>
+			<div class="row cl">
+				<label class="form-label col-2">爱好：</label>
+				<div class="formControls skin-minimal col-5">
+					<div class="check-box">
+						<input type="checkbox" id="checkbox-5" name="checkbox2" datatype="*" nullmsg="爱好不能为空！">
+						<label for="checkbox-5">上网</label>
+					</div>
+					<div class="check-box">
+						<input type="checkbox" id="checkbox-6" name="checkbox2">
+						<label for="checkbox-6">摄影</label>
+					</div>
+				</div>
+				<div class="col-5"> </div>
+			</div>
+			<div class="row cl">
+				<label class="form-label col-2">附件：</label>
+				<div class="formControls col-5"> <span class="btn-upload form-group">
+					<input class="input-text upload-url" type="text" name="uploadfile-2" id="uploadfile-2" readonly  datatype="*" nullmsg="请添加附件！" style="width:200px">
+					<a href="javascript:void();" class="btn btn-primary upload-btn"><i class="Hui-iconfont">&#xe642;</i> 浏览文件</a>
+					<input type="file" multiple name="file-2" class="input-file">
+					</span> </div>
+				<div class="col-5"> </div>
+			</div>
+			<div class="row cl">
+				<label class="form-label col-2">所在城市：</label>
+				<div class="formControls col-5"> <span class="select-box">
+					<select class="select" size="1" name="demo1" datatype="*" nullmsg="请选择所在城市！">
+						<option value="" selected>请选择城市</option>
+						<option value="1">北京</option>
+						<option value="2">上海</option>
+						<option value="3">广州</option>
+					</select>
+					</span> </div>
+				<div class="col-5"> </div>
+			</div>
+			<div class="row cl">
+				<label class="form-label col-2">网址：</label>
+				<div class="formControls col-5">
+					<input type="text" class="input-text" placeholder="http://" name="username" id="username" datatype="url" nullmsg="网址不能为空">
+				</div>
+				<div class="col-5"> </div>
+			</div>
+			<div class="row cl">
+				<label class="form-label col-2">备注：</label>
+				<div class="formControls col-5">
+					<textarea name="" cols="" rows="" class="textarea"  placeholder="说点什么...最少输入10个字符" datatype="*10-500" nullmsg="备注不能为空！" onKeyUp="textarealength(this,500)"></textarea>
+					<p class="textarea-numberbar"><em class="textarea-length">0</em>/500</p>
+				</div>
+				<div class="col-5"> </div>
+			</div>
+			<div class="row cl">
+				<div class="col-10 col-offset-2">
+					<input class="btn btn-primary" type="submit" value="&nbsp;&nbsp;提交&nbsp;&nbsp;">
+				</div>
+			</div>
+		</form>
+		<h2>按钮</h2>
+		<div class="line"></div>
+		<table class="table table-border table-bordered table-striped mt-20">
+			<thead>
+				<tr>
+					<th class="col1">button</th>
+					<th class="col2">input</th>
+					<th class="col3">a</th>
+					<th class="col4">disabled状态</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><button class="btn btn-default radius" type="button">默认</button></td>
+					<td><input class="btn btn-default radius" type="button" value="默认"></td>
+					<td><a href="#" class="btn btn-default radius">默认</a></td>
+					<td><input class="btn btn-default radius disabled" type="button" value="不可点击"></td>
+				</tr>
+				<tr>
+					<td><button class="btn btn-primary radius" type="button">主要</button></td>
+					<td><input class="btn btn-primary radius" type="button" value="主要"></td>
+					<td><a href="#" class="btn btn-primary radius">主要</a></td>
+					<td><input class="btn btn-primary radius disabled" type="button" value="不可点击"></td>
+				</tr>
+				<tr>
+					<td><button class="btn btn-secondary radius" type="button">次要</button></td>
+					<td><input class="btn btn-secondary radius" type="button" value="次要"></td>
+					<td><a href="#" class="btn btn-secondary radius">次要</a></td>
+					<td><input class="btn btn-secondary radius disabled" type="button" value="不可点击"></td>
+				</tr>
+				<tr>
+					<td><button class="btn btn-success radius" type="button">成功</button></td>
+					<td><input class="btn btn-success radius" type="button" value="成功"></td>
+					<td><a href="#" class="btn btn-success radius">成功</a></td>
+					<td><input class="btn btn-success radius disabled" type="button" value="不可点击"></td>
+				</tr>
+				<tr>
+					<td><button class="btn btn-warning radius" type="button">警告</button></td>
+					<td><input class="btn btn-warning radius" type="button" value="警告"></td>
+					<td><a href="#" class="btn btn-warning radius">警告</a></td>
+					<td><input class="btn btn-warning radius disabled" type="button" value="不可点击"></td>
+				</tr>
+				<tr>
+					<td><button class="btn btn-danger radius" type="button">危险</button></td>
+					<td><input class="btn btn-danger radius" type="button" value="危险"></td>
+					<td><a href="#" class="btn btn-danger radius">危险</a></td>
+					<td><input class="btn btn-danger radius disabled" type="button" value="不可点击"></td>
+				</tr>
+				<tr>
+					<td><button class="btn btn-link radius" type="button">链接</button></td>
+					<td><input class="btn btn-link radius" type="button" value="链接"></td>
+					<td><a href="#" class="btn btn-link radius">链接</a></td>
+					<td><input class="btn btn-link radius disabled" type="button" value="不可点击"></td>
+				</tr>
+			</tbody>
+		</table>
+		</p>
+		<h2>表格</h2>
+		<div class="line"></div>
+		<table class="table table-border table-bordered table-striped mt-20">
+			<thead>
+				<tr>
+					<th class="col1">表头</th>
+					<th class="col2">表头</th>
+					<th class="col3">表头</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th class="col1">类别</th>
+					<td class="col2">表格内容</td>
+					<td class="col3">表格内容</td>
+				</tr>
+				<tr>
+					<th class="col1">类别</th>
+					<td class="col2">表格内容</td>
+					<td class="col3">表格内容</td>
+				</tr>
+				<tr>
+					<th class="col1">类别</th>
+					<td class="col2">表格内容</td>
+					<td class="col3">表格内容</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</section>
+<footer class="footer">
+	<p>Copyright &copy;2013-2015 H-ui.net All Rights Reserved.</p>
+</footer>
+<script type="text/javascript" src="lib/jquery/1.9.1/jquery.min.js"></script> 
+<script type="text/javascript" src="lib/layer/1.9.3/layer.js"></script> 
+<script type="text/javascript" src="lib/laypage/1.2/laypage.js"></script> 
+<script type="text/javascript" src="lib/My97DatePicker/WdatePicker.js"></script> 
+<script type="text/javascript" src="lib/icheck/jquery.icheck.min.js"></script> 
+<script type="text/javascript" src="lib/bootstrap-Switch/bootstrapSwitch.js"></script> 
+<script type="text/javascript" src="lib/Validform/5.3.2/Validform.min.js"></script> 
+<script type="text/javascript" src="lib/Validform/5.3.2/passwordStrength-min.js"></script> 
+<script type="text/javascript" src="static/h-ui/js/H-ui.js"></script> 
+<script>
+$(function(){
+	$('.skin-minimal input').iCheck({
+		checkboxClass: 'icheckbox-blue',
+		radioClass: 'iradio-blue',
+		increaseArea: '20%'
+	});
+	$("#demoform").Validform({
+		tiptype:2
+	});
+});
+</script>
+</body>
+</html>
+<!--H-ui前端框架提供前端技术支持 h-ui.net @2015-8-4 -->

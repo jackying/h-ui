@@ -1,0 +1,138 @@
+@charset "utf-8";
+/* -----------H-ui前端框架-----------------------
+H-ui.admin.css v1.0
+Copyright H-ui Inc.
+http://www.H-ui.net
+date:2014.4.13
+Created & Modified by guojunhui.
+----------------------------------------------*/
+/*---------程序员可自行修改皮肤------------------*/
+body{font-size:14px;color:#333}/*全站默认字体颜色*/
+a{color:#333}a:hover,a:focus,.maincolor,.maincolor a{color:#06c}
+.bg-1{ background-color:#f5fafe}
+.Hui-header{background-color:#222;border-bottom:#080808 1px solid;-moz-box-shadow: 0 0 4px #333333;-webkit-box-shadow: 0 0 4px #333333;box-shadow: 0 0 4px #333333}/*头部颜色*/
+.Hui-aside{background-color:#333;border-right: 1px solid #222}/*侧边栏*/
+	.Hui-logo,.Hui-logo-m{color:#fff}/*logo文字颜色*/
+	.Hui-logo:hover,.Hui-logo-m:hover{color:#fff;text-decoration: none}
+	#Hui-nav li a{ color:#999}/*头部导航文字颜色*/
+	#Hui-nav li a:hover{ color:#fff}
+	#Hui-nav li.current a,#Hui-nav li.current a:hover{ color:#fff; background-color:#111}/*导航高亮状态*/
+	.menu_dropdown dt{color:#fff;border-bottom: 1px solid #222}/*左侧二级导航菜单*/
+	.menu_dropdown li a{color:#fff;border-bottom: 1px solid #222}
+	.menu_dropdown li a:hover{color:#fff;background-color:#777}
+	.menu_dropdown li.current a,.menu_dropdown li.current a:hover{ background:#777}
+/*--------------------H-uiAdmin-------------------------*/
+html{height:100%}
+body{min-height: 100%;position: relative}
+a{color:#333}a:hover,a:focus,.maincolor,.maincolor a{color:#06c}
+h4{line-height:30px}
+/*页面框架*/
+.Hui-header{ position:absolute;top:0; right:0; left:0;height:44px;z-index:99; overflow:hidden}
+.Hui-aside{position: absolute;top:44px;bottom:0;left:0;padding-top:10px;width:199px;z-index:99;overflow:auto}
+.Hui-article-box{position: absolute;top:44px;right:0;bottom: 0;left:199px; overflow:hidden}
+	.Hui-article{position: absolute;top:40px;bottom: 0;left:0; right:0;overflow:auto;z-index:1}
+.Hui-container{ padding:45px 0 0}
+
+.Hui-aside,.Hui-article-box,.dislpayArrow{-moz-transition: all 0.2s ease 0s;-webkit-transition: all 0.2s ease 0s;-ms-transition: all 0.2s ease 0s;-o-transition: all 0.2s ease 0s;transition: all 0.2s ease 0s}
+.big-page .Hui-article-box,.big-page .dislpayArrow,.big-page .breadcrumb{left:0px}
+.big-page .Hui-aside{ left:-200px}
+
+/*组件*/
+	/*logo*/
+	.Hui-logo,.Hui-logo-m{height:44px; margin-left:20px;cursor:pointer;font-size:16px; font-weight:bold; line-height:44px}
+	.Hui-logo{display:inline-block;padding-right:5px}
+	.Hui-logo:hover,.Hui-logo-m:hover{text-decoration:none; color:#0C0}
+	.Hui-logo-m{display:none;width:45px;margin-left:10px}
+	.Hui-subtitle{ font-size:12px; color:#eee; padding-top:15px}
+	.viewhome{ line-height:44px; padding-right:15px}
+	.viewhome a{ color:#FFF; padding-left:20px; background:url(../images/icon_link.png) no-repeat 0 center}
+	
+	/*导航*/
+	#Hui-nav{ margin-left:200px; margin-right:100px}
+	#Hui-nav li,#Hui-nav li a{height:44px; line-height:44px}
+	.Hui-userbox{ position:absolute; top:8px; right:20px}
+	.Hui-nav-toggle{ display:none; position:absolute; top:0px; right:10px; width:44px; height:44px; background:#333 url(../images/hamburger.gif) no-repeat center}
+	/*左侧菜单*/
+	.menu_dropdown dl{ margin-bottom:0}
+	.menu_dropdown dt{display:block;font-weight: bold;line-height:35px;padding-left:15px;cursor:pointer;position:relative}
+	.menu_dropdown dt .menu_dropdown-arrow{ position:absolute;overflow: hidden; top:0; right:15px;transition-duration:0.3s ;transition-property:all;}
+	.menu_dropdown dd{ display:none}
+	.menu_dropdown dt.selected .menu_dropdown-arrow{transform: rotate(180deg);}
+	.menu_dropdown dd.selected{display:block; margin-left:0px}
+	.menu_dropdown ul{padding:0px}
+	.menu_dropdown li{line-height:35px;overflow:hidden;zoom:1}
+	.menu_dropdown li a{padding-left:15px; display:block;font-weight: bold; margin:0}
+	.menu_dropdown li a i{ font-weight: normal}
+	.menu_dropdown dd ul{padding:3px 8px}
+	.menu_dropdown dd li{line-height:32px}
+	.menu_dropdown dd li a{line-height:32px;padding-left:24px; border-bottom:none; font-weight:normal}
+	.menu_dropdown li a:hover{text-decoration:none}
+	/*菜单收缩切换*/
+	.dislpayArrow{position: absolute;top: 0;bottom: 0;left:200px;width:0px; height:100%;z-index:10}
+	.dislpayArrow a{ position:absolute; display:block; width:17px; height:61px;top:50%; margin-top:-30px; background:url(../images/icon_arrow.png) no-repeat 0 0; outline:none}
+	.dislpayArrow a.open{ background-position:0 -61px}
+	.dislpayArrow a:hover{ text-decoration:none; background-position:right 0}
+	.dislpayArrow a.open:hover{background-position:right -61px}
+
+	/*选项卡导航*/
+	.Hui-tabNav{height: 40px; padding-right:75px;background: #a2bed5 url(../images/acrossTab-bg.png) repeat-x 0 bottom;overflow:hidden; position:relative}
+	.Hui-tabNav-wp{position:relative; height:40px;overflow:hidden}
+	.Hui-tabNav .acrossTab{ position:absolute; top:10px; left:0px}
+	.loading {background:url(../images/loading_072.gif) no-repeat center; height:100px}
+	.show_iframe iframe {position: absolute;bottom: 0;height: 100%;width: 100%}
+	.Hui-tabNav-more {position: absolute;right:0px;width:70px;top:8px;display: none}
+
+	/*面包屑导航*/
+	.breadcrumb{background-color:#F5F5F5}
+
+	/*页脚
+		Name:			mod_footer
+		Level:			Global
+		Sample:			<footer class="footer"><p><a target="_blank" href="/feedback.html">意见反馈</a><cite>|</cite><a target="_blank" href="/about">关于XX</a><cite>|</cite><a target="_blank" href="/jobs.html">诚聘英才</a><br/>Copyright &copy;2012 guojunhui.com 郭俊辉版权所有 京ICP备10046298-4号</p></footer>
+		Explain:页脚
+		Last Modify:	jackying
+	*/
+	.footer{border-top:1px solid #E8E8E8;margin-top:20px;font-family:tahoma,Arial;font-size:12px;color:#999;line-height:22px;text-align:center}
+	.footer p{padding-top:15px}
+	.footer a,.footer a:hover{color:#999}
+/*大屏幕*/
+@media (min-width: 1200px){
+  
+}
+/*横向平板*/
+@media (min-width: 768px) and (max-width: 979px){
+  
+}
+
+/*横向手机 竖向平板*/
+@media (max-width: 767px) {
+	html{ overflow-y:auto}	
+	#Hui-nav{margin-left:130px!important; margin-right:60px}
+	#Hui-nav li{width:24%;font-weight:bold;font-size:16px}
+	#Hui-nav li a{ display:block}
+		.Hui-nav-toggle{ display:block}
+	.Hui-aside{ display:none;float:none; width:100%; height:auto; margin-top:0;padding-top:0;bottom:auto}
+	.big-page .Hui-aside{ left:0!important}
+	.Hui-subtitle,.dislpayArrow,.Hui-userbox,.Hui-tabNav{ display:none}
+		.menu_dropdown dt{line-height:44px}
+		.menu_dropdown li,.menu_dropdown dd li,.menu_dropdown dd li a{ line-height:44px}
+  .Hui-tabNav{ position:fixed; z-index:998}
+  .Hui-article-box{ position:static; left:0}
+  .Hui-article-box .pd-20{padding:20px 10px}
+		.Hui-article{left:0}
+		.Hui-container .bk-gray{ border:none}
+		.Hui-container .pd-10{ padding:0}
+}
+/*竖向手机*/
+@media (max-width: 480px) {
+	#Hui-nav{margin-left:50px!important;margin-right:60px}
+		.Hui-logo{ display:none}
+		.Hui-logo-m{ display:inline-block; padding-right:5px}
+		.Hui-subtitle,.dislpayArrow,.Hui-userbox{ display:none}
+  
+}
+
+/*==============以下是业务相关的样式====================*/
+/*权限*/
+.permission-list .item{ display:inline-block; float:left;white-space:nowrap; width:100px; padding:5px 0}
+.permission-list b.item{ width:50px}
