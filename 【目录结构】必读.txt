@@ -1,30 +1,30 @@
-Copyright£ºh-ui.net	Last Modify£ºguojunhui	2017.05.17
+Copyrightï¼šh-ui.net	Last Modifyï¼šguojunhui	2017.05.17
 ===================================================================
-static/	×ÊÔ´
-©À©¤©¤ h-ui/				H-uiÌØÓĞ×ÊÔ´
-©¦    ©À©¤©¤ css/						ÑùÊ½
-©¦    ©¦    ©À©¤©¤ H-ui.reset.css				CSS Reset
-©¦    ©¦    ©À©¤©¤ H-ui.css					H-ui.css
-©¦    ©¦    ©À©¤©¤ H-ui.min.css					H-ui.css(min°æ)
-©¦    ©¦    ©À©¤©¤ H-ui.ie.css					IE ÏÂ¼æÈİcss
-©¦    ©À©¤©¤ images/						Í¼Æ¬×ÊÔ´ 
-©¦    ©À©¤©¤ js/
-©¦    ©¦    ©À©¤©¤ H-ui.js					H-uiºËĞÄ½Å±¾
-©¦    ©¦    ©À©¤©¤ H-ui.min.js					H-uiºËĞÄ½Å±¾(min°æ)
+static/	èµ„æº
+â”œâ”€â”€ h-ui/				H-uiç‰¹æœ‰èµ„æº
+â”‚    â”œâ”€â”€ css/						æ ·å¼
+â”‚    â”‚    â”œâ”€â”€ H-ui.reset.css				CSS Reset
+â”‚    â”‚    â”œâ”€â”€ H-ui.css					H-ui.css
+â”‚    â”‚    â”œâ”€â”€ H-ui.min.css					H-ui.css(minç‰ˆ)
+â”‚    â”‚    â”œâ”€â”€ H-ui.ie.css					IE ä¸‹å…¼å®¹css
+â”‚    â”œâ”€â”€ images/						å›¾ç‰‡èµ„æº 
+â”‚    â”œâ”€â”€ js/
+â”‚    â”‚    â”œâ”€â”€ H-ui.js					H-uiæ ¸å¿ƒè„šæœ¬
+â”‚    â”‚    â”œâ”€â”€ H-ui.min.js					H-uiæ ¸å¿ƒè„šæœ¬(minç‰ˆ)
 
-Lib/	µÚÈı·½²å¼ş
-©À©¤©¤ jquery					jQueryÀà¿â£¨v1.9.1£©
-©À©¤©¤ Hui-iconfont				°¢ÀïÍ¼±ê×ÖÌå¿â£¨H-ui¶¨ÖÆ£©
-©À©¤©¤ jquery.SuperSlide			»ÃµÆÆ¬×é¼ş
-©À©¤©¤ Validform				±íµ¥ÑéÖ¤²å¼ş
-©À©¤©¤ jquery.validation			±íµ¥ÑéÖ¤²å¼ş
-©À©¤©¤ My97DatePicker				ÈÕÆÚ²å¼ş
-©À©¤©¤ datatables				±í¸ñ²å¼ş
-©À©¤©¤ nprogress				½ø¶ÈÌõ²å¼ş
-©À©¤©¤ layer					layerµ¯³ö²ã²å¼ş
-©À©¤©¤ laypage					laypage ·­Ò³²å¼ş
-©À©¤©¤ html5shiv.js				html5²å¼ş£¬ÈÃµÍ°æ±¾IEÖ§³Öhtml5ÔªËØ
-©À©¤©¤ DD_belatedPNG_0.0.8a-min.js		½â¾öIE6pngÍ¸Ã÷
-©À©¤©¤ swfobject.js				Flash²å¼ş
-©À©¤©¤ expressInstall.swf  			¼ì²éflash²å¼ş
-©À©¤©¤ respond.min.js				ÈÃIE¼æÈİmedia
+Lib/	ç¬¬ä¸‰æ–¹æ’ä»¶
+â”œâ”€â”€ jquery					jQueryç±»åº“ï¼ˆv1.9.1ï¼‰
+â”œâ”€â”€ Hui-iconfont				é˜¿é‡Œå›¾æ ‡å­—ä½“åº“ï¼ˆH-uiå®šåˆ¶ï¼‰
+â”œâ”€â”€ jquery.SuperSlide			å¹»ç¯ç‰‡ç»„ä»¶
+â”œâ”€â”€ Validform				è¡¨å•éªŒè¯æ’ä»¶
+â”œâ”€â”€ jquery.validation			è¡¨å•éªŒè¯æ’ä»¶
+â”œâ”€â”€ My97DatePicker				æ—¥æœŸæ’ä»¶
+â”œâ”€â”€ datatables				è¡¨æ ¼æ’ä»¶
+â”œâ”€â”€ nprogress				è¿›åº¦æ¡æ’ä»¶
+â”œâ”€â”€ layer					layerå¼¹å‡ºå±‚æ’ä»¶
+â”œâ”€â”€ laypage					laypage ç¿»é¡µæ’ä»¶
+â”œâ”€â”€ html5shiv.js				html5æ’ä»¶ï¼Œè®©ä½ç‰ˆæœ¬IEæ”¯æŒhtml5å…ƒç´ 
+â”œâ”€â”€ DD_belatedPNG_0.0.8a-min.js		è§£å†³IE6pngé€æ˜
+â”œâ”€â”€ swfobject.js				Flashæ’ä»¶
+â”œâ”€â”€ expressInstall.swf  			æ£€æŸ¥flashæ’ä»¶
+â”œâ”€â”€ respond.min.js				è®©IEå…¼å®¹media
