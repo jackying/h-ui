@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<link href="css/H-ui.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://lib.h-ui.net/jquery/1.9.1/jquery.min.js"></script>
+<title>jquery.Huitab.js - H-ui前端框架官方网站 - 专注前端解决方案</title>
+<meta name="keywords" content="jquery.Huitab.js,选项卡插件,H-ui前端框架">
+<meta name="description" content="jquery.Huitab.js插件帮助手册。">
+</head>
+<body>
+<article class="cl pd-20">
+	<h1 class="page_title">jquery.Huitab.js
+		<span class="label label-success radius">已封装</span>
+	</h1>
+	<p>H-ui.js 中已封装，无需单独下载。单独下载地址 <a href="http://lib.h-ui.net/Hui/v3.0.4/jquery.Huitab.js" class="btn radius btn-primary">jquery.Huitab.js</a> </p>
+	<p>jQuery.Huitab是一个用js编写的jQuery插件，实现选项卡效果。</p>
+	<h2>使用方法</h2>
+	<p>1、jQuery.Huitab.js依赖jquery或者zepto.js。</p>
+	<p>js调用</p>
+<pre class="prettyprint linenums">$("#HuiTab-demo1").Huitab({
+	index:0
+});
+$("#HuiTab-demo2").Huitab({
+	index:2
+});
+$("#HuiTab-demo3").Huitab({
+	tabEvent:"mousemove",
+	index:0
+});</pre>
+	<h2>demo效果</h2>
+	<div class="codeView docs-example">
+		<div id="HuiTab-demo1" class="HuiTab">
+			<div class="tabBar clearfix">
+				<span>选项卡一</span>
+				<span>选项卡二</span>
+				<span>自适应宽度</span>
+			</div>
+			<div class="tabCon">内容一</div>
+			<div class="tabCon">内容二</div>
+			<div class="tabCon">内容三</div>
+		</div>
+		<div id="HuiTab-demo2" class="HuiTab">
+			<div class="tabBar clearfix">
+				<span>选项卡一</span>
+				<span>选项卡二</span>
+				<span>自适应宽度</span>
+			</div>
+			<div class="tabCon">内容一</div>
+			<div class="tabCon">内容二</div>
+			<div class="tabCon">内容三</div>
+		</div>
+		<div id="HuiTab-demo3" class="HuiTab">
+			<div class="tabBar clearfix">
+				<span>选项卡一</span>
+				<span>选项卡二</span>
+				<span>自适应宽度</span>
+			</div>
+			<div class="tabCon">内容一</div>
+			<div class="tabCon">内容二</div>
+			<div class="tabCon">内容三</div>
+		</div>
+	</div>
+	<h2>相关参数</h2>
+	<table class="table table-border table-bg table-bordered">
+		<thead>
+			<tr>
+				<th width="10%">属性</th>
+				<th width="10%">默认值</th>
+				<th width="15%">描述</th>
+				<th>备注</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>tabBar</td>
+				<td>'.tabBar span'</td>
+				<td>触发区域</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>tabCon</td>
+				<td>".tabCon"</td>
+				<td>主体区域</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>className</td>
+				<td>"current"</td>
+				<td>切换时追加的样式</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>tabEvent</td>
+				<td>"click"</td>
+				<td>触发事件</td>
+				<td>可以换成mousemove</td>
+			</tr>
+			<tr>
+				<td>index</td>
+				<td>0</td>
+				<td>默认第一个为打开</td>
+				<td>默认当前状态索引（从0开始）</td>
+			</tr>
+		</tbody>
+	</table>
+</article>
+<script type="text/javascript" src="http://lib.h-ui.net/prettify.js"></script> 
+<script type="text/javascript" src="js/jQuery.Huitab.js"></script> 
+<script>
+$(function(){
+	prettyPrint();
+	$("#HuiTab-demo1").Huitab({
+		index:0
+	});
+	$("#HuiTab-demo2").Huitab({
+		index:2
+	});
+	$("#HuiTab-demo3").Huitab({
+		tabEvent:"mousemove",
+		index:0
+	});
+});
+</script>
+</body>
+</html>
