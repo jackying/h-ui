@@ -700,18 +700,29 @@ input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit
 }
 /*最外层*/
 .containBox {background-color:#fff;position:relative;z-index:100;zoom:1;-moz-transition:-moz-transform .2s ease-out;-webkit-transition:-webkit-transform .2s ease-out;-o-transition:-o-transform .2s ease-out;transition:transform .2s ease-out;top:0px;}
-.containBox-bg{position:absolute;width:100%;top:0;left:0;z-index:999}
+.containBox-bg{position:absolute;width:100%;top:0;left:0;z-index:2000}
 .sideBox {display:none}
 @media (max-width:767px) {
     body,.content {font-size:16px;line-height:1.6}
     /*隐藏的菜单*/
-    .sideBox {position:absolute;display:block;z-index:99;right:0;top:0;bottom:0;width:270px;background-color:#303135}
+    .sideBox {position:absolute;display:block;z-index:99;right:0;top:0;bottom:0;width:250px;background-color:#303135}
     .sideBox .navbar-nav {display:block}
     .sideBox .navbar-nav li {border-bottom:1px solid #222;display:block}
     .sideBox .navbar-nav a {color:#fff;display:block;padding-left:20px;padding:10px 30px;}
     .sideBox .navbar-nav a:hover {text-decoration:none;}
     .Hui-wraper {width:auto;padding:0 10px}
     .AD-img img {width:100%;height:auto}
+	body.sideBox-open{ overflow: hidden} 
+	body.sideBox-open .containBox{overflow: hidden;
+			-moz-transform: translate3d(-250px,0,0);
+		-webkit-transform: translate3d(-250px,0,0);
+				transform: translate3d(-250px,0,0);
+				backface-visibility: hidden;
+		-webkit-backface-visibility: hidden;
+			-moz-backface-visibility: hidden;
+			-ms-backface-visibility: hidden;
+	}
+	body.sideBox-open .containBox-bg{bottom:0;right:0;}
 }
 .contain-main-wraper {padding-top:90px}
 /*2.3 常用布局

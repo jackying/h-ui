@@ -959,13 +959,15 @@
 <script type="text/javascript" src="lib/jquery.validation/1.14.0/validate-methods.js"></script>
 <script type="text/javascript" src="lib/jquery.validation/1.14.0/messages_zh.min.js"></script>
 <script>
-function setDoctmentMinHeight() {
-    var h = $(document).height();
-    $(".containBox").css("min-height", h);
-    $(".containBox-bg,.sideBox").height(h);
+//弹窗
+function modaldemo(){
+	$("#modal-demo").modal("show");
+}
+//消息框
+function modalalertdemo(){
+	$.Huimodalalert('我是消息框，2秒后我自动滚蛋！',2000);
 }
 $(function(){
-	setDoctmentMinHeight();
 	$(".input-text,.textarea").Huifocusblur();
 	
 	//幻灯片
@@ -1093,17 +1095,7 @@ $(function(){
 			$("#result-1").html('你的评分是'+score+'分');
 		}
 	});
-});
 
-//弹窗
-function modaldemo(){
-	$("#modal-demo").modal("show");
-}
-//消息框
-function modalalertdemo(){
-	$.Huimodalalert('我是消息框，2秒后我自动滚蛋！',2000);
-}
-$(function(){
 	$( ".ui-sortable" ).sortable({
 		//connectWith: ".panel",
 		items:".panel",
@@ -1116,18 +1108,19 @@ $(function(){
 		}
 	}).disableSelection();
 
+ 	var _bodyHeight = $(window).height();
+	var h = $(document).height();
+	$(".containBox").height(h);
+
 	/*左右滑动菜单*/
     $(".JS-nav-toggle").click(function() {
-        $(".containBox").css({ "transform": "translate(-270px, 0px)" });
-        $(".containBox-bg").show();
+		$("body").addClass('sideBox-open');
+        $(".containBox,.containBox-bg").height(_bodyHeight).show();
     });
     $(".containBox-bg").click(function() {
-        $(".containBox").css({ "transform": "translate(0px, 0px)" });
-        $(this).hide();
-    });
-    $(".sideBox").click(function() {
-        $(".containBox").css({ "transform": "translate(0px, 0px)" });
-        $(".containBox-bg").hide();
+		$(".containBox").height(h)
+		$(this).hide();
+		$("body").removeClass('sideBox-open');
     });
 });
 </script>
