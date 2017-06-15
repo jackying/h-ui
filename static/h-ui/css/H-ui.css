@@ -1,9 +1,9 @@
 @charset "utf-8";
 /* -----------H-ui前端框架-------------
-* H-ui.css v3.1.1
+* H-ui.css v3.1.2
 * http://www.h-ui.net/
 * Created & Modified by guojunhui
-* Date modified 2017.06.12
+* Date modified 2017.06.15
 *
 * Copyright 2013-2017 北京颖杰联创科技有限公司 All rights reserved.
 * Licensed under MIT license.
@@ -1287,7 +1287,7 @@ table.dataTable thead .sorting_desc {background-image:url(../images/dataTable/so
 	.table-responsive > .table-bordered > tbody > tr:last-child > td,
 	.table-responsive > .table-bordered > tfoot > tr:last-child > td {border-bottom: 0}
 	*/
-	.table-responsive th,.table-responsive td{ display: block}
+	.table-responsive th,.table-responsive td{ display: block;width: 100%!important;}
 
 }
 
