@@ -1287,7 +1287,7 @@ table.dataTable thead .sorting_desc {background-image:url(../images/dataTable/so
 	.table-responsive > .table-bordered > tbody > tr:last-child > td,
 	.table-responsive > .table-bordered > tfoot > tr:last-child > td {border-bottom: 0}
 	*/
-	.table-responsive th,.table-responsive td{ display: block;width: 100%!important;}
+	.table-responsive th,.table-responsive td{ display: block;width: 100%!important;box-sizing: border-box;}
 
 }
 
