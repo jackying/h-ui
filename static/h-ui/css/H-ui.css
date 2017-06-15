@@ -729,7 +729,6 @@ input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit
      overflow: auto;}
 	body.sideBox-open .containBox-bg{bottom:0;right:0;}
 }
-.contain-main-wraper {padding-top:90px}
 /*2.3 常用布局
 	Name:			style_Layout
 	Explain:		左右两栏|左中右三栏|上中下
