@@ -1261,7 +1261,7 @@ table.dataTable thead .sorting_desc {background-image:url(../images/dataTable/so
 </div>
 */
 @media (max-width: 767px) {
-	.table-responsive {width: 100%;margin-bottom: 15px;overflow-x: scroll;overflow-y: hidden;border: 1px solid #ddd;-ms-overflow-style: -ms-autohiding-scrollbar;-webkit-overflow-scrolling: touch}
+	/*.table-responsive {width: 100%;margin-bottom: 15px;overflow-x: scroll;overflow-y: hidden;border: 1px solid #ddd;-ms-overflow-style: -ms-autohiding-scrollbar;-webkit-overflow-scrolling: touch}
 	.table-responsive > .table {margin-bottom: 0}
 	.table-responsive > .table > thead > tr > th,
 	.table-responsive > .table > tbody > tr > th,
@@ -1286,6 +1286,9 @@ table.dataTable thead .sorting_desc {background-image:url(../images/dataTable/so
 	.table-responsive > .table-bordered > tfoot > tr:last-child > th,
 	.table-responsive > .table-bordered > tbody > tr:last-child > td,
 	.table-responsive > .table-bordered > tfoot > tr:last-child > td {border-bottom: 0}
+	*/
+	.table-responsive th,.table-responsive td{ display: block}
+
 }
 
 /*3.4 表单
