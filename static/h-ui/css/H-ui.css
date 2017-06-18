@@ -1,9 +1,9 @@
 @charset "utf-8";
 /* -----------H-ui前端框架-------------
-* H-ui.css v3.1.2
+* H-ui.css v3.1.3
 * http://www.h-ui.net/
 * Created & Modified by guojunhui
-* Date modified 2017.06.15
+* Date modified 2017.06.17
 *
 * Copyright 2013-2017 北京颖杰联创科技有限公司 All rights reserved.
 * Licensed under MIT license.
@@ -3606,10 +3606,12 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus{color: #fff;text-deco
 					box-shadow: 0 3px 9px rgba(0,0,0,.5)}
 		
 			.modal-header {min-height: 16.42857143px;padding: 15px;border-bottom: 1px solid #eee; position:relative}
-			.modal-header .close{position:absolute; right:10px; top:10px}
+			.modal-header .close{position:absolute; right:15px; top:15px}
+			.modal-close{position:absolute; right:15px; top:15px;font-size:24px; z-index: 9}
+			a.modal-close:hover{ text-decoration: none}
 			.modal-header h3,.modal-header .modal-title{margin:0; padding:10px 0; font-size:16px}
 			
-			.modal-body {position:relative;padding: 15px;overflow-y:visible;word-break:break-all}
+			.modal-body {position:relative;padding:15px;overflow-y:visible;word-break:break-all}
 				.modal-form {margin-bottom: 0}
 				
 			.modal-footer {padding:15px;margin-bottom: 0;text-align: right;background-color: #f5f5f5;border-top: 1px solid #eee;*zoom: 1}
