@@ -1,9 +1,9 @@
 @charset "utf-8";
 /* -----------H-ui前端框架-------------
-* H-ui.css v3.1.3
+* H-ui.css v3.1.4
 * http://www.h-ui.net/
 * Created & Modified by guojunhui
-* Date modified 2017.06.17
+* Date modified 2017.06.23
 *
 * Copyright 2013-2017 北京颖杰联创科技有限公司 All rights reserved.
 * Licensed under MIT license.
@@ -3539,7 +3539,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus{color: #fff;text-deco
 	Explain:		警告,使用警告框jQuery插件
 */
 .progress,.progress-bar,.sr-only{height:10px; font-size:0;line-height:0}
-.progress{overflow:hidden; width:400px}
+.progress{overflow:hidden; width:100%}
 .progress.radius{}/*自定义圆角*/
 .progress-bar{width:100%;background-color:#efefef;}
 .sr-only{
