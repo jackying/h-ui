@@ -1,8 +1,8 @@
 /*-----------H-ui前端框架-------------
-* H-ui.js v3.1
+* H-ui.js v3.1.2
 * http://www.h-ui.net/
 * Created & Modified by guojunhui
-* Date modified 2017.05.16
+* Date modified 2017.05.25
 *
 * Copyright 2013-2017 北京颖杰联创科技有限公司 All rights reserved.
 * Licensed under MIT license.
@@ -2372,7 +2372,6 @@ function stopDefault(e) {
 				if (opts.animate) {
 					var objStyle = nav.style,
 					transition = "max-height " + opts.transition + "ms";
-
 					objStyle.WebkitTransition = objStyle.MozTransition = objStyle.OTransition = objStyle.transition = transition;
 				}
 			},
@@ -2386,9 +2385,7 @@ function stopDefault(e) {
 				for (var i = 0; i < nav.inner.length; i++) {
 					savedHeight += nav.inner[i].offsetHeight;
 				}
-
 				var innerStyles = "." + opts.jsClass + " ." + opts.navClass + "-" + this.index + ".opened{max-height:" + savedHeight + "px !important} ." + opts.jsClass + " ." + opts.navClass + "-" + this.index + ".opened.dropdown-active {max-height:9999px !important}";
-
 				if (styleElement.styleSheet) {
 					styleElement.styleSheet.cssText = innerStyles;
 				} else {
@@ -2767,121 +2764,133 @@ function stopDefault(e) {
 } (window.jQuery);
 
 /* =======================================================================
- * jQuery.Huispinner.js v2.0 微调器
+ * jQuery.Huispinner.js v2.1 微调器
  * http://www.h-ui.net/
  * Created & Modified by guojunhui
- * Date modified 2017.05.05
+ * Date modified 2017.06.25
  *
  * Copyright 2017 北京颖杰联创科技有限公司 All rights reserved.
  * Licensed under MIT license.
  * http://opensource.org/licenses/MIT
  * ========================================================================*/
-!function($) {
-	$.fn.Huispinner = function(options) {
+!function($) {	
+	$.fn.Huispinner = function(options, callback) {
 		var defaults = {
-			value:1,
+			value : 1,
 			minValue : 1,
 			maxValue : 999,
 			dis : 1,
 		}
 		var options = $.extend(defaults, options);
 		var keyCodes = {
-			up: 38,
-			down: 40
+			up : 38,
+			down : 40
 		}
-		
-		this.each(function(){
+
+		this.each(function() {
 			var that = $(this);
-			var str = 
-			'<div class="spinner">'+
-				'<a class="subtract disabled" href="javascript:void(0)"><i>-</i></a>'+
-				'<input class="amount input-text" value="'+options.value+'" autocomplete="off">'+
-				'<a class="add" href="javascript:void(0)"><i>+</i></a>'+
-			'</div>';
+			var str = '<div class="spinner">'
+					+ '<a class="subtract disabled" href="javascript:void(0)"><i>-</i></a>'
+					+ '<input class="amount input-text" value="'
+					+ options.value + '" autocomplete="off">'
+					+ '<a class="add" href="javascript:void(0)"><i>+</i></a>'
+					+ '</div>';
 			that.append(str);
-			
+
 			var input = that.find(".input-text"),
 				subtract = that.find(".subtract"),
-				add =  that.find(".add"),
+				add = that.find(".add"),
 				value = parseInt(input.val());
 
-			if(value <= options.minValue){
+			if (value <= options.minValue) {
 				subtract.addClass("disabled");
 				add.removeClass("disabled");
 			}
-			if(value >= options.maxValue){
+			if (value >= options.maxValue) {
 				subtract.removeClass("disabled");
 				add.addClass("disabled");
 			}
-			
-			//输入框失去焦点
-			input.on('blur',function(){
+
+			// 输入框失去焦点
+			input.on('blur', function() {
 				var v = $(this).val();
-				v = v.replace(/[^\d]/g,"");
-				v = v.replace(/\b(0+)/gi,"");
-				
-				if(v!=""){
-					if(v > options.minValue && v < options.maxValue){
+				v = v.replace(/[^\d]/g, "");
+				v = v.replace(/\b(0+)/gi, "");
+
+				if (v != "") {
+					if (v > options.minValue && v < options.maxValue) {
 						input.val(v)
 						add.removeClass("disabled");
 						subtract.removeClass("disabled");
-					}else{
-						if(v <= options.minValue){
+					} else {
+						if (v <= options.minValue) {
 							input.val(options.minValue);
 							subtract.addClass("disabled");
 							add.removeClass("disabled");
-						}
-						else{
+						} else {
 							input.val(options.maxValue);
 							subtract.removeClass("disabled");
 							add.addClass("disabled");
 						}
-					}								
-				}else{
+					}
+				} else {
 					$(this).val(options.minValue);
 					subtract.addClass("disabled");
 					add.removeClass("disabled");
 				}
-			});
-			
-			//上下方向键
-			input.on("keydown",function(e){
-				var evt = e || window.event;
-				if (evt.keyCode === keyCodes.up) {			
-					subtract.trigger("click");
-					evt.returnValue = false; 
+				if (callback) {
+					callback(input.val());
 				}
-				if (evt.keyCode === keyCodes.down) {			
+			});
+
+			// 上下方向键
+			input.on("keydown", function(e) {
+				var evt = e || window.event;
+				if (evt.keyCode === keyCodes.up) {
+					subtract.trigger("click");
+					evt.returnValue = false;
+				}
+				if (evt.keyCode === keyCodes.down) {
 					add.trigger("click");
 					evt.returnValue = false;
-				}				
+				}
 			});
-			
-			//减
-			subtract.on('click',function(){		
-				var goodsCount= parseInt(input.val());
-				input.val(goodsCount <=options.minValue ? options.minValue : goodsCount - options.dis);
+
+			// 减
+			subtract.on('click', function() {
+				var goodsCount = parseInt(input.val());
+				input.val(goodsCount <= options.minValue
+						? options.minValue
+						: goodsCount - options.dis);
 				add.removeClass("disabled");
-				if(input.val()<= options.minValue){
+				if (input.val() <= options.minValue) {
 					input.val(options.minValue)
 					subtract.addClass("disabled");
 				}
+				if (callback) {
+					callback(input.val());
+				}
 			});
-			
-			//加
-			add.on('click',function(){
-				var goodsCount= parseInt(input.val());
-				input.val(goodsCount >= options.maxValue ? options.maxValue : goodsCount + options.dis);
+
+			// 加
+			add.on('click', function() {
+				var goodsCount = parseInt(input.val());
+				input.val(goodsCount >= options.maxValue
+						? options.maxValue
+						: goodsCount + options.dis);
 				subtract.removeClass("disabled");
-				
-				if(input.val() >= options.maxValue){
+
+				if (input.val() >= options.maxValue) {
 					input.val(options.maxValue);
 					add.addClass("disabled");
+				}
+				if (callback) {
+					callback(input.val());
 				}
 			});
 		});
 	}
-} (window.jQuery);
+}(window.jQuery);
 
 /* =======================================================================
  * jQuery.format.js 金额格式化
