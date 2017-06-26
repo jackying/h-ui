@@ -1,8 +1,8 @@
 /*-----------H-ui前端框架-------------
-* H-ui.js v3.1.2
+* H-ui.js v3.1.3
 * http://www.h-ui.net/
 * Created & Modified by guojunhui
-* Date modified 2017.05.25
+* Date modified 2017.05.26
 *
 * Copyright 2013-2017 北京颖杰联创科技有限公司 All rights reserved.
 * Licensed under MIT license.
@@ -2764,10 +2764,10 @@ function stopDefault(e) {
 } (window.jQuery);
 
 /* =======================================================================
- * jQuery.Huispinner.js v2.1 微调器
+ * jQuery.Huispinner.js v2.1.2 微调器
  * http://www.h-ui.net/
  * Created & Modified by guojunhui
- * Date modified 2017.06.25
+ * Date modified 2017.06.26
  *
  * Copyright 2017 北京颖杰联创科技有限公司 All rights reserved.
  * Licensed under MIT license.
@@ -2790,7 +2790,7 @@ function stopDefault(e) {
 		this.each(function() {
 			var that = $(this);
 			var str = '<div class="spinner">'
-					+ '<a class="subtract disabled" href="javascript:void(0)"><i>-</i></a>'
+					+ '<a class="subtract" href="javascript:void(0)"><i>-</i></a>'
 					+ '<input class="amount input-text" value="'
 					+ options.value + '" autocomplete="off">'
 					+ '<a class="add" href="javascript:void(0)"><i>+</i></a>'
