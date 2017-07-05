@@ -216,7 +216,7 @@
 							<label class="form-label col-xs-3">爱好：</label>
 							<div class="formControls skin-minimal col-xs-5">
 								<div class="check-box">
-									<input type="checkbox" id="checkbox-5" name="checkbox2" datatype="*">
+									<input type="checkbox" id="checkbox-5" name="checkbox2">
 									<label for="checkbox-5">上网</label>
 								</div>
 								<div class="check-box">
@@ -235,29 +235,43 @@
 							<label class="form-label col-xs-3">附件：</label>
 							<div class="formControls col-xs-8">
 								<span class="btn-upload form-group">
-								<input class="input-text upload-url" type="text" name="uploadfile-2" id="uploadfile-2" readonly  datatype="*" nullmsg="请添加附件！" style="width:200px">
+								<input class="input-text upload-url" type="text" name="uploadfile-2" id="uploadfile-2" readonly style="width:200px">
 								<a href="javascript:void();" class="btn btn-primary upload-btn"><i class="Hui-iconfont">&#xe642;</i> 浏览文件</a>
 								<input type="file" multiple name="file-2" class="input-file">
 								</span>
 							</div>
 						</div>
-						<div class="row cl">
+						<div class="row clearfix">
 							<label class="form-label col-xs-3">所在城市：</label>
 							<div class="formControls col-xs-8">
-								<span class="select-box">
-								<select class="select" size="1" name="city" datatype="*" nullmsg="请选择所在城市！">
-									<option value="" selected>请选择城市</option>
-									<option value="1">北京</option>
-									<option value="2">上海</option>
-									<option value="3">广州</option>
-								</select>
-								</span>
+								<div class="row clearfix" style="margin-top:0">
+									<div class="col-xs-6">
+										<span class="select-box">
+											<select class="select" size="1" name="city">
+												<option value="" selected>选择省份</option>
+												<option value="1">北京</option>
+												<option value="2">上海</option>
+												<option value="3">广州</option>
+											</select>
+										</span>
+									</div>
+									<div class="col-xs-6">
+										<span class="select-box">
+											<select class="select" size="1" name="city">
+												<option value="" selected>选择城市</option>
+												<option value="1">北京</option>
+												<option value="2">上海</option>
+												<option value="3">广州</option>
+											</select>
+										</span>
+									</div>
+								</div>
 							</div>
 						</div>
 						<div class="row cl">
 							<label class="form-label col-xs-3">网址：</label>
 							<div class="formControls col-xs-8">
-								<input type="text" class="input-text" placeholder="http://" name="website" id="website" datatype="url" nullmsg="网址不能为空">
+								<input type="text" class="input-text" placeholder="http://" name="website" id="website">
 							</div>
 						</div>
 						<div class="row cl">
