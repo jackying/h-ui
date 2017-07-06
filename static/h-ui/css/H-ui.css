@@ -800,7 +800,7 @@ var{}	/*变量*/
 kbd{}	/*键盘文本*/
 code{}	/*计算机代码文本*/
 dfn{font-style: italic}	/*一个定义项目*/
-del{font-family:Simsun}	/*删除线*/
+del{}	/*删除线*/
 code,kbd,pre,samp {font-family: monospace, serif;font-size: 1em}
 pre{white-space: pre-wrap}	/*预格式化的文本*/
 .uppercase{text-transform:uppercase} /*文字大写*/
@@ -3660,7 +3660,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus{color: #fff;text-deco
 	.modal-alert-info{padding:30px; text-align:center; font-size:14px; background-color:#fff}
 
 
-.loading{height: 50px; background: url(../images/loading/loading-b.gif) no-repeat center}
+.loading{height: 50px; width: 50px; background:#fff url(../images/loading/loading-b.gif) no-repeat center}
 .mask{position:fixed;top:0;left:0;z-index:999;width:100%;height:100%;background-color:rgba(0,0,0,0.7);-moz-transition:all 0.3s ease-in;-webkit-transition:all 0.3s ease-in;-o-transition:all 0.3s ease-in;transition:all 0.3s ease-in}
 * html .mask{position:absolute;left:expression(documentElement.scrollLeft + documentElement.clientWidth - this.offsetWidth);top:expression(documentElement.scrollTop + documentElement.clientHeight - this.offsetHeight)}
 
