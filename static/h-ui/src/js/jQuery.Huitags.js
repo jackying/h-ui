@@ -2,7 +2,7 @@
  * jQuery.Huitags.js v2.0 标签
  * http://www.h-ui.net/
  * Created & Modified by guojunhui
- * Date modified 2017.05.10
+ * Date modified 2017.07.06
  *
  * Copyright 2017 北京颖杰联创科技有限公司 All rights reserved.
  * Licensed under MIT license.
@@ -54,9 +54,20 @@
 				has.find("span").on('click',function(){
 					var taghasV = $(this).text();
 					taghasV=taghasV.replace(/(^\s*)|(\s*$)/g,"");
-					editor.append('<span class="Huitags-token">'+taghasV+'</span>');
-					gettagval(this);
-					$(this).remove();
+					var dataStr = val.val();			
+					var dataStrArr=dataStr.split(",");
+					if(dataStrArr.toString().indexOf(taghasV)>-1){
+						console.log("标签不能重复");
+						return false;
+					}
+					else{
+						editor.append('<span class="Huitags-token">'+taghasV+'</span>');
+						gettagval(this);
+						$(this).remove();
+					}
+
+
+					
 				});
 			}
 			
