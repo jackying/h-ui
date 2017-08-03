@@ -1,8 +1,8 @@
 /*-----------H-ui前端框架-------------
-* H-ui.js v3.1.3
+* H-ui.js v3.1.5
 * http://www.h-ui.net/
 * Created & Modified by guojunhui
-* Date modified 2017.05.26
+* Date modified 2017.08.03
 *
 * Copyright 2013-2017 北京颖杰联创科技有限公司 All rights reserved.
 * Licensed under MIT license.
@@ -42,6 +42,7 @@ jQuery.Huialert.js
 jQuery.Huitotop.js v2.0
 jQuery.Huimarquee.js
 jQuery.Huispinner.js v2.0
+jQuery.Huiloading.js v1.0
 
 Bootstrap.modal.js v3.3.0
 Bootstrap.dropdown.js v3.3.0
@@ -2891,6 +2892,36 @@ function stopDefault(e) {
 		});
 	}
 }(window.jQuery);
+
+/* =======================================================================
+ * jQuery.Huiloading.js v1.0 Huiloading
+ * http://www.h-ui.net/
+ * Created & Modified by guojunhui
+ * Date modified 2017.07.18
+ *
+ * Copyright 2017 北京颖杰联创科技有限公司 All rights reserved.
+ * Licensed under MIT license.
+ * http://opensource.org/licenses/MIT
+ * ========================================================================*/
+!function($) {
+	$.Huiloading =  {
+		show:function(messages){
+			if ($(".loading-wraper").length > 0) {
+				$(".loading-wraper").remove();
+			}
+			if( messages == null ) messages = '';  
+			var htmlstr = '<div class="loading-wraper"><div class="loading-content"><i class="iconpic iconpic-loading"></i> <span>'+messages+'</span></div></div>';
+			$(document.body).append(htmlstr);
+			var w = $(".loading-wraper .loading-content").width()+40;
+			$(".loading-wraper .loading-content").css({
+				"margin-left":-(w/2)+"px",
+			});
+		},
+		hide:function(){
+			$(".loading-wraper").remove();
+		}
+	}
+} (window.jQuery);
 
 /* =======================================================================
  * jQuery.format.js 金额格式化

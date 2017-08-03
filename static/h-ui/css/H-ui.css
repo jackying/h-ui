@@ -1,9 +1,9 @@
 @charset "utf-8";
 /* -----------H-ui前端框架-------------
-* H-ui.css v3.1.4
+* H-ui.css v3.1.5
 * http://www.h-ui.net/
 * Created & Modified by guojunhui
-* Date modified 2017.07.02
+* Date modified 2017.08.03
 *
 * Copyright 2013-2017 北京颖杰联创科技有限公司 All rights reserved.
 * Licensed under MIT license.
@@ -3552,6 +3552,11 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus{color: #fff;text-deco
 .progress-bar-success .sr-only{ background-color:#5cb85c}
 .progress-bar-warning .sr-only{background-color: #f0ad4e}
 .progress-bar-danger .sr-only{background-color: #d9534f}
+
+.loading-wraper{ position: fixed; z-index: 2000; top: 0; right: 0; bottom: 0; left: 0; background-color: rgba(25,24,26,0.34)}
+.loading-wraper .loading-content{padding:10px 20px;width:auto;height:auto;background-color: #fff;border-radius: 10px;position: absolute;left:50%; top: 50%;marigin-left:-50px;margin-top:-40px;}
+.loading-wraper .loading-content .iconpic-loading{width: 40px; height: 40px;background:#fff url(../images/loading/iconpic-loading.gif) no-repeat center}
+.loading-wraper .loading-content .iconpic,.loading-wraper .loading-content span{ vertical-align: middle;font-size:14px;}
 
 /*4.10 对话框
 	Name:			mod_modal
