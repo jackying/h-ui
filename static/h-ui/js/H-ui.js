@@ -1,8 +1,8 @@
 /*-----------H-ui前端框架-------------
-* H-ui.js v3.1.5
+* H-ui.js v3.1.6
 * http://www.h-ui.net/
 * Created & Modified by guojunhui
-* Date modified 2017.08.03
+* Date modified 2017.08.30
 *
 * Copyright 2013-2017 北京颖杰联创科技有限公司 All rights reserved.
 * Licensed under MIT license.
@@ -4938,11 +4938,6 @@ function displaynavbar(obj){
 } (window.jQuery);
 
 $(function() {
-	/*全选*/
-	$("table thead th input:checkbox").on("click",function() {
-		$(this).closest("table").find("tr > td:first-child input:checkbox").prop("checked", $("table thead th input:checkbox").prop("checked"));
-	});
-
 	/*上传*/
 	$(document).on("change", ".input-file",function() {
 		var uploadVal = $(this).val();
