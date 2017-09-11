@@ -4837,8 +4837,7 @@ function displaynavbar(obj){
 		}
 	}
 	$.Huimodalalert.hide = function() {
-		$("#modal-alert").fadeOut("normal",
-		function() {
+		$("#modal-alert").fadeOut("normal",function() {
 			$("#modal-alert").remove();
 		});
 	}
@@ -4849,11 +4848,10 @@ function displaynavbar(obj){
  * ========================================================================*/
 !function($) {
 	$.Huialert = function() {
-		$(".Huialert i").Huihover();
-		$(".Huialert i").on("click",function() {
+		$.Huihover('.Huialert i');
+		$(document).on("click",".Huialert i",function() {
 			var Huialert = $(this).parents(".Huialert");
-			Huialert.fadeOut("normal",
-			function() {
+			Huialert.fadeOut("normal",function() {
 				Huialert.remove();
 			});
 		});

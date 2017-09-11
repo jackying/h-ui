@@ -4,11 +4,9 @@
 !function($) {
 	$.Huialert = function() {
 		$.Huihover('.Huialert i');
-		$(".Huialert i").on("click",
-		function() {
+		$(document).on("click",".Huialert i",function() {
 			var Huialert = $(this).parents(".Huialert");
-			Huialert.fadeOut("normal",
-			function() {
+			Huialert.fadeOut("normal",function() {
 				Huialert.remove();
 			});
 		});
