@@ -1,8 +1,8 @@
 /*-----------H-ui前端框架-------------
-* H-ui.js v3.1.6
+* H-ui.js v3.1.7
 * http://www.h-ui.net/
 * Created & Modified by guojunhui
-* Date modified 2017.08.30
+* Date modified 2017.10.10
 *
 * Copyright 2013-2017 北京颖杰联创科技有限公司 All rights reserved.
 * Licensed under MIT license.
@@ -31,7 +31,7 @@ jQuery.Huisidenav.js
 jQuery.Huihover.js v2.0
 jQuery.Huifocusblur.js V2.0
 jQuery.Huiselect.js
-jQuery.Huitab.js v2.0
+jQuery.Huitab.js v2.0.1
 jQuery.Huifold.js v2.0
 jQuery.Huitags.js v2.0
 jQuery.Huitagsmixed.js
@@ -4434,17 +4434,17 @@ function displaynavbar(obj){
 } (window.jQuery);
 
 /* =======================================================================
- * jQuery.Huitab.js v2.0 选项卡
+ * jQuery.Huitab.js v2.0.1 选项卡
  * http://www.h-ui.net/
  * Created & Modified by guojunhui
- * Date modified 2017.05.05
+ * Date modified 2017.10.10
  *
  * Copyright 2017 北京颖杰联创科技有限公司 All rights reserved.
  * Licensed under MIT license.
  * http://opensource.org/licenses/MIT
  * ========================================================================*/
 !function($) {
-	$.fn.Huitab = function(options){
+	$.fn.Huitab = function(options, callback){
 		var defaults = {
 			tabBar:'.tabBar span',
 			tabCon:".tabCon",
@@ -4466,6 +4466,9 @@ function displaynavbar(obj){
 				var index = that.find(options.tabBar).index(this);
 				that.find(options.tabCon).hide();
 				that.find(options.tabCon).eq(index).show();
+				if (callback) {
+					callback();
+				}
 			});
 		});
 	}

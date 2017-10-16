@@ -116,9 +116,14 @@ $("#HuiTab-demo3").Huitab({
 <script>
 $(function(){
 	prettyPrint();
-	$("#HuiTab-demo1").Huitab({
-		index:0
-	});
+	$("#HuiTab-demo1").Huitab(
+		{
+			index:0,
+		},
+		function(){
+			alert("触发了点击");
+		}
+	);
 	$("#HuiTab-demo2").Huitab({
 		index:2
 	});

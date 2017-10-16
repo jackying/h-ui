@@ -1,15 +1,15 @@
 /* =======================================================================
- * jQuery.Huitab.js v2.0 选项卡
+ * jQuery.Huitab.js v2.0.1 选项卡
  * http://www.h-ui.net/
  * Created & Modified by guojunhui
- * Date modified 2017.05.05
+ * Date modified 2017.10.10
  *
  * Copyright 2017 北京颖杰联创科技有限公司 All rights reserved.
  * Licensed under MIT license.
  * http://opensource.org/licenses/MIT
  * ========================================================================*/
 !function($) {
-	$.fn.Huitab = function(options){
+	$.fn.Huitab = function(options, callback){
 		var defaults = {
 			tabBar:'.tabBar span',
 			tabCon:".tabCon",
@@ -31,6 +31,9 @@
 				var index = that.find(options.tabBar).index(this);
 				that.find(options.tabCon).hide();
 				that.find(options.tabCon).eq(index).show();
+				if (callback) {
+					callback();
+				}
 			});
 		});
 	}
