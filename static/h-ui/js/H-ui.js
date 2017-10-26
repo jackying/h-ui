@@ -1,8 +1,8 @@
 /*-----------H-ui前端框架-------------
-* H-ui.js v3.1.7
+* H-ui.js v3.1.8
 * http://www.h-ui.net/
 * Created & Modified by guojunhui
-* Date modified 2017.10.10
+* Date modified 2017.10.26
 *
 * Copyright 2013-2017 北京颖杰联创科技有限公司 All rights reserved.
 * Licensed under MIT license.
@@ -4851,7 +4851,7 @@ function displaynavbar(obj){
  * ========================================================================*/
 !function($) {
 	$.Huialert = function() {
-		$.Huihover('.Huialert i');
+		$('.Huialert i').Huihover();
 		$(document).on("click",".Huialert i",function() {
 			var Huialert = $(this).parents(".Huialert");
 			Huialert.fadeOut("normal",function() {
