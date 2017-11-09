@@ -1,0 +1,110 @@
+/*4.22 评论列表
+	Name:			mod_comment
+	Sample:
+	<ul class="commentList">
+	  <li class="item clearfix">
+	    <a href="#"><i class="avatar avatar-L radius"><img alt="" src="static/h-ui/images/ucenter/avatar-default.jpg"></i></a>
+		<div class="comment-main">
+		  <header class="comment-header">
+		    <div class="comment-meta"><a class="comment-author" href="#">辉哥</a> 评论于 <time title="2014年8月31日 下午3:20" datetime="2014-08-31T03:54:20">2014-8-31 15:20</time></div>
+	      </header>
+		  <div class="comment-body"><p><a href="#">@某人</a> 你是猴子派来的救兵吗？</p></div></div>
+	  </li>
+	</ul>
+*/
+
+.commentList{
+    .item {
+        list-style: none outside none;
+        margin: 1.6rem 0 0;
+        .avatar {
+            border: 1px solid transparent;
+            float: left
+        }
+        .comment-main {
+            position: relative;
+            margin-left: 64px;
+            border: 1px solid #dedede;
+            border-radius: 2px;
+            &:before,
+            &:after {
+                position: absolute;
+                top: 11px;
+                left: -16px;
+                right: 100%;
+                width: 0;
+                height: 0;
+                display: block;
+                content: " ";
+                border-color: transparent;
+                border-style: solid solid outset;
+                pointer-events: none;
+            }
+            &:before {
+                border-right-color: #dedede;
+                border-width: 8px;
+            }
+            &:after {
+                border-width: 7px;
+                border-right-color: #f8f8f8;
+                margin-top: 1px;
+                margin-left: 2px
+            }
+            .comment-header {
+                padding: 10px 15px;
+                background: #f8f8f8;
+                border-bottom: 1px solid #eee;
+                .comment-title {
+                    margin: 0 0 8px 0;
+                    font-size: 1.6rem;
+                    line-height: 1.2;
+                }
+
+                .comment-meta {
+                    font-size: 13px;
+                    color: #999;
+                    line-height: 1.2;
+                    a {
+                        color: #999
+                    }
+                    .comment-author {
+                        font-weight: 700;
+                        color: #999;
+                    }
+                }
+            }
+            .comment-body {
+                padding: 15px;
+                overflow: hidden;
+                >:last-child {
+                    margin-bottom: 0
+                }
+            }
+        }
+        &.comment-flip {
+            .avatar {
+                float: right;
+            }
+            .comment-main {
+                margin-left: 0;
+                margin-right: 64px;
+                &:before {
+                    border-left-color: #dedede;
+                    border-right-color: transparent
+                }
+                &:before,
+                &:after {
+                    left: 100%;
+                    position: absolute;
+                    right: -16px
+                }
+                 :after {
+                    border-left-color: #f8f8f8;
+                    border-right-color: transparent;
+                    margin-left: auto;
+                    margin-right: 2px
+                }
+            }
+        }
+    }
+} 

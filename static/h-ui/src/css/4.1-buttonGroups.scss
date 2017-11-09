@@ -1,0 +1,30 @@
+/*4.1 按钮组
+  Name:     mod_btn-group
+  Example:
+<div class="btn-group">
+  <span class="btn btn-primary radius">左边按钮</span>
+  <span class="btn btn-default radius">中间按钮</span>
+  <span class="btn btn-default radius">中间按钮</span>
+  <span class="btn btn-default radius">右边按钮</span>
+</div>
+  Explain:
+*/
+
+.btn-group {
+    font-size: 0;
+    .btn {
+        margin-left: -1px;
+    }
+    .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+        border-radius: 0;
+    }
+    >.btn:first-child:not(:last-child):not(.dropdown-toggle) {
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+    }
+    >.btn:last-child:not(:first-child),
+    >.dropdown-toggle:not(:first-child) {
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+    }
+}

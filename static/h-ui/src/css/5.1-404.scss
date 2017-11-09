@@ -1,0 +1,19 @@
+/*5.1 错误页-404*/
+
+.page-404 {
+    color: #afb5bf;
+    padding-top: 60px;
+    padding-bottom: 90px;
+    .error-title {
+        font-size: 80px;
+        .iconfont {
+            font-size: 80px
+        }
+    }
+    .error-description {
+        font-size: 24px
+    }
+    .error-info {
+        font-size: 14px
+    }
+}

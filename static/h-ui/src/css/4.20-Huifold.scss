@@ -1,0 +1,39 @@
+/*4.20 折叠
+	Name:			mod_Huifold
+	Sample:
+	<ul id="" class="Huifold">
+	  <li class="item"><h4>标题<b>+</b></h4><div class="info">内容 </div></li>
+	  ……
+	</ul>
+*/
+
+.Huifold .item {
+    position: relative;
+    h4 {
+        margin: 0;
+        font-weight: bold;
+        position: relative;
+        border-top: 1px solid #fff;
+        font-size: 15px;
+        line-height: 22px;
+        padding: 7px 10px;
+        background-color: #eee;
+        cursor: pointer;
+        padding-right: 30px;
+        b {
+            position: absolute;
+            display: block;
+            cursor: pointer;
+            right: 10px;
+            top: 7px;
+            width: 16px;
+            height: 16px;
+            text-align: center;
+            color: #666
+        }
+    }
+    .info {
+        display: none;
+        padding: 10px
+    }
+}

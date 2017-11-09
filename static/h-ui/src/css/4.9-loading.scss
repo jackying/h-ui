@@ -1,0 +1,41 @@
+/*4.9 进度条 loading
+	Name:			mod_progress
+	Example:
+	<div class="progress radius"><div class="progress-bar"><span class="sr-only"></span></div></div>
+	Explain:		警告,使用警告框jQuery插件
+*/
+.progress,
+.progress-bar,
+.sr-only {
+    height: 10px;
+    font-size: 0;
+    line-height: 0;
+}
+.progress {
+    overflow: hidden;
+    width: 400px;
+    .progress-bar {
+        width: 100%;
+        background-color: #efefef;
+        .sr-only {
+            display: inline-block;
+            background-color: #337ab7;
+            -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
+            box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
+            -webkit-transition: width .6s ease;
+            -o-transition: width .6s ease;
+            transition: width .6s ease;
+        }
+        &.progress-bar-success .sr-only {
+            background-color: #5cb85c;
+        }
+
+        &.progress-bar-warning .sr-only {
+            background-color: #f0ad4e;
+        }
+
+        &.progress-bar-danger .sr-only {
+            background-color: #d9534f;
+        }
+    }
+}

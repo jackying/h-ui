@@ -1,0 +1,85 @@
+/*4.14 Panel 面板
+	Name:			mod_panel
+	Sample:
+	<div class="panel panel-default">
+		<div class="panel-body">默认面板</div>
+	</div>
+*/
+
+.panel {
+    background-color: #fff;
+    border: solid 1px transparent;
+    .panel-header {
+        border-bottom: solid 1px transparent;
+        padding: 8px 15px;
+        font-size: 14px;
+        font-weight: 700;
+        margin-bottom: -1px
+    }
+    .panel-body {
+        padding: 15px
+    }
+    .panel-footer {
+        background-color: #f5f5f5;
+        border-top: 1px solid #ddd;
+        padding: 5px 20px
+    }
+    /*默认面板*/
+    &.panel-default {
+        border-color: #ddd;
+        >.panel-header {
+            border-color: #ddd;
+            background-color: #f5f5f5;
+            color: #444;
+        }
+    }
+    /*主要面板*/
+    &.panel-primary {
+        border-color: #5a98de;
+        >.panel-header {
+            border-color: #5a98de;
+            background-color: #5a98de;
+            color: #fff;
+        }
+    }
+
+    /*次要面板*/
+    &.panel-secondary {
+        border-color: #3bb4f2;
+        >.panel-header {
+            border-color: #3bb4f2;
+            background-color: #3bb4f2;
+            color: #fff;
+        }
+    }
+
+    /*成功面板*/
+    &.panel-success {
+        border-color: #5eb95e;
+        >.panel-header {
+            border-color: #5eb95e;
+            background-color: #5eb95e;
+            color: #fff;
+        }
+    }
+
+    /*警告面板*/
+    &.panel-warning {
+        border-color: #f37b1d;
+        >.panel-header {
+            border-color: #f37b1d;
+            background-color: #f37b1d;
+            color: #fff;
+        }
+    }
+
+    /*危险面板*/
+    &.panel-danger {
+        border-color: #dd514c;
+        >.panel-header {
+            border-color: #dd514c;
+            background-color: #dd514c;
+            color: #fff;
+        }
+    }
+}

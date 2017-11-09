@@ -1,0 +1,32 @@
+/*4.23 页脚
+	Name:			mod_footer
+	Sample:
+<footer class="footer mt-20">
+  <div class="container">
+    <nav class="footer-nav">
+      <a target="_blank" href="/aboutHui.html">关于H-ui</a>
+      <span class="pipe">|</span>
+      <a target="_blank" href="/copyright.html">软件著作权</a>
+      <span class="pipe">|</span>
+      <a target="_blank" href="/juanzeng.html">感谢捐赠</a>
+    </nav>
+    <p>Copyright &copy;2013-2016 H-ui.net All Rights Reserved. <br>
+    <a rel="nofollow" target="_blank" href="http://www.miitbeian.gov.cn/">京ICP备10000000号</a><br>
+    未经允许，禁止转载、抄袭、镜像</p>
+  </div>
+</footer>
+*/
+
+.footer {
+    border-top: 1px solid #E8E8E8;
+    padding: 15px 0;
+    font-family: tahoma, Arial;
+    font-size: 12px;
+    color: #999;
+    line-height: 22px;
+    text-align: center;
+    a,
+    a:hover {
+        color: #999
+    }
+}

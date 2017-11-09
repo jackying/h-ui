@@ -1,0 +1,175 @@
+/*3.6 图片*/
+
+/*3.6.1 图片效果
+<img src="" class="img-responsive|radius|round|thumbnail" />
+img-responsive 响应式    .radius 圆角图片    .round 圆形图片   .thumbnail 缩略图
+*/
+
+.img-responsive {
+    display: inline-block;
+    max-width: 100%;
+    height: auto
+}
+@media (max-width: 767px) {
+    .img-responsive {
+        width: 100%
+    }
+}
+
+.thumbnail {
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    max-width: 100%;
+    height: auto;
+    padding: 4px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out
+}
+
+.duang-opacity img {
+    -webkit-transition: opacity .1s linear;
+    -moz-transition: opacity .1s linear;
+    -o-transition: opacity .1s linear;
+    transition: opacity .1s linear
+}
+
+.duang-opacity a:hover img,
+a:hover .opacity img {
+    opacity: 0.85;
+    filter: alpha(opacity=85)
+}
+
+/*3.6.2 图集效果
+	Name:			modal_album
+	Example:
+<div class="album-item" style="width:160px">
+	<div class="album-img">
+		<img src="" style="height: 160px;">
+	</div>
+	<div class="album-title">《仙剑奇侠传》赵灵儿<span class="c-999">(20张)</span></div>
+	<div class="album-bg">
+		<div class="album-bg-Fir"></div>
+		<div class="album-bg-Sec"></div>
+	</div>
+</div>*/
+
+.album-img {
+    border: 1px solid #e0e0e0;
+    img {
+        display: block;
+        width: 100%
+    }
+}
+
+.album-title {
+    display: block;
+    text-align: left;
+    padding: 7px 5px;
+    line-height: 18px;
+    color: #555;
+    text-decoration: none;
+    font-size: 12px;
+    border: solid 1px #e0e0e0;
+    border-top: 0
+}
+
+.album-bg-Fir,
+.album-bg-Sec {
+    border: 1px solid #e6e6e6;
+    border-top: 1px solid #f5f5f5;
+    height: 1px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.album-bg-Fir {
+    margin: 0 3px;
+}
+
+.album-bg-Sec {
+    margin: 0 6px;
+}
+
+
+/*3.6.3 头像
+	Name:			mod_avatar
+	Example:		<i class="avatar avatar-L radius"><img src="static/h-ui/images/ucenter/avatar-default.jpg"></i>
+*/
+
+.avatar {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    width: 32px;
+    height: 32px;
+    img {
+        display: block;
+        width: 32px;
+        height: 32px;
+    }
+    &.radius,
+    &.radius img {
+        border-radius: 50%;
+    }
+    &.size-MINI {
+        width: 16px;
+        height: 16px;
+        img {
+            width: 16px;
+            height: 16px
+        }
+    }
+    &.size-S{
+        width: 24px;
+        height: 24px;
+        img {
+            width: 24px;
+            height: 24px
+        }
+    }
+    &.size-M{
+        width: 32px;
+        height: 32px;
+        img {
+            width: 32px;
+            height: 32px
+        }
+    }
+    &.size-L{
+        width: 48px;
+        height: 48px;
+        img {
+            width: 48px;
+            height: 48px
+        }
+    }
+    &.size-XL {
+        width: 64px;
+        height: 64px;
+        img {
+            width: 64px;
+            height: 64px
+        }
+    }
+    &.size-XXL {
+        width: 100px;
+        height: 100px;
+        img {
+            width: 100px;
+            height: 100px
+        }
+    }
+    &.size-XXXL {
+        width: 128px;
+        height: 128px;
+        img {
+            width: 128px;
+            height: 128px
+        }
+    }
+}

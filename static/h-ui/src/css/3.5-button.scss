@@ -1,0 +1,352 @@
+/*3.5 按钮
+	Name:			style_button
+	Example:		<button class="btn radius radius btn-primary|btn-info|btn-success|btn-warning|btn-danger|btn-inverse|btn-link" type="button">按钮</button>
+	Explain:		btn-primary：主要|btn-info：信息|btn-success：成功|btn-warning：警告|btn-danger：危险|btn-inverse：反向|btn-link：链接
+
+*/
+
+
+/*关闭*/
+
+.close {
+    font-size: 20px;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: 0.2;
+    filter: alpha(opacity=20);
+    &:hover,
+    &:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+        opacity: 0.4;
+        filter: alpha(opacity=40)
+    }
+}
+
+button.close {
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none
+}
+
+
+/*按钮*/
+
+.btn {
+    display: inline-block;
+    box-sizing: border-box;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 400;
+    white-space: nowrap;
+    vertical-align: middle;
+    -moz-padding-start: npx;
+    -moz-padding-end: npx;
+    border: solid 1px #ddd;
+    background-color: #fff;
+    width: auto;
+    *zoom: 1;
+    *overflow: visible;
+    -webkit-transition: background-color .1s linear;
+    -moz-transition: background-color .1s linear;
+    -o-transition: background-color .1s linear;
+    transition: background-color .1s linear;
+    &:active,
+    &.active {
+        background-color: #ccc;
+        -moz-box-shadow: 0 1px 8px rgba(0, 0, 0, 0.125) inset;
+        -webkit-box-shadow: 0 1px 8px rgba(0, 0, 0, 0.125) inset;
+        box-shadow: 0 1px 8px rgba(0, 0, 0, 0.125) inset
+    }
+    &:first-child {
+        *margin-left: 0;
+    }
+}
+
+a.btn:hover,
+a.btn:focus,
+a.btn:active,
+a.btn.active,
+a.btn.disabled,
+a.btn[disabled] {
+    text-decoration: none
+}
+
+/*默认——灰色	通常用于取消*/
+.btn-default {
+    background-color: #e6e6e6;
+    border-color: #e6e6e6;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+        color: #333;
+        background-color: #c7c7c7;
+        border-color: #c7c7c7
+    }
+}
+
+/*主要——主色	通常用于确定、提交、购买、支付等*/
+.btn-primary {
+    color: #fff;
+    background-color: $primary-color;
+    border-color: $primary-color;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+        color: #fff;
+        background-color: #0a6999;
+        border-color: #0a6999;
+    }
+}
+
+/*次要按钮*/
+.btn-secondary {
+    color: #fff;
+    background-color: $secondary-color;
+    border-color: $secondary-color;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+        color: #fff;
+        background-color: #0f9ae0;
+        border-color: #0f9ae0;
+    }
+}
+
+/*成功*/
+.btn-success {
+    color: #fff;
+    background-color: $success-color;
+    border-color: $success-color;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+        color: #fff;
+        background-color: #429842;
+        border-color: #429842;
+    }
+}
+
+/*警告*/
+.btn-warning {
+    color: #fff;
+    background-color: $warning-color;
+    border-color: $warning-color;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+        color: #fff;
+        background-color: #c85e0b;
+        border-color: #c85e0b
+    }
+}
+
+/*危险*/
+.btn-danger {
+    color: #fff;
+    background-color: $danger-color;
+    border-color: $danger-color;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+        color: #fff;
+        background-color: #c62b26;
+        border-color: #c62b26
+    }
+}
+
+/*链接*/
+.btn-link {
+    color: #0e90d2;
+    cursor: pointer;
+    border-color: transparent;
+    background-color: transparent;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+        color: #095f8a;
+        text-decoration: underline;
+        background-color: transparent;
+    }
+}
+
+/*块级按钮*/
+.btn-block {
+    box-sizing: border-box;
+    display: block;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+}
+
+
+/* Outline buttons */
+.btn-default-outline {
+    background-color: transparent;
+    border-color: #e6e6e6;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active,
+    &.focus {
+        color: #333;
+        background-color: transparent;
+        border-color: #c7c7c7;
+    }
+}
+
+.btn-primary-outline {
+    color: $primary-color;
+    background-color: transparent;
+    border-color: $primary-color;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active,
+    &.focus {
+        color: #0a6999;
+        background-color: transparent;
+        border-color: #0a6999;
+    }
+}
+.open>.btn-primary-outline.dropdown-toggle {
+    color: #0a6999;
+    background-color: transparent;
+    border-color: #0a6999;
+}
+
+.btn-secondary-outline {
+    color: $secondary-color;
+    background-color: transparent;
+    background-image: none;
+    border-color: $secondary-color;
+    &:hover,
+    &.focus,
+    &:active,
+    &:focus {
+        color: #fff;
+        background-color: $secondary-color;
+        border-color: $secondary-color
+    }
+}
+.open>.btn-secondary-outline.dropdown-toggle {
+    color: #fff;
+    background-color: $secondary-color;
+    border-color: $secondary-color
+}
+
+
+.btn-success-outline {
+    color: $success-color;
+    background-color: transparent;
+    background-image: none;
+    border-color: $success-color;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active,
+    &.focus{
+        color: #fff;
+        background-color: $success-color;
+        border-color: $success-color;
+    }
+}
+.open > .btn-success-outline.dropdown-toggle {
+    color: #fff;
+    background-color: $success-color;
+    border-color: $success-color;
+}
+
+.btn-warning-outline {
+    color: $warning-color;
+    background-color: transparent;
+    background-image: none;
+    border-color: $warning-color;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active,
+    &.focus {
+        color: #fff;
+        background-color: $warning-color;
+        border-color: $warning-color;
+    }
+}
+.open > .btn-warning-outline.dropdown-toggle {
+    color: #fff;
+    background-color: $warning-color;
+    border-color: $warning-color;
+}
+
+.btn-danger-outline {
+    color: $danger-color;
+    background-color: transparent;
+    background-image: none;
+    border-color: $danger-color;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active,
+    &.focus {
+        color: #fff;
+        background-color: $danger-color;
+        border-color: $danger-color;
+    }
+}
+.open>.btn-danger-outline.dropdown-toggle {
+    color: #fff;
+    background-color: $danger-color;
+    border-color: $danger-color;
+}
+
+/*禁用状态*/
+.btn.disabled {
+    cursor: not-allowed;
+    background-image: none;
+    opacity: .65;
+    filter: alpha(opacity=65);
+    box-shadow: none;
+    pointer-events: none
+}
+
+/*表单组*/
+.form-group {
+    display: inline-block;
+    vertical-align: middle;
+    .input-text {
+        position: relative;
+        vertical-align: top;
+    }
+    .btn {
+        position: relative;
+        margin-left: -1px
+    }
+    &.radius {
+        overflow: hidden;
+        .input-text {
+            border-radius: 4px 0 0 4px;
+        }
+        .btn {
+            border-radius: 0 4px 4px 0
+        }
+    }
+    &.round {
+        overflow: hidden;
+        .input-text {
+            border-radius: 1000px 0 0 1000px;
+        }
+        .btn {
+            border-radius: 0 1000px 1000px 0
+        }
+    } 
+}

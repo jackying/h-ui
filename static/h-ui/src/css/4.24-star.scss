@@ -1,0 +1,72 @@
+/*4.24 星星评价
+	Name:			mod_star
+	Sample:
+显示分数效果 可以是百分比
+<div class="star-bar star-bar-show size-M">
+	<span class="star" style="width:75%"></span>
+</div>
+
+打分效果 结构是js生成。
+<div id="" class="star-bar size-M "></div>
+*/
+.star-bar{
+    font-size: 0;
+    line-height: 0;
+    .star{
+        display: inline-block;
+        text-align: center;
+    }
+    &.star-bar-show {
+        background: url(../images/star/iconpic-star-S-default.png) repeat-x 0 0;
+        .star {
+            background: url(../images/star/iconpic-star-S.png) repeat-x 0 0;
+            &.star-1 {
+                width: 20%
+            }
+
+            &.star-2 {
+                width: 40%
+            }
+
+            &.star-3 {
+                width: 60%
+            }
+
+            &.star-4 {
+                width: 80%
+            }
+
+            &.star-5 {
+                width: 100%
+            }
+        }
+
+    }
+    &.size-S {
+        width: 80px;
+        height: 16px;
+        background-size:16px;
+        .star {
+            height: 16px;
+            background-size: 16px;
+        }
+        img {
+            width: 16px;
+            height: 16px;
+        }
+    }
+    &.size-M {
+        width: 120px;
+        height: 24px;
+        background-size: 24px;
+        .star {
+            height: 24px;
+            background-size: 24px;
+        }
+        img {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+}

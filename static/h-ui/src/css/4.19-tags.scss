@@ -1,0 +1,177 @@
+/*4.19 标签*/
+/*4.19.1 标签输入效果
+		Name:			mod_Hui-tags
+		Sample:
+		<div class="Hui-tags">
+          <div class="Hui-tags-editor cl">
+            <i class="Hui-tags-icon"></i>
+			<span class="Hui-tags-token">Hui前端框架</span>
+			<span class="Hui-tags-token">CSS3</span>
+			<span class="Hui-tags-token">HTML5</span>
+			<div class="Hui-tags-iptwrap"><input type="text" class="Hui-tags-input" maxlength="20" value=""><label class="Hui-tags-label">添加相关标签，用空格或回车分隔</label></div>
+		  </div>
+		  <div class="Hui-tags-list">
+			<div class="Hui-notag">暂无常用标签</div>
+			<div class="Hui-tags-has"><span>前端框架</span> <span>前端开发</span> <span>H-ui</span></div>
+		  </div>
+		  <input type="hidden" class="Hui-tags-val" name="" value="">
+		</div>
+	*/
+
+.Hui-tags,
+.Huitags-wraper {
+    border: solid 1px #dedede;
+    padding: 0 10px;
+    .Hui-tags-editor,
+    .Huitags-editor {
+        position: relative;
+        padding: 10px 0 10px 24px;
+        min-height: 20px;
+        .Hui-tags-icon,
+        .Huitags-icon {
+            position: absolute;
+            left: 0;
+            top: 11px;
+            font-size: 14px;
+            color: #666
+        }
+        .Hui-tags-token,
+        .Huitags-token {
+            color: #aaa;
+            float: left;
+            font-size: 12px;
+            height: 20px;
+            line-height: 20px;
+            margin-right: 8px;
+            padding: 0 1px;
+            white-space: nowrap;
+            cursor: pointer;
+            &:before {
+                content: "#"
+            }
+            &:hover {
+                text-decoration: line-through
+            }
+        }
+        .Hui-tags-iptwrap {
+            position: relative;
+            float: left;
+            .Hui-tags-input,
+            .Huitags-input {
+                position: relative;
+                height: 20px;
+                min-width: 60px;
+                border: 0 none;
+                vertical-align: top;
+                line-height: 20px;
+                color: #333;
+                z-index: 2;
+                background: url(../images/Hui-tags/empty.png) repeat scroll 0 0;
+                display: inline-block;
+                width: 100%
+            }
+        }
+        .Hui-tags-label,
+        .Huitags-label {
+            position: absolute;
+            top: 0;
+            left: 2px;
+            width: 240px;
+            height: 20px;
+            line-height: 20px;
+            font-size: 14px;
+            overflow: hidden;
+            z-index: 1;
+            color: #ccc
+        }
+    }
+    .Hui-tags-list,
+    .Huitags-list {
+        padding: 0 0 10px 0;
+        .Hui-notag,
+        .Huitags-notag {
+            font-size: 12px;
+        }
+        .Hui-tags-has span,
+        .Huitags-has span {
+            cursor: pointer;
+            font-size: 12px;
+            white-space: nowrap;
+            margin-right: 10px
+        }
+    }
+}
+
+/*4.19.2 标签混排效果
+		Name:			mod_tags
+		Sample:			<div class="pd-10 tags"><a href="http://www.h-ui.net/">H-ui前端框架</a>……</div>
+	
+	*/
+.tags {
+    .tags a {
+        height: 26px;
+        line-height: 26px;
+        padding-right: 6px
+    }
+    a:hover {
+        color: #F00;
+        text-decoration: underline
+    }
+    &.tags1 {
+        color: #C00;
+        font-size: 24px
+    }
+
+    &.tags2 {
+        color: #030;
+        font-size: 16px
+    }
+
+    &.tags3 {
+        color: #00F
+    }
+
+    &.tags4 {
+        font-size: 16px
+    }
+
+    &.tags5 {
+        color: #C00;
+        font-size: 20px;
+    }
+
+    &.tags6 {
+        color: #F06;
+        font-size: 20px
+    }
+
+    &.tags7 {
+        color: #030;
+        font-weight: bold;
+        font-size: 18px
+    }
+
+    &.tags8 {
+        color: #F06;
+        font-weight: bold
+    }
+
+    &.tags9 {
+        color: #C00;
+        font-weight: bold;
+        font-size: 16px;
+    }
+}
+
+/*4.19.3 tag云标签*/
+#tagyun {
+    position: relative;
+    a {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 3px 6px
+    }
+}

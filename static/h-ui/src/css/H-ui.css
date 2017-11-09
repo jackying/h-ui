@@ -1,9 +1,9 @@
 ﻿@charset "utf-8";
 /* -----------H-ui前端框架-------------
-* H-ui.css v3.1.5
+* H-ui.css v3.1.6
 * http://www.h-ui.net/
 * Created & Modified by guojunhui
-* Date modified 2017.08.31
+* Date modified 2017.11.09
 *
 * Copyright 2013-2017 北京颖杰联创科技有限公司 All rights reserved.
 * Licensed under MIT license.
@@ -105,7 +105,8 @@
 	4.25 tooltip效果
 	4.26 popover效果
 	4.27 datetimepicker日期插件
-	4.28 sortable拖动
+	4.28 分类检索
+	4.29 sortable拖动
 	4.29 ColorPicker 颜色控件
 	4.30 Markdown
   5. 页面
@@ -1231,31 +1232,31 @@ table.dataTable thead .sorting_desc {background-image:url(../images/dataTable/so
 </div>
 */
 @media (max-width: 767px) {
-	table-responsive {width: 100%;margin-bottom: 15px;overflow-x: scroll;overflow-y: hidden;border: 1px solid #ddd;-ms-overflow-style: -ms-autohiding-scrollbar;-webkit-overflow-scrolling: touch}
-	table-responsive > .table {margin-bottom: 0}
-	table-responsive > .table > thead > tr > th,
-	table-responsive > .table > tbody > tr > th,
-	table-responsive > .table > tfoot > tr > th,
-	table-responsive > .table > thead > tr > td,
-	table-responsive > .table > tbody > tr > td,
-	table-responsive > .table > tfoot > tr > td {white-space: nowrap}
-	table-responsive > .table-bordered {border: 0}
-	table-responsive > .table-bordered > thead > tr > th:first-child,
-	table-responsive > .table-bordered > tbody > tr > th:first-child,
-	table-responsive > .table-bordered > tfoot > tr > th:first-child,
-	table-responsive > .table-bordered > thead > tr > td:first-child,
-	table-responsive > .table-bordered > tbody > tr > td:first-child,
-	table-responsive > .table-bordered > tfoot > tr > td:first-child {border-left: 0}
-	table-responsive > .table-bordered > thead > tr > th:last-child,
-	table-responsive > .table-bordered > tbody > tr > th:last-child,
-	table-responsive > .table-bordered > tfoot > tr > th:last-child,
-	table-responsive > .table-bordered > thead > tr > td:last-child,
-	table-responsive > .table-bordered > tbody > tr > td:last-child,
-	table-responsive > .table-bordered > tfoot > tr > td:last-child {border-right: 0}
-	table-responsive > .table-bordered > tbody > tr:last-child > th,
-	table-responsive > .table-bordered > tfoot > tr:last-child > th,
-	table-responsive > .table-bordered > tbody > tr:last-child > td,
-	table-responsive > .table-bordered > tfoot > tr:last-child > td {border-bottom: 0}
+	.table-responsive {width: 100%;margin-bottom: 15px;overflow-x: scroll;overflow-y: hidden;border: 1px solid #ddd;-ms-overflow-style: -ms-autohiding-scrollbar;-webkit-overflow-scrolling: touch}
+	.table-responsive > .table {margin-bottom: 0}
+	.table-responsive > .table > thead > tr > th,
+	.table-responsive > .table > tbody > tr > th,
+	.table-responsive > .table > tfoot > tr > th,
+	.table-responsive > .table > thead > tr > td,
+	.table-responsive > .table > tbody > tr > td,
+	.table-responsive > .table > tfoot > tr > td {white-space: nowrap}
+	.table-responsive > .table-bordered {border: 0}
+	.table-responsive > .table-bordered > thead > tr > th:first-child,
+	.table-responsive > .table-bordered > tbody > tr > th:first-child,
+	.table-responsive > .table-bordered > tfoot > tr > th:first-child,
+	.table-responsive > .table-bordered > thead > tr > td:first-child,
+	.table-responsive > .table-bordered > tbody > tr > td:first-child,
+	.table-responsive > .table-bordered > tfoot > tr > td:first-child {border-left: 0}
+	.table-responsive > .table-bordered > thead > tr > th:last-child,
+	.table-responsive > .table-bordered > tbody > tr > th:last-child,
+	.table-responsive > .table-bordered > tfoot > tr > th:last-child,
+	.table-responsive > .table-bordered > thead > tr > td:last-child,
+	.table-responsive > .table-bordered > tbody > tr > td:last-child,
+	.table-responsive > .table-bordered > tfoot > tr > td:last-child {border-right: 0}
+	.table-responsive > .table-bordered > tbody > tr:last-child > th,
+	.table-responsive > .table-bordered > tfoot > tr:last-child > th,
+	.table-responsive > .table-bordered > tbody > tr:last-child > td,
+	.table-responsive > .table-bordered > tfoot > tr:last-child > td {border-bottom: 0}
 }
 
 /*3.4 表单
@@ -1958,38 +1959,79 @@ a.btn:hover,a.btn:focus,a.btn:active,a.btn.active,a.btn.disabled,a.btn[disabled]
 
 /*块级按钮*/
 .btn-block {-moz-box-sizing: border-box;display: block;padding-left: 0;padding-right: 0;width: 100%}
+
 /* Outline buttons */
 .btn-default-outline{background-color:transparent;border-color:#e6e6e6}
 .btn-default-outline:hover,
 .btn-default-outline:focus,
 .btn-default-outline:active,
-.btn-default-outline.active{color:#333;background-color:transparent;border-color:#c7c7c7}
+.btn-default-outline.active,
+.btn-default-outline.focus,
+.open>.btn-default-outline.dropdown-toggle {
+	color: #333;
+	background-color: transparent;
+	border-color: #c7c7c7
+}
 
 .btn-primary-outline{color:#5a98de;background-color:transparent; border-color:#5a98de}
 .btn-primary-outline:hover,
 .btn-primary-outline:focus,
 .btn-primary-outline:active,
-.btn-primary-outline.active{color:#0a6999;background-color:transparent;border-color:#0a6999}
+.btn-primary-outline.active,
+.btn-primary-outline.focus,
+.open>.btn-primary-outline.dropdown-toggle {
+	color: #0a6999;
+	background-color: transparent;
+	border-color: #0a6999;
+}
 
 .btn-secondary-outline{color:#3bb4f2;background-color:transparent;background-image:none;border-color:#3bb4f2}
-.btn-secondary-outline.active,.btn-secondary-outline.focus,.btn-secondary-outline:active,.btn-secondary-outline:focus,.open>.btn-secondary-outline.dropdown-toggle{color:#fff;background-color:#3bb4f2;border-color:#3bb4f2}
-.btn-secondary-outline:hover{color:#fff;background-color:#3bb4f2;border-color:#3bb4f2}
-.btn-secondary-outline.disabled.focus,.btn-secondary-outline.disabled:focus,.btn-secondary-outline:disabled.focus,.btn-secondary-outline:disabled:focus,fieldset[disabled] .btn-secondary-outline.focus,fieldset[disabled] .btn-secondary-outline:focus{border-color:#0f9ae0}
+.btn-secondary-outline:hover,
+.btn-secondary-outline:focus,
+.btn-secondary-outline:active,
+.btn-secondary-outline.active,
+.btn-secondary-outline.focus,
+.open > .btn-secondary-outline.dropdown-toggle{
+	color:#fff;
+	background-color:#3bb4f2;
+	border-color:#3bb4f2;
+}
 
 .btn-success-outline{color:#5eb95e;background-color:transparent;background-image:none;border-color:#5eb95e}
-.btn-success-outline.active,.btn-success-outline.focus,.btn-success-outline:active,.btn-success-outline:focus,.open>.btn-success-outline.dropdown-toggle{color:#fff;background-color:#5eb95e;border-color:#5eb95e}
-.btn-success-outline:hover{color:#fff;background-color:#5eb95e;border-color:#5eb95e}
-.btn-success-outline.disabled.focus,.btn-success-outline.disabled:focus,.btn-success-outline:disabled.focus,.btn-success-outline:disabled:focus,fieldset[disabled] .btn-success-outline.focus,fieldset[disabled] .btn-success-outline:focus{border-color:#429842}
+.btn-success-outline:hover,
+.btn-success-outline:focus,
+.btn-success-outline:active,
+.btn-success-outline.active,
+.btn-success-outline.focus,
+.open > .btn-success-outline.dropdown-toggle{
+	color:#fff;
+	background-color:#5eb95e;
+	border-color:#5eb95e;
+}
 
 .btn-warning-outline{color:#f37b1d;background-color:transparent;background-image:none;border-color:#f37b1d}
-.btn-warning-outline.active,.btn-warning-outline.focus,.btn-warning-outline:active,.btn-warning-outline:focus,.open>.btn-warning-outline.dropdown-toggle{color:#fff;background-color:#f37b1d;border-color:#f37b1d}
-.btn-warning-outline:hover{color:#fff;background-color:#f37b1d;border-color:#f37b1d}
-.btn-warning-outline.disabled.focus,.btn-warning-outline.disabled:focus,.btn-success-outline:disabled.focus,.btn-warning-outline:disabled:focus,fieldset[disabled] .btn-warning-outline.focus,fieldset[disabled] .btn-warning-outline:focus{border-color:#c85e0b}
+.btn-warning-outline:hover,
+.btn-warning-outline:focus,
+.btn-warning-outline:active,
+.btn-warning-outline.active,
+.btn-warning-outline.focus,
+.open > .btn-warning-outline.dropdown-toggle {
+	color: #fff;
+	background-color: #f37b1d;
+	border-color: #f37b1d;
+}
 
 .btn-danger-outline{color:#dd514c;background-color:transparent;background-image:none;border-color:#dd514c}
-.btn-danger-outline.active,.btn-danger-outline.focus,.btn-danger-outline:active,.btn-danger-outline:focus,.open>.btn-danger-outline.dropdown-toggle{color:#fff;background-color:#dd514c;border-color:#dd514c}
-.btn-danger-outline:hover{color:#fff;background-color:#dd514c;border-color:#dd514c}
-.btn-danger-outline.disabled.focus,.btn-danger-outline.disabled:focus,.btn-success-outline:disabled.focus,.btn-danger-outline:disabled:focus,fieldset[disabled] .btn-danger-outline.focus,fieldset[disabled] .btn-danger-outline:focus{border-color:#c62b26}
+.btn-danger-outline:hover,
+.btn-danger-outline:focus,
+.btn-danger-outline:active,
+.btn-danger-outline.active,
+.btn-danger-outline.focus,
+.open > .btn-danger-outline.dropdown-toggle {
+	color: #fff;
+	background-color: #dd514c;
+	border-color: #dd514c;
+}
 
 /*禁用状态*/
 .btn.disabled{cursor:not-allowed;background-image:none;opacity:.65;filter:alpha(opacity=65);box-shadow:none; pointer-events:none}
@@ -2016,6 +2058,7 @@ img-responsive 响应式    .radius 圆角图片    .round 圆形图片   .thumb
 }
 .duang-opacity img{-webkit-transition:opacity .1s linear;-moz-transition:opacity .1s linear;-o-transition:opacity .1s linear;transition:opacity .1s linear}
 .duang-opacity a:hover img,a:hover .opacity img{opacity:0.85;filter: alpha(opacity=85)}
+
 /*3.6.2 图集效果
 	Name:			modal_album
 	Example:
@@ -2057,7 +2100,8 @@ img-responsive 响应式    .radius 圆角图片    .round 圆形图片   .thumb
 H-ui采用Font Awesome 3.2.1的整套图标，因为是图标字体，所以可以像控制字体那样随心所欲改变这些图标的颜色、大小、阴影以及任何CSS能控制的属性
 */
 .iconpic{display:inline-block; vertical-align:sub;*vertical-align:middle;_vertical-align:middle; width:16px; height:16px; background-position:center; background-repeat:no-repeat}
-/*3.8 效果
+
+/*3.8 动画
 	Name:			style_animation
 	Example:		<input class="btn hui-animation" val="淡入" type="button" data-tra="hui-fadein" />
 */
@@ -2998,6 +3042,7 @@ H-ui采用Font Awesome 3.2.1的整套图标，因为是图标字体，所以可�
     40%,60%,80%{transform:scale(1.1) rotate(-3deg)}
     100%{transform:scale(1) rotate(0)}
 }
+
 /*4.1 按钮组
   Name:     mod_btn-group
   Example:
@@ -3090,7 +3135,16 @@ H-ui采用Font Awesome 3.2.1的整套图标，因为是图标字体，所以可�
 	.navbar-nav > ul > li > a{height: 44px!important;line-height: 44px!important}
 
     .nav-collapse > ul,.nav-collapse > ul >li {width: 100%;display: block}
-    .js .nav-collapse {position: absolute;display: block;float:none; clear:both;max-height: 0;clip: rect(0 0 0 0);margin-left: -15px; margin-right: -15px;overflow: hidden;
+    .js-nav-active .nav-collapse {
+    	position: absolute;
+    	display: block;
+    	float: none;
+    	clear: both;
+    	max-height: 0;
+    	clip: rect(0 0 0 0);
+    	margin-left: -15px;
+    	margin-right: -15px;
+    	overflow: hidden;
       -webkt-transition:max-height 284ms ease 0s;
       -moz-transition:max-height 284ms ease 0s;
       -o-transition:max-height 284ms ease 0s;
@@ -3178,7 +3232,7 @@ H-ui采用Font Awesome 3.2.1的整套图标，因为是图标字体，所以可�
 	<div class="topnav"><div class="cl"><div class="l">您好，欢迎来到Hui！</div><div class="r"><span class="r_nav">[ <a rel="nofollow" href="javascript:login();">登录</a> ]</span><span class="pipe">|</span><span class="r_nav">[ <a href="javascript:register();" rel="nofollow">注册</a> ]</span><span class="pipe">|</span><span class="r_nav"><a title="收藏" href="javascript:addFavorite();">收藏本站</a></span><span class="pipe">|</span><span class="r_nav"><a href="javascript:void(0)" onclick="setHome(this);" title="设为首页">设为首页</a></span></div></div></div>
 
 */
-.topnav{height:30px;line-height:30px;background-color;#f7f7f7;border-bottom:1px solid #EBEBEB; font-size:12px}
+.topnav{height:30px;line-height:30px;background-color:#f7f7f7;border-bottom:1px solid #EBEBEB; font-size:12px}
 .topbar{background-color: #ECECEC;border-bottom:1px solid #ddd}
 .topbar a{margin-right:5px}
 .r_nav{display:inline-block; color:#999}
@@ -3336,8 +3390,9 @@ H-ui采用Font Awesome 3.2.1的整套图标，因为是图标字体，所以可�
 .menu{background-color:#fff;border:solid 1px #f2f2f2; display: inline-block}
 .menu.radius{border-top-left-radius:0;border-top-right-radius:0}
 .menu.box-shadow{border-top:none}
-.menu > li{position:relative; clear:both;* float:left}
-.menu > li > a{ display: block;border-bottom:solid 1px #f2f2f2;padding:5px 20px; line-height:1.8;text-align:left;font-weight: normal;white-space:nowrap; vertical-align:top}
+.menu > li{position:relative; clear:both;float:left}
+.menu > li > a{
+	display: block;border-bottom:solid 1px #f2f2f2;padding:5px 20px; line-height:1.8;text-align:left;font-weight: normal;white-space:nowrap;}
 .menu > li:last-child > a{ border-bottom:none}
 .menu > li > a:hover,.menu > li > a:focus,.menu > li.open > a{ text-decoration:none;background-color:#fafafa}
 .menu > li > a .arrow{ position:absolute; top:50%; margin-top:-10px; right:5px;line-height: 20px; height: 20px; color: #999}
@@ -3407,7 +3462,7 @@ H-ui采用Font Awesome 3.2.1的整套图标，因为是图标字体，所以可�
 .slider-arrow.next{right:0px}
 
 /*4.5 选项卡
-	Name:			module_slider
+	Name:			module_tab
 	Sample:
 	<div id="tab_demo" class="HuiTab">
       <div class="tabBar cl"><span>选项卡一</span><span>选项卡二</span><span>自适应宽度</span></div>
@@ -3417,8 +3472,7 @@ H-ui采用Font Awesome 3.2.1的整套图标，因为是图标字体，所以可�
     </div>
 */
 .tabBar {border-bottom: 2px solid #222}
-.tabBar span {background-color: #e8e8e8;cursor: pointer;display: inline-block;float: left;
-font-weight: bold;height: 30px;line-height: 30px;padding: 0 15px}
+.tabBar span {background-color: #e8e8e8;cursor: pointer;float: left;font-weight: bold;height: 30px;line-height: 30px;padding: 0 15px}
 .tabBar span.current{background-color: #222;color: #fff}
 .tabCon {display: none}
 
@@ -3788,6 +3842,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus{color: #fff;text-deco
 	/*4.13.2 jiathis分享*/
 	.Hui-share.jiathis_style_24x24 .jtico{ background:none; padding-left:0!important}
 	.Hui-share.jiathis_style_24x24 .jiathis_separator{ margin-left:0; margin-right:6px}
+
 /*4.14 Panel 面板
 	Name:			mod_panel
 	Sample:
@@ -3840,8 +3895,13 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus{color: #fff;text-deco
 .rollpic .prev:hover{background-position:0 -38px}
 .rollpic .next{background-position:0 -76px;margin-left:5px}
 .rollpic .next:hover{background-position:0 -114px}
-.rollpicshow{float:left; border:solid 1px #ddd}
-.rollpicshow li{padding:10px}
+.rollpic .rollpicshow {
+	float: left;
+	border: solid 1px #ddd
+}
+.rollpic .rollpicshow li {
+	padding: 10px
+}
 
 /*4.17 搜索条
 	Name:			mod_searchBar
@@ -4300,7 +4360,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus{color: #fff;text-deco
 .input-prepend.date .add-on i,
 .input-group.date .input-group-addon span {cursor: pointer;width: 14px;height: 14px}
 
-/*4.27 分类检索
+/*4.28 分类检索
 	Name:			mod_select-category
 	Sample:
 <div class="select-category">
@@ -4320,13 +4380,13 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus{color: #fff;text-deco
 .select-category .item .dd{ margin-left:100px; text-align:left; font-size:14px; height:auto}
 .select-category .item .dd a{ display:inline-block;white-space:nowrap; overflow:hidden;text-overflow:ellipsis; margin-right:10px; padding:0 5px; text-decoration:none}
 
-/*4.28 sortable拖动*/
+/*4.29 sortable拖动*/
 .ui-state-highlight{ height:50px; margin-top:20px;border:1px solid #fcefa1;background:#fbf9ee;color:#363636}
 .sortable-control{ cursor:move}
 
-/*4.29 ColorPicker 颜色控件*/
+/*4.30 ColorPicker 颜色控件*/
 
-/*4.30 Markdown */
+/*4.31 Markdown */
 .markdown{word-wrap: break-word;}
 .markdown,
 .markdown h1,

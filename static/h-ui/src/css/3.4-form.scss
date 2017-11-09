@@ -1,0 +1,1881 @@
+/*3.4 表单
+	Name:			style_form
+	Example:
+	Explain:
+
+*/
+
+
+/*3.4.1 input,textarea 文本域 文本区域*/
+/*默认状态*/
+
+.input-text,
+.textarea {
+    box-sizing: border-box;
+    border: solid 1px #ddd;
+    width: 100%;
+    -webkit-transition: all 0.2s linear 0s;
+    -moz-transition: all 0.2s linear 0s;
+    -o-transition: all 0.2s linear 0s;
+    transition: all 0.2s linear 0s
+}
+
+.textarea {
+    height: 100px;
+    resize: none;
+    font-size: 14px;
+    padding: 4px
+}
+
+.textarea-numberbar {
+    position: absolute;
+    right: 20px;
+    bottom: 5px;
+    z-index: 1;
+    margin-bottom: 0
+}
+
+.textarea-length {
+    font-style: normal
+}
+
+.input-text:hover,
+.textarea:hover {
+    border: solid 1px #3bb4f2
+}
+
+
+/*得到焦点后*/
+
+.input-text.focus,
+.textarea.focus {
+    border: solid 1px #0f9ae0 \9;
+    border-color: rgba(82, 168, 236, 0.8);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6)
+}
+
+
+/*不可点击*/
+.input-text.disabled,
+.textarea.disabled,
+.input-text.disabled.focus,
+.textarea.disabled.focus {
+    background-color: #ededed;
+    cursor: default;
+    border-color: #ddd;
+    -webkit-box-shadow: inset 0 2px 2px #e8e7e7;
+    -moz-box-shadow: inset 0 2px 2px #e8e7e7;
+    box-shadow: inset 0 2px 2px #e8e7e7
+}
+
+
+/*只读状态*/
+.input-text.disabled,
+.textarea.disabled {
+    background-color: #e6e6e6;
+    cursor: default
+}
+
+
+/*阴影*/
+.input-text.box-shadow,
+.textarea.box-shadow {
+    -ms-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075)
+}
+
+
+/*行内元素*/
+
+.input-text.inline {
+    display: inline-block;
+    width: auto
+}
+
+
+/*3.4.2 checkbox radio  单选 多选
+	Example:
+<div class="skin-minimal">
+  <div class="check-box">
+    <input type="checkbox" id="checkbox-1">
+    <label for="checkbox-1">复选框</label>
+  </div>
+</div>
+
+<div class="skin-minimal">
+  <div class="radio-box">
+    <input type="radio" id="minimal-radio-1" name="demo-radio1">
+    <label for="minimal-radio-1">单选按钮</label>
+  </div>
+</div>
+	Explain:
+*/
+
+input[type="radio"],
+input[type="checkbox"] {
+    line-height: normal;
+    margin-top: -4px
+}
+
+.check-box,
+.radio-box {
+    display: inline-block;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: relative;
+    padding-left: 30px;
+    padding-right: 20px
+}
+
+.icheckbox,
+.icheckbox-red,
+.icheckbox-green,
+.icheckbox-blue,
+.icheckbox-aero,
+.icheckbox-grey,
+.icheckbox-orange,
+.icheckbox-yellow,
+.icheckbox-pink,
+.icheckbox-purple,
+.iradio,
+.iradio-red,
+.iradio-green,
+.iradio-blue,
+.iradio-aero,
+.iradio-grey,
+.iradio-orange,
+.iradio-yellow,
+.iradio-pink,
+.iradio-purple {
+    position: absolute;
+    top: 4px;
+    left: 0
+}
+
+@media (max-width: 767px) {
+    .responsive .check-box,
+    .responsive .radio-box {
+        display: block
+    }
+}
+
+
+/*3.4.2.1 jQuery.icheck.css*/
+
+
+/* iCheck.js Minimal skin
+----------------------------------- */
+
+.icheckbox,
+.iradio {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 18px;
+    height: 18px;
+    background: url(../images/iCheck/minimal.png) no-repeat;
+    border: none;
+    cursor: pointer
+}
+
+.icheckbox{
+    background-position: 0 0;
+    &.static:hover {
+        background-position: 0 0
+    }
+    &.hover,
+    &:hover {
+        background-position: -20px 0
+    }
+    &.checked {
+        background-position: -40px 0
+    }
+    &.disabled {
+        background-position: -60px 0;
+        cursor: default
+    }
+    &.checked.disabled {
+        background-position: -80px 0
+    }
+}
+
+
+.iradio{
+    background-position: -100px 0;
+    &.static:hover {
+        background-position: -100px 0;
+    }
+    &.hover,
+    &:hover {
+        background-position: -120px 0
+    }
+    &.checked {
+        background-position: -140px 0
+    }
+    &.disabled {
+        background-position: -160px 0;
+        cursor: default
+    }
+    &.checked.disabled {
+        background-position: -180px 0
+    }
+}
+
+
+/* Retina support */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+    .icheckbox,
+    .iradio {
+        background-image: url(../images/iCheck/minimal@2x.png);
+        -webkit-background-size: 200px 20px;
+        background-size: 200px 20px
+    }
+}
+
+
+/* red */
+
+.icheckbox-red,
+.iradio-red {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 18px;
+    height: 18px;
+    background: url(../images/iCheck/red.png) no-repeat;
+    border: none;
+    cursor: pointer
+}
+
+.icheckbox-red,
+.icheckbox-red.static:hover {
+    background-position: 0 0
+}
+
+.icheckbox-red.hover,
+.icheckbox-red:hover {
+    background-position: -20px 0
+}
+
+.icheckbox-red.checked {
+    background-position: -40px 0
+}
+
+.icheckbox-red.disabled {
+    background-position: -60px 0;
+    cursor: default
+}
+
+.icheckbox-red.checked.disabled {
+    background-position: -80px 0
+}
+
+.iradio-red,
+.iradio-red.static:hover {
+    background-position: -100px 0
+}
+
+.iradio-red.hover,
+.iradio-red:hover {
+    background-position: -120px 0
+}
+
+.iradio-red.checked {
+    background-position: -140px 0
+}
+
+.iradio-red.disabled {
+    background-position: -160px 0;
+    cursor: default
+}
+
+.iradio-red.checked.disabled {
+    background-position: -180px 0
+}
+
+
+/* Retina support */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+    .icheckbox-red,
+    .iradio-red {
+        background-image: url(../images/iCheck/red@2x.png);
+        -webkit-background-size: 200px 20px;
+        background-size: 200px 20px
+    }
+}
+
+
+/* green */
+
+.icheckbox-green,
+.iradio-green {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 18px;
+    height: 18px;
+    background: url(../images/iCheck/green.png) no-repeat;
+    border: none;
+    cursor: pointer
+}
+
+.icheckbox-green,
+.icheckbox-green.static:hover {
+    background-position: 0 0
+}
+
+.icheckbox-green.hover,
+.icheckbox-green:hover {
+    background-position: -20px 0
+}
+
+.icheckbox-green.checked {
+    background-position: -40px 0
+}
+
+.icheckbox-green.disabled {
+    background-position: -60px 0;
+    cursor: default
+}
+
+.icheckbox-green.checked.disabled {
+    background-position: -80px 0
+}
+
+.iradio-green,
+.iradio-green.static:hover {
+    background-position: -100px 0
+}
+
+.iradio-green.hover,
+.iradio-green:hover {
+    background-position: -120px 0
+}
+
+.iradio-green.checked {
+    background-position: -140px 0
+}
+
+.iradio-green.disabled {
+    background-position: -160px 0;
+    cursor: default
+}
+
+.iradio-green.checked.disabled {
+    background-position: -180px 0
+}
+
+
+/* Retina support */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+    .icheckbox-green,
+    .iradio-green {
+        background-image: url(../images/iCheck/green@2x.png);
+        -webkit-background-size: 200px 20px;
+        background-size: 200px 20px
+    }
+}
+
+
+/* blue */
+
+.icheckbox-blue,
+.iradio-blue {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 18px;
+    height: 18px;
+    background: url(../images/iCheck/blue.png) no-repeat;
+    border: none;
+    cursor: pointer
+}
+
+.icheckbox-blue,
+.icheckbox-blue.static:hover {
+    background-position: 0 0
+}
+
+.icheckbox-blue.hover,
+.icheckbox-blue:hover {
+    background-position: -20px 0
+}
+
+.icheckbox-blue.checked {
+    background-position: -40px 0
+}
+
+.icheckbox-blue.disabled {
+    background-position: -60px 0;
+    cursor: default
+}
+
+.icheckbox-blue.checked.disabled {
+    background-position: -80px 0
+}
+
+.iradio-blue,
+.iradio-blue.static:hover {
+    background-position: -100px 0
+}
+
+.iradio-blue.hover,
+.iradio-blue:hover {
+    background-position: -120px 0
+}
+
+.iradio-blue.checked {
+    background-position: -140px 0
+}
+
+.iradio-blue.disabled {
+    background-position: -160px 0;
+    cursor: default
+}
+
+.iradio-blue.checked.disabled {
+    background-position: -180px 0
+}
+
+
+/* Retina support */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+    .icheckbox-blue,
+    .iradio-blue {
+        background-image: url(../images/iCheck/blue@2x.png);
+        -webkit-background-size: 200px 20px;
+        background-size: 200px 20px
+    }
+}
+
+
+/* aero */
+
+.icheckbox-aero,
+.iradio-aero {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 18px;
+    height: 18px;
+    background: url(../images/iCheck/aero.png) no-repeat;
+    border: none;
+    cursor: pointer
+}
+
+.icheckbox-aero,
+.icheckbox-aero.static:hover {
+    background-position: 0 0
+}
+
+.icheckbox-aero.hover,
+.icheckbox-aero:hover {
+    background-position: -20px 0
+}
+
+.icheckbox-aero.checked {
+    background-position: -40px 0
+}
+
+.icheckbox-aero.disabled {
+    background-position: -60px 0;
+    cursor: default
+}
+
+.icheckbox-aero.checked.disabled {
+    background-position: -80px 0
+}
+
+.iradio-aero,
+.iradio-aero.static:hover {
+    background-position: -100px 0
+}
+
+.iradio-aero.hover,
+.iradio-aero:hover {
+    background-position: -120px 0
+}
+
+.iradio-aero.checked {
+    background-position: -140px 0
+}
+
+.iradio-aero.disabled {
+    background-position: -160px 0;
+    cursor: default
+}
+
+.iradio-aero.checked.disabled {
+    background-position: -180px 0
+}
+
+
+/* Retina support */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+    .icheckbox-aero,
+    .iradio-aero {
+        background-image: url(../images/iCheck/aero@2x.png);
+        -webkit-background-size: 200px 20px;
+        background-size: 200px 20px
+    }
+}
+
+
+/* grey */
+
+.icheckbox-grey,
+.iradio-grey {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 18px;
+    height: 18px;
+    background: url(../images/iCheck/grey.png) no-repeat;
+    border: none;
+    cursor: pointer
+}
+
+.icheckbox-grey,
+.icheckbox-grey.static:hover {
+    background-position: 0 0
+}
+
+.icheckbox-grey.hover,
+.icheckbox-grey:hover {
+    background-position: -20px 0
+}
+
+.icheckbox-grey.checked {
+    background-position: -40px 0
+}
+
+.icheckbox-grey.disabled {
+    background-position: -60px 0;
+    cursor: default
+}
+
+.icheckbox-grey.checked.disabled {
+    background-position: -80px 0
+}
+
+.iradio-grey,
+.iradio-grey.static:hover {
+    background-position: -100px 0
+}
+
+.iradio-grey.hover,
+.iradio-grey:hover {
+    background-position: -120px 0
+}
+
+.iradio-grey.checked {
+    background-position: -140px 0
+}
+
+.iradio-grey.disabled {
+    background-position: -160px 0;
+    cursor: default
+}
+
+.iradio-grey.checked.disabled {
+    background-position: -180px 0
+}
+
+
+/* Retina support */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+    .icheckbox-grey,
+    .iradio-grey {
+        background-image: url(../images/iCheck/grey@2x.png);
+        -webkit-background-size: 200px 20px;
+        background-size: 200px 20px
+    }
+}
+
+
+/* orange */
+
+.icheckbox-orange,
+.iradio-orange {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 18px;
+    height: 18px;
+    background: url(../images/iCheck/orange.png) no-repeat;
+    border: none;
+    cursor: pointer
+}
+
+.icheckbox-orange,
+.icheckbox-orange.static:hover {
+    background-position: 0 0
+}
+
+.icheckbox-orange.hover,
+.icheckbox-orange:hover {
+    background-position: -20px 0
+}
+
+.icheckbox-orange.checked {
+    background-position: -40px 0
+}
+
+.icheckbox-orange.disabled {
+    background-position: -60px 0;
+    cursor: default
+}
+
+.icheckbox-orange.checked.disabled {
+    background-position: -80px 0
+}
+
+.iradio-orange,
+.iradio-orange.static:hover {
+    background-position: -100px 0
+}
+
+.iradio-orange.hover,
+.iradio-orange:hover {
+    background-position: -120px 0
+}
+
+.iradio-orange.checked {
+    background-position: -140px 0
+}
+
+.iradio-orange.disabled {
+    background-position: -160px 0;
+    cursor: default
+}
+
+.iradio-orange.checked.disabled {
+    background-position: -180px 0
+}
+
+
+/* Retina support */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+    .icheckbox-orange,
+    .iradio-orange {
+        background-image: url(../images/iCheck/orange@2x.png);
+        -webkit-background-size: 200px 20px;
+        background-size: 200px 20px
+    }
+}
+
+
+/* yellow */
+
+.icheckbox-yellow,
+.iradio-yellow {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 18px;
+    height: 18px;
+    background: url(../images/iCheck/yellow.png) no-repeat;
+    border: none;
+    cursor: pointer
+}
+
+.icheckbox-yellow,
+.icheckbox-yellow.static:hover {
+    background-position: 0 0
+}
+
+.icheckbox-yellow.hover,
+.icheckbox-yellow:hover {
+    background-position: -20px 0
+}
+
+.icheckbox-yellow.checked {
+    background-position: -40px 0
+}
+
+.icheckbox-yellow.disabled {
+    background-position: -60px 0;
+    cursor: default
+}
+
+.icheckbox-yellow.checked.disabled {
+    background-position: -80px 0
+}
+
+.iradio-yellow,
+.iradio-yellow.static:hover {
+    background-position: -100px 0
+}
+
+.iradio-yellow.hover,
+.iradio-yellow:hover {
+    background-position: -120px 0
+}
+
+.iradio-yellow.checked {
+    background-position: -140px 0
+}
+
+.iradio-yellow.disabled {
+    background-position: -160px 0;
+    cursor: default
+}
+
+.iradio-yellow.checked.disabled {
+    background-position: -180px 0
+}
+
+
+/* Retina support */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+    .icheckbox-yellow,
+    .iradio-yellow {
+        background-image: url(../images/iCheck/yellow@2x.png);
+        -webkit-background-size: 200px 20px;
+        background-size: 200px 20px
+    }
+}
+
+
+/* pink */
+
+.icheckbox-pink,
+.iradio-pink {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 18px;
+    height: 18px;
+    background: url(../images/iCheck/pink.png) no-repeat;
+    border: none;
+    cursor: pointer
+}
+
+.icheckbox-pink,
+.icheckbox-pink.static:hover {
+    background-position: 0 0
+}
+
+.icheckbox-pink.hover,
+.icheckbox-pink:hover {
+    background-position: -20px 0
+}
+
+.icheckbox-pink.checked {
+    background-position: -40px 0
+}
+
+.icheckbox-pink.disabled {
+    background-position: -60px 0;
+    cursor: default
+}
+
+.icheckbox-pink.checked.disabled {
+    background-position: -80px 0
+}
+
+.iradio-pink,
+.iradio-pink.static:hover {
+    background-position: -100px 0
+}
+
+.iradio-pink.hover,
+.iradio-pink:hover {
+    background-position: -120px 0
+}
+
+.iradio-pink.checked {
+    background-position: -140px 0
+}
+
+.iradio-pink.disabled {
+    background-position: -160px 0;
+    cursor: default
+}
+
+.iradio-pink.checked.disabled {
+    background-position: -180px 0
+}
+
+
+/* Retina support */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+    .icheckbox-pink,
+    .iradio-pink {
+        background-image: url(../images/iCheck/pink@2x.png);
+        -webkit-background-size: 200px 20px;
+        background-size: 200px 20px
+    }
+}
+
+
+/* purple */
+
+.icheckbox-purple,
+.iradio-purple {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 18px;
+    height: 18px;
+    background: url(../images/iCheck/purple.png) no-repeat;
+    border: none;
+    cursor: pointer
+}
+
+.icheckbox-purple,
+.icheckbox-purple.static:hover {
+    background-position: 0 0
+}
+
+.icheckbox-purple.hover,
+.icheckbox-purple:hover {
+    background-position: -20px 0
+}
+
+.icheckbox-purple.checked {
+    background-position: -40px 0
+}
+
+.icheckbox-purple.disabled {
+    background-position: -60px 0;
+    cursor: default
+}
+
+.icheckbox-purple.checked.disabled {
+    background-position: -80px 0
+}
+
+.iradio-purple,
+.iradio-purple.static:hover {
+    background-position: -100px 0
+}
+
+.iradio-purple.hover,
+.iradio-purple:hover {
+    background-position: -120px 0
+}
+
+.iradio-purple.checked {
+    background-position: -140px 0
+}
+
+.iradio-purple.disabled {
+    background-position: -160px 0;
+    cursor: default
+}
+
+.iradio-purple.checked.disabled {
+    background-position: -180px 0
+}
+
+
+/* Retina support */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+    .icheckbox-purple,
+    .iradio-purple {
+        background-image: url(../images/iCheck/purple@2x.png);
+        -webkit-background-size: 200px 20px;
+        background-size: 200px 20px
+    }
+}
+
+
+/*3.4.2.2 Bootsrtap.Switch.css*/
+.has-switch {
+    display: inline-block;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    position: relative;
+    text-align: left;
+    overflow: hidden;
+    line-height: 8px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    min-width: 100px;
+    &.size-MINI {
+        min-width: 72px
+    }
+    &.size-S {
+        min-width: 80px
+    }
+    &.size-L {
+        min-width: 120px
+    }
+    &.deactivate {
+        opacity: .5;
+        filter: alpha(opacity=50);
+        cursor: default!important;
+        label,
+        span {
+            cursor: default!important
+        }
+    }
+    > div {
+        display: inline-block;
+        width: 150%;
+        position: relative;
+        top: 0;
+        &.switch-animate {
+            -webkit-transition: left .5s;
+            -moz-transition: left .5s;
+            -o-transition: left .5s;
+            transition: left .5s
+        }
+        &.switch-off {
+            left: -50%
+        }
+        &.switch-on {
+            left: 0
+        }
+    }
+    input[type=checkbox] {
+        display: none
+    }
+    span,
+    label {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        cursor: pointer;
+        position: relative;
+        display: inline-block;
+        padding-bottom: 4px;
+        padding-top: 4px;
+        font-size: 14px;
+        line-height: 20px;
+        &.size-MINI {
+            padding-bottom: 4px;
+            padding-top: 4px;
+            font-size: 10px;
+            line-height: 9px;
+        }
+        &.size-S {
+            padding-bottom: 3px;
+            padding-top: 3px;
+            font-size: 12px;
+            line-height: 18px;
+        }
+        &.size-L {
+            padding-bottom: 9px;
+            padding-top: 9px;
+            font-size: 16px;
+            line-height: normal;
+        }
+    }
+    label {
+        text-align: center;
+        margin-top: -1px;
+        margin-bottom: -1px;
+        z-index: 100;
+        width: 34%;
+        border-left: 1px solid #ccc;
+        border-right: 1px solid #ccc;
+        color: #fff;
+        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+        background-color: #f5f5f5;
+        background-image: -moz-linear-gradient(top, #fff, #e6e6e6);
+        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#e6e6e6));
+        background-image: -webkit-linear-gradient(top, #fff, #e6e6e6);
+        background-image: -o-linear-gradient(top, #fff, #e6e6e6);
+        background-image: linear-gradient(to bottom, #fff, #e6e6e6);
+        background-repeat: repeat-x;
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
+        border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+        border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+        *background-color: #e6e6e6;
+        filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+        &:hover,
+        &:focus,
+        &:active,
+        &.active,
+        &.disabled,
+        &[disabled] {
+            color: #fff;
+            background-color: #e6e6e6;
+            *background-color: #d9d9d9;
+        }
+        &:active,
+        &.active {
+            background-color: #ccc \9;
+        }
+        i {
+            color: #000;
+            text-shadow: 0 1px 0 #fff;
+            line-height: 18px;
+            pointer-events: none
+        }
+    }
+    span {
+        text-align: center;
+        z-index: 1;
+        width: 33%;
+        &.switch-left {
+            -webkit-border-top-left-radius: 4px;
+            -moz-border-radius-topleft: 4px;
+            border-top-left-radius: 4px;
+            -webkit-border-bottom-left-radius: 4px;
+            -moz-border-radius-bottomleft: 4px;
+            border-bottom-left-radius: 4px
+        }
+        &.switch-right {
+            color: #333;
+            text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+            background-color: #f0f0f0;
+            background-image: -moz-linear-gradient(top, #e6e6e6, #fff);
+            background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#e6e6e6), to(#fff));
+            background-image: -webkit-linear-gradient(top, #e6e6e6, #fff);
+            background-image: -o-linear-gradient(top, #e6e6e6, #fff);
+            background-image: linear-gradient(to bottom, #e6e6e6, #fff);
+            background-repeat: repeat-x;
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffe6e6e6', endColorstr='#ffffffff', GradientType=0);
+            border-color: #fff #fff #d9d9d9;
+            border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+            *background-color: #fff;
+            filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+            &:hover,
+            &:focus,
+            &:active,
+            &.active,
+            &.disabled,
+            &[disabled] {
+                color: #333;
+                background-color: #fff;
+                *background-color: #f2f2f2;
+            }
+            &:active,
+            &.active {
+                background-color: #e6e6e6 \9;
+            }
+        }
+            
+        &.switch-primary,
+        &.switch-left {
+            color: #fff;
+            text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+            background-color: #005fcc;
+            background-image: -moz-linear-gradient(top, #04c, #08c);
+            background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#04c), to(#08c));
+            background-image: -webkit-linear-gradient(top, #04c, #08c);
+            background-image: -o-linear-gradient(top, #04c, #08c);
+            background-image: linear-gradient(to bottom, #04c, #08c);
+            background-repeat: repeat-x;
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0044cc', endColorstr='#ff0088cc', GradientType=0);
+            border-color: #08c #08c #005580;
+            border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+            *background-color: #08c;
+            filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+            &:hover,
+            &:focus,
+            &:active,
+            &.active,
+            &.disabled,
+            &[disabled] {
+                color: #fff;
+                background-color: #08c;
+                *background-color: #0077b3;
+            }
+            &:active,
+            &.active {
+                background-color: #069 \9;
+            }
+        }
+
+        &.switch-info {
+            color: #fff;
+            text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+            background-color: #41a7c5;
+            background-image: -moz-linear-gradient(top, #2f96b4, #5bc0de);
+            background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#2f96b4), to(#5bc0de));
+            background-image: -webkit-linear-gradient(top, #2f96b4, #5bc0de);
+            background-image: -o-linear-gradient(top, #2f96b4, #5bc0de);
+            background-image: linear-gradient(to bottom, #2f96b4, #5bc0de);
+            background-repeat: repeat-x;
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff2f96b4', endColorstr='#ff5bc0de', GradientType=0);
+            border-color: #5bc0de #5bc0de #28a1c5;
+            border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+            *background-color: #5bc0de;
+            filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+            &:hover,
+            &:focus,
+            &:active,
+            &.active,
+            &.disabled,
+            &[disabled] {
+                color: #fff;
+                background-color: #5bc0de;
+                *background-color: #46b8da;
+            }
+            &:active,
+            &.active {
+                background-color: #31b0d5 \9
+            }
+        }
+        
+        
+        &.switch-success {
+            color: #fff;
+            text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+            background-color: #58b058;
+            background-image: -moz-linear-gradient(top, #51a351, #62c462);
+            background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#51a351), to(#62c462));
+            background-image: -webkit-linear-gradient(top, #51a351, #62c462);
+            background-image: -o-linear-gradient(top, #51a351, #62c462);
+            background-image: linear-gradient(to bottom, #51a351, #62c462);
+            background-repeat: repeat-x;
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff51a351', endColorstr='#ff62c462', GradientType=0);
+            border-color: #62c462 #62c462 #3b9e3b;
+            border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+            *background-color: #62c462;
+            filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+            &:hover,
+            &:focus,
+            &:active,
+            &.active,
+            &.disabled,
+            &[disabled] {
+                color: #fff;
+                background-color: #62c462;
+                *background-color: #4fbd4f
+            }
+            &:active,
+            &.active {
+                background-color: #42b142 \9;
+            }
+        }
+        &.switch-warning {
+            color: #fff;
+            text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+            background-color: #f9a123;
+            background-image: -moz-linear-gradient(top, #f89406, #fbb450);
+            background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f89406), to(#fbb450));
+            background-image: -webkit-linear-gradient(top, #f89406, #fbb450);
+            background-image: -o-linear-gradient(top, #f89406, #fbb450);
+            background-image: linear-gradient(to bottom, #f89406, #fbb450);
+            background-repeat: repeat-x;
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff89406', endColorstr='#fffbb450', GradientType=0);
+            border-color: #fbb450 #fbb450 #f89406;
+            border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+            *background-color: #fbb450;
+            filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+            &:hover,
+            &:focus,
+            &:active,
+            &.active,
+            &.disabled,
+            &[disabled] {
+                color: #fff;
+                background-color: #fbb450;
+                *background-color: #faa937
+            }
+            &:active,
+            &.active {
+                background-color: #fa9f1e \9
+            }
+        }
+        &.switch-danger {
+            color: #fff;
+            text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+            background-color: #d14641;
+            background-image: -moz-linear-gradient(top, #bd362f, #ee5f5b);
+            background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#bd362f), to(#ee5f5b));
+            background-image: -webkit-linear-gradient(top, #bd362f, #ee5f5b);
+            background-image: -o-linear-gradient(top, #bd362f, #ee5f5b);
+            background-image: linear-gradient(to bottom, #bd362f, #ee5f5b);
+            background-repeat: repeat-x;
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffbd362f', endColorstr='#ffee5f5b', GradientType=0);
+            border-color: #ee5f5b #ee5f5b #e51d18;
+            border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+            *background-color: #ee5f5b;
+            filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+            &:hover,
+            &:focus,
+            &:active,
+            &.active,
+            &.disabled,
+            &[disabled] {
+                color: #fff;
+                background-color: #ee5f5b;
+                *background-color: #ec4844;
+            }
+            &:active,
+            &.active {
+                background-color: #e9322d \9;
+            }
+        }
+    }
+}
+
+
+/*3.4.3 select 下拉框
+<span class="select-box">
+  <select class="select" size="1" name="demo">
+    <option value="1" selected>默认</option>
+    <option value="2">菜单二</option>
+    <option value="3">菜单三</option>
+  </select>
+</span>
+	Explain:
+	select 是表单元素中最难美化的一个，有两种美化方式：
+		1、修改源生的，修改有限，只能修改个边框，背景，字体。优点：程序方便操作；缺点：丑，浏览器之间存在很大差异。
+		2、将源生的隐藏掉，用其他元素（如div li）通过js模拟下拉交互，然后再传值给源生的select。优点：好看，兼容好；缺点：代码冗余，依赖JS，不方便操作
+*/
+
+
+/*方法一、修改源生*/
+.select {
+    border: solid 1px #ddd;
+    box-sizing: border-box;
+    cursor: pointer;
+    line-height: normal;
+    font-weight: normal;
+    width: 100%;
+    white-space: nowrap;
+    font-size: 14px;
+}
+.select-box {
+    border: solid 1px #ddd;
+    box-sizing: border-box;
+    vertical-align: middle;
+    width: 100%;
+    display: inline-block;
+    padding: 4px 5px;
+    .select {
+        border: none
+    }
+    &.inline,
+    &.inline .select {
+        width: auto
+    }
+    &.size-M {
+        padding: 4px 5px;
+        .select {
+            font-size: 14px
+        }
+    }
+    &.size-MINI {
+        padding: 0px 5px;
+        .select {
+            font-size: 12px
+        }
+    }
+    &.size-S {
+        padding: 3px 5px;
+        .select {
+            font-size: 12px;
+        }
+    }
+    &.size-L {
+        padding: 8px 5px;
+        .select {
+            font-size: 16px
+        }
+    }
+    &.size-XL {
+        padding: 10px 5px;
+        .select {
+            font-size: 18px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .responsive{
+        .select-box {
+            border: none;
+        }
+        .select-box .select,
+        .select {
+            border: solid 1px #ddd;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .select-box,
+        .select-box.size-M,
+        .select-box.size-MINI,
+        .select-box.size-S,
+        .select-box.size-L,
+        .select-box.size-XL {
+            height: auto;
+            padding: 0;
+        }
+    }
+}
+
+
+/*方法二、JS模拟
+<select name="demo" data-enabled="false">
+  <option value="1" selected>默认</option>
+  <option value="2">菜单二</option>
+  <option value="3">菜单三</option>
+</select>
+需要引用2个js文件
+<script type="text/javascript" src="lib/squid.js"></script>
+<script type="text/javascript" src="lib/jselect-1.0.js"></script>
+页面调用方法
+<script type="text/javascript">
+squid.swing.jselect()
+</script>
+*/
+
+.select-wrapper {
+    position: relative;
+    display: inline-block;
+    font-size: 14px;
+    cursor: default
+}
+
+.select-default {
+    zoom: 1;
+    display: block;
+    padding-left: 10px;
+    padding-right: 30px;
+    background-color: #fff;
+    border: solid 1px #d0d0d0;
+    height: 34px;
+    line-height: 34px
+}
+
+.jsselect.radius {
+    overflow: visible;
+    .select-default {
+        border-radius: 4px
+    }
+    .select-list {
+        border-radius: 4px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+
+    }
+}
+
+.select-icon {
+    position: absolute;
+    height: 8px;
+    width: 12px;
+    right: 10px;
+    top: 50%;
+    margin-top: -4px;
+    background: url(../images/jselect/iconpic-arrow-down2.png) no-repeat center
+}
+
+.unselectable {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.select-list {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    z-index: 1;
+    line-height: 34px;
+    max-height: 320px;
+    overflow: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    -moz-box-shadow: 0 1px 2px rgba(0, 1, 1, 0.2);
+    -webkit-box-shadow: 0 1px 2px rgba(0, 1, 1, 0.2);
+    box-shadow: 0 1px 2px rgba(0, 1, 1, 0.2);
+    box-sizing: border-box;
+    border: solid 1px #d0d0d0;
+    _height: expression(this.scrollHeight > 319 ? "320px": "auto");
+    .select-item {
+        margin: 0;
+        padding: 0;
+        .selected {
+            background-color: #148cf1;
+            color: #fff
+        }
+    }
+    .select-option {
+        background: #fff;
+        line-height: 34px;
+        text-align: left;
+        white-space: nowrap;
+        cursor: pointer;
+        border-bottom: 1px solid #f2f2f2;
+        padding: 0 10px;
+    }
+}
+
+/*3.4.4 input-file 文件上传
+	Example:
+<span class="btn-upload">
+  <a style="z-index:2;" href="javascript:void();" class="btn btn-primary radius"><i class="iconfont">&#xf0020;</i> 浏览文件<input type="file" multiple name="file_0" class="input-file"></a>
+</span>
+	Explain：把文件选择域设为透明,通过绝对定位覆盖在长的好看的按钮上面。
+*/
+
+.btn-upload {
+    position: relative;
+    display: inline-block;
+    height: 31px;
+    *display: inline;
+    overflow: hidden;
+    vertical-align: middle;
+    cursor: pointer;
+    .upload-url {
+        cursor: pointer;
+        width: 300px
+    }
+    .input-file {
+        position: absolute;
+        right: 0;
+        top: 0;
+        cursor: pointer;
+        z-index: 1;
+        font-size: 30em;
+        opacity: 0;
+        filter: alpha(opacity=0)
+    }
+}
+
+
+.form-group .upload-btn {
+    margin-left: -1px
+}
+
+.btn-upload .icon-add,
+.btn-upload .icon-minus {
+    cursor: pointer;
+    display: inline-block;
+    font-family: Arial;
+    font-size: 30px;
+    height: 31px;
+    line-height: 31px;
+    text-align: center;
+    vertical-align: middle;
+    width: 36px
+}
+
+@media (max-width: 767px) {
+    .upload-btn {
+        display: none
+    }
+    .upload-url {
+        display: none
+    }
+}
+
+
+/*数字表单*/
+
+.numberControlBox {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle
+}
+
+.ncb-up,
+.ncb-down {
+    font-size: 0px;
+    display: block;
+    height: 10px;
+    background-color: #f4f4f4;
+    background: -moz-linear-gradient(top, rgb(255, 255, 255) 0%, rgb(230, 230, 230) 50%, rgb(255, 255, 255) 100%);
+    width: 24px;
+    border: 1px solid #d1d1d1;
+    cursor: pointer
+}
+
+.ncb-up {
+    margin-bottom: 1px
+}
+
+.numberControlBox .ncb_ico {
+    display: block;
+    height: 10px;
+    background-image: url(../images/iconpic-arrow.png);
+    background-repeat: no-repeat
+}
+
+.ncb-up .ncb_ico {
+    background-position: -22px center
+}
+
+.ncb-down .ncb_ico {
+    background-position: 1px center
+}
+
+.ncb_btn_hover {
+    border: 1px solid #9dc7e7;
+    background-color: #dff2fc;
+    background: -moz-linear-gradient(top, rgb(255, 255, 255) 0%, rgb(210, 237, 250) 50%, rgb(255, 255, 255) 100%)
+}
+
+.ncb_btn_selected {
+    border: 1px solid #6198c2;
+    background-color: #aee1fb;
+    background: -moz-linear-gradient(top, rgb(255, 255, 255) 0%, rgb(174, 225, 251) 50%, rgb(255, 255, 255) 100%)
+}
+
+.input-text[type="number"] {
+    width: 80px
+}
+
+
+/*3.4.5 spinner 控件*/
+.spinner {
+    display: block;
+    overflow: hidden;
+    width: 100px;
+    position: relative;
+    padding-left: 29px;
+    padding-right: 29px;
+    .input-text {
+        height: 30px;
+        text-align: center;
+        width: 100%
+    }
+    a {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        height: 28px;
+        line-height: 28px;
+        width: 28px;
+        cursor: pointer;
+        outline: 0;
+        text-decoration: none;
+        text-align: center;
+        font-size: 16px;
+        border: 1px solid #ddd;
+        background-color: #f7f7f7;
+        &:hover {
+            text-decoration: none
+        }
+        i {
+            font-style: normal;
+        }
+        &.subtract {
+            left: 0
+        }
+        &.add {
+            right: 0
+        }
+        &.add.disabled,
+        &.subtract.disabled {
+            color: #999;
+            cursor: not-allowed
+        }
+    }
+}
+
+
+/*3.4.6 邮箱提示*/
+
+.emailSug-wrapper {
+    position: absolute;
+    background: #fff;
+    text-align: left;
+    .emailSug-list .emailSug-item {
+        font-size: 14px;
+        height: 25px;
+        line-height: 25px;
+        padding-left: 10px;
+        color: #333;
+        &.active {
+            background: #5a98de;
+            cursor: pointer;
+            color: #fff
+        }
+    }
+}
+
+
+/*3.4.7 表单布局*/
+
+label,
+.placeholder {
+    font-size: 14px
+}
+
+.form legend {
+    font-size: 20px
+}
+
+
+/*表单名称*/
+
+.form .row {
+    margin-top: 15px
+}
+
+
+/*表单行*/
+
+.form-label {
+    display: block;
+    color: #555
+}
+
+
+/*表单标题*/
+
+.formControls {
+    position: relative;
+    /*表单默认值*/
+    .form-label {
+        margin-top: 3px;
+        cursor: text;
+        text-align: right
+    }
+    .Validform_checktip {
+        margin-top: 5px
+    }
+}
+
+
+/*表单控制区*/
+
+.formControls > * {
+    vertical-align: middle
+}
+
+.placeholder {
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    color: #c6c6c6;
+    cursor: text
+}
+
+
+
+
+/*设置placeholder颜色*/
+::-webkit-input-placeholder {
+    color: #b3b3b3
+}
+/* WebKit browsers */
+::-moz-placeholder {
+    color: #b3b3b3
+}
+/* Mozilla Firefox 4 to 18 */
+::-moz-placeholder {
+    color: #b3b3b3
+}
+/* Mozilla Firefox 19+ */
+::-ms-input-placeholder {
+    color: #b3b3b3
+}
+
+/* Internet Explorer 10+ */
+.placeholder {
+    color: #adb0be;
+    position: absolute;
+    z-index: 9
+}
+/*不兼容placeholder属性的浏览器，可使用<span class="placeholder">表单默认值</span>*/
+
+@media (max-width: 767px) {
+    .form-horizontal .form-label {
+        text-align: left
+    }
+}
+
+
+/*3.4.8 表单验证*/
+
+
+/*文本框的错误状态*/
+
+.Validform_error,
+input.error,
+select.error,
+textarea.error {
+    background-color: #fbe2e2;
+    border-color: #c66161;
+    color: #c00
+}
+
+.Validform_wrong,
+.Validform_right,
+.Validform_warning {
+    display: inline-block;
+    height: 20px;
+    font-size: 12px;
+    vertical-align: middle;
+    padding-left: 25px
+}
+
+
+/*错误*/
+
+.Validform_wrong {
+    background: url(../images/validform/iconpic-error.png) no-repeat 0 center;
+    color: #ef392b
+}
+
+
+/*正确*/
+
+.Validform_right {
+    background: url(../images/validform/iconpic-right.png) no-repeat 0 center
+}
+
+
+/*警告*/
+
+.Validform_warning {
+    background: url(../images/validform/iconpic-warning.png) no-repeat 0 center;
+    color: #777
+}
+
+label.error {
+    position: absolute;
+    right: 18px;
+    top: 5px;
+    color: #ef392b;
+    font-size: 12px
+}
+
+.check-box label.error,
+.radio-box label.error {
+    right: auto;
+    width: 150px;
+    left: 210px;
+    top: -2px
+}
+
+
+/*密码等级*/
+
+.passwordStrength{
+    b {
+        font-weight: 400
+    }
+    b,
+    span {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 16px;
+        line-height: 18px\9;
+        height: 16px
+    }
+    span {
+        width: 57px;
+        text-align: center;
+        background-color: #d0d0d0;
+        border-right: 1px solid #fff
+    }
+    .last {
+        border-right: none
+    }
+    .bgStrength {
+        color: #fff;
+        background-color: #fcc900
+    }
+
+}
+
+
+/*Validform对话框*/
+#Validform_msg {
+    font-size: 14px;
+    width: 300px;
+    -webkit-box-shadow: 2px 2px 3px #aaa;
+    -moz-box-shadow: 2px 2px 3px #aaa;
+    background: #fff;
+    position: absolute;
+    top: 0px;
+    right: 50px;
+    z-index: 99999;
+    display: none;
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#999999');
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+    .iframe {
+        position: absolute;
+        left: 0px;
+        top: -1px;
+        z-index: -1;
+    }
+    .Validform_title {
+        font-size: 20px;
+        padding: 10px;
+        text-align: left;
+        color: #fff;
+        position: relative;
+        background-color: #fcc900
+    }
+    a.Validform_close{
+        &:link,
+        &:visited {
+            position: absolute;
+            right: 8px;
+            top: 6px;
+            color: #fff;
+            text-decoration: none;
+            font-family: Verdana;
+        }
+        &:hover {
+            color: #fff
+        }
+    }
+    .Validform_info {
+        padding: 10px;
+        border: 1px solid #bbb;
+        border-top: none;
+        text-align: left
+    }
+}
+
+@media (max-width: 767px) {
+    .responsive .Validform_checktip {
+        margin-top: 10px
+    }
+}

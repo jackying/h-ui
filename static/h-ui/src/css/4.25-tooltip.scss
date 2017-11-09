@@ -1,0 +1,111 @@
+/*4.25 tooltip 效果
+	Name:			mod_tooltip
+*/
+
+.tooltip {
+    position: absolute;
+    z-index: 1070;
+    display: block;
+    font-size: 12px;
+    line-height: 1.4;
+    visibility: visible;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    .tooltip-inner {
+        max-width: 200px;
+        padding: 3px 8px;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        background-color: #000;
+        border-radius: 4px
+    }
+
+    .tooltip-arrow {
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-color: transparent;
+        border-style: solid
+    }
+    &.in {
+        filter: alpha(opacity=90);
+        opacity: .9
+    }
+    &.top {
+        padding: 5px 0;
+        margin-top: -3px;
+        .tooltip-arrow {
+            bottom: 0;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px 5px 0;
+            border-top-color: #000
+        }
+    }
+    &.top-left{
+        .tooltip-arrow {
+            bottom: 0;
+            left: 5px;
+            border-width: 5px 5px 0;
+            border-top-color: #000
+        }
+    }
+    &.top-right{
+        .tooltip-arrow {
+            right: 5px;
+            bottom: 0;
+            border-width: 5px 5px 0;
+            border-top-color: #000
+        }
+    }
+    &.right {
+        padding: 0 5px;
+        margin-left: 3px;
+        .tooltip-arrow {
+            top: 50%;
+            left: 0;
+            margin-top: -5px;
+            border-width: 5px 5px 5px 0;
+            border-right-color: #000
+        }
+    }
+    &.bottom {
+        padding: 5px 0;
+        margin-top: 3px;
+        .tooltip-arrow {
+            top: 0;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 0 5px 5px;
+            border-bottom-color: #000
+        }
+    }
+    &.bottom-left{
+        .tooltip-arrow {
+            top: 0;
+            left: 5px;
+            border-width: 0 5px 5px;
+            border-bottom-color: #000
+        }
+    }
+    &.bottom-right{
+        .tooltip-arrow {
+            top: 0;
+            right: 5px;
+            border-width: 0 5px 5px;
+            border-bottom-color: #000
+        }
+    }
+    &.left {
+        padding: 0 5px;
+        margin-left: -3px;
+        .tooltip-arrow {
+            top: 50%;
+            right: 0;
+            margin-top: -5px;
+            border-width: 5px 0 5px 5px;
+            border-left-color: #000
+        }
+    }   
+}

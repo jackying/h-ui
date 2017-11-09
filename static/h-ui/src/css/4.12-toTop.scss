@@ -1,0 +1,68 @@
+/*4.12 右侧悬浮工具
+	Name:		modal_tools-right
+*/
+
+.tools-right {
+    position: fixed;
+    right: 15px;
+    z-index: 999;
+    cursor: pointer;
+    visibility: visible;
+    background-color: #fff;
+    border: 1px solid #d9d9d9;
+    color: #9c9c9c;
+    font-size: 16px;
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    text-decoration: none;
+    _position: absolute;
+    _top: expression(documentElement.scrollTop + documentElement.clientHeight-this.offsetHeight);
+    &:hover {
+        color: #fff;
+        text-decoration: none;
+        background-color: #999;
+        border-color: #999
+    }
+    /*4.12.1 返回顶部
+        Name:			mod_totop
+        Level:			Global
+        Example:		<a href="javascript:void(0)" class="tools-right toTop" title=backToTopTxt alt=backToTopTxt></a>
+        Explain:		返回顶部
+    */
+    .toTop {
+        bottom: 60px;
+        display: none;
+    }
+    /*4.12.2 意见反馈
+		Name:			mod_feedback
+		Level:			Global
+		Example:		<a href="javascript:;" class="tools-right feedback Hui-iconfont" title="意见反馈" onClick="feedback()">&#xe70c;</a>
+		Explain:		意见反馈
+        <div id="modal-feedback" class="modal hide fade">
+            <div class="modal-header">
+                <h3>意见反馈</h3>
+                <a class="Hui-iconfont close" data-dismiss="modal" aria-hidden="true" href="javascript:void();">&#xe6a6;</a>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <label class="mr-20"><input type="radio" class="radio" value="1" name="radio-feedback" id="feedback-1"> 业务咨询</label>
+                    <label class="mr-20"><input type="radio" class="radio" value="2" name="radio-feedback" id="feedback-2"> 体验反馈</label>
+                    <label class="mr-20"><input type="radio" class="radio" value="3" name="radio-feedback" id="feedback-3"> 好点子</label>
+                </div>
+                <div class="formControls mt-20">
+                    <textarea class="textarea valid" onKeyUp="$.Huitextarealength(this,500)" placeholder="吐槽点什么...最少输入10个字符"></textarea>
+                    <p class="textarea-numberbar"><em class="textarea-length">0</em>/500</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary radius">确定</button>
+                <button class="btn btn-default radius ml-10" data-dismiss="modal" aria-hidden="true">取消</button>
+            </div>
+        </div>
+	*/
+    .feedback {
+        bottom: 110px;
+    }
+}

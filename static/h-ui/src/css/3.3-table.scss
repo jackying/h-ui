@@ -1,0 +1,321 @@
+/*3.3 表格
+	Name:			style_table
+	Example:		<table class="table table-bordered table-striped table-condensed"><thead><tr><th>…</th></tr></thead><tbody><tr><td>…</td></tr></tbody></table>
+	Explain:		表格，None无样式，仅仅有列和行|.table行与行之间以水平线相隔|.table-bordered表格外围均有外边框|.table-striped奇数行背景设为浅灰色|.table-condensed竖直方向padding缩减一半，从8px变为4px，所有的 td 和 th 元素都受影响
+*/
+/*默认table*/
+table {
+    width: 100%;
+    empty-cells: show;
+    background-color: transparent;
+    border-collapse: collapse;
+    border-spacing: 0;
+    th {
+        text-align: left;
+        font-weight: 400
+    }
+}
+
+/*带水平线*/
+
+.table {
+    th {
+        font-weight: bold;
+    }
+    td {
+        text-align: left
+    }
+    th,
+    td {
+        padding: 8px;
+        line-height: 20px;
+        word-break: break-all
+    }
+    tbody {
+        tr.success>td {
+            background-color: #dff0d8;
+        }
+        tr.error>td {
+            background-color: #f2dede
+        }
+        tr.warning>td {
+            background-color: #fcf8e3
+        }
+        tr.info>td {
+            background-color: #d9edf7
+        }
+        +tbody {
+            border-top: 2px solid #ddd;
+        }
+    }
+    .table {
+        background-color: #fff;
+    }
+
+    /*带横向分割线*/
+    &.table-border {
+        border-top: 1px solid #ddd;
+        th,
+        td {
+            border-bottom: 1px solid #ddd
+        }
+    }
+
+    /*th带背景*/
+    &.table-bg thead th {
+        background-color: #F5FAFE
+    }
+
+    /*带外边框*/
+    &.table-bordered {
+        border: 1px solid #ddd;
+        border-collapse: separate;
+        *border-collapse: collapse;
+        border-left: 0;
+        .th,
+        td {
+            border-left: 1px solid #ddd
+        }
+        &.table-bordered {
+            border-bottom: 0
+        }
+    }
+
+    /*奇数行背景设为浅灰色*/
+    &.table-striped tbody>tr:nth-child(odd)>td,
+    &.table-striped tbody>tr:nth-child(odd)>th {
+        background-color: #f9f9f9
+    }
+
+    /*竖直方向padding缩减一半*/
+    &.table-condensed th,
+    &.table-condensed td {
+        padding: 4px 5px
+    }
+
+    /*鼠标悬停样式*/
+    &.table-hover tbody tr:hover td,
+    &.table-hover tbody tr:hover th {
+        background-color: #f5f5f5
+    }
+    tbody{
+        /*鼠标选择整行样式*/
+        tr.selected td {
+            background-color: #F3F3F3
+        }
+
+        /*悬停在行*/
+        tr.active,
+        tr.active > td,
+        tr.active > th,
+        tr .active {
+            background-color: #F5F5F5!important
+        }
+
+        /*成功或积极*/
+        tr.success,
+        tr.success > td,
+        tr.success > th,
+        tr .success {
+            background-color: #DFF0D8!important
+        }
+
+        /*警告或出错*/
+        tr.warning,
+        tr.warning > td,
+        tr.warning > th,
+        tr .warning {
+            background-color: #FCF8E3!important
+        }
+
+        /*危险*/
+        tr.danger,
+        tr.danger > td,
+        tr.danger > th,
+        tr .danger {
+            background-color: #F2DEDE!important
+        }
+
+    }
+
+    /*表格文字对齐方式，默认是居左对齐*/
+    .text-l th,
+    .text-l td {
+        text-align: left;
+    }
+    /*整行居中*/
+    .text-c th,
+    .text-c td {
+        text-align: center;
+    }
+
+    /*整行居右*/
+    .text-r th,
+    .text-r td {
+        text-align: right;
+    }
+
+    /*单独列居左*/
+    th.text-l,
+    td.text-l {
+        text-align: left!important;
+    }
+
+    
+    /*单独列居中*/
+    th.text-c,
+    td.text-c {
+        text-align: center!important;
+    }
+
+    
+    /*单独列居右*/
+    th.text-r,
+    td.text-r {
+        text-align: right!important;
+    }
+}
+
+
+/*datatable*/
+
+table.dataTable {
+    border-collapse: separate;
+    border-spacing: 0;
+    clear: both;
+    thead{
+        .sorting_asc,
+        .sorting_desc,
+        .sorting {
+            cursor: pointer;
+            background-repeat: no-repeat;
+            background-position: right center;
+            
+        }
+        .sorting {
+            background-image: url(../images/dataTable/sort_both.png)
+        }
+        .sorting_asc {
+            background-image: url(../images/dataTable/sort_asc.png)
+        }
+        .sorting_desc {
+            background-image: url(../images/dataTable/sort_desc.png)
+        }
+    }
+    td.sorting_1 {
+        background-color: #f5fafe
+    }
+}
+
+.dataTables_wrapper {
+    .dataTables_length {
+        float: left;
+        padding-bottom: 20px;
+        .select {
+            width: 50px
+        }
+    }
+    .dataTables_filter {
+        float: right;
+        text-align: right;
+        .input-text {
+            width: auto
+        }
+    }
+    .dataTables_info {
+        clear: both;
+        float: left;
+        padding-top: 10px;
+        font-size: 14px;
+        color: #666;
+    }
+    .dataTables_paginate {
+        float: right;
+        padding-top: 10px;
+        text-align: right;
+        .paginate_button {
+            border: 1px solid #ccc;
+            cursor: pointer;
+            display: inline-block;
+            margin-left: 2px;
+            text-align: center;
+            text-decoration: none;
+            color: #666;
+            height: 26px;
+            line-height: 26px;
+            text-decoration: none;
+            margin: 0 0px 6px 6px;
+            padding: 0 10px;
+            font-size: 14px;
+            &:hover,
+            &.current,
+            &.current:hover {
+                background: #5a98de;
+                color: #fff
+            }
+        }
+        
+    }
+}
+
+
+/*让表格支持响应式*/
+
+/*
+<div class="table-responsive">
+  <table class="table">
+    ...
+  </table>
+</div>
+*/
+
+@media (max-width: 767px) {
+    .table-responsive {
+        width: 100%;
+        margin-bottom: 15px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        border: 1px solid #ddd;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        -webkit-overflow-scrolling: touch;
+        >.table {
+            margin-bottom: 0;
+            > thead > tr > th,
+            > tbody > tr > th,
+            > tfoot > tr > th,
+            > thead > tr > td,
+            > tbody > tr > td,
+            > tfoot > tr > td {
+                white-space: nowrap;
+            }
+        }
+        
+        >.table-bordered {
+            border: 0;
+            >thead>tr>th:first-child,
+            >tbody>tr>th:first-child,
+            >tfoot>tr>th:first-child,
+            >thead>tr>td:first-child,
+            >tbody>tr>td:first-child,
+            >tfoot>tr>td:first-child {
+                border-left: 0
+            }
+
+            >thead>tr>th:last-child,
+            >tbody>tr>th:last-child,
+            >tfoot>tr>th:last-child,
+            >thead>tr>td:last-child,
+            >tbody>tr>td:last-child,
+            >tfoot>tr>td:last-child {
+                border-right: 0
+            }
+
+            >tbody>tr:last-child>th,
+            >tfoot>tr:last-child>th,
+            >tbody>tr:last-child>td,
+            >tfoot>tr:last-child>td {
+                border-bottom: 0
+            }
+        }
+    }
+}

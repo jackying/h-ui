@@ -1,0 +1,306 @@
+/*1 重定义浏览器默认样式
+	Name:			style_reset
+	Explain:		重定义浏览器默认样式
+*/
+$primary-color:#5a98de;
+$secondary-color:#3bb4f2;
+$success-color:#5eb95e;
+$warning-color: #f37b1d;
+$danger-color: #dd514c;
+
+$error-color: #c00;
+$font-family: "'Microsoft Yahei','Hiragino Sans GB','Helvetica Neue',Helvetica,tahoma,arial,'WenQuanYi Micro Hei',Verdana,sans-serif,'\5B8B\4F53'";
+
+$border-color: #e5e5e5;
+* {
+    word-wrap: break-word;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+iframe,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+button,
+input,
+textarea,
+th,
+td,
+fieldset {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol,
+dl {
+    list-style-type: none;
+}
+
+html,
+body {
+    *position: static;
+}
+
+html {
+    font-family: sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var {
+    font-style: normal;
+    font-weight: 400;
+}
+
+input,
+button,
+textarea,
+select,
+optgroup,
+option {
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+}
+
+input,
+button {
+    overflow: visible;
+    vertical-align: middle;
+    outline: none;
+}
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="text"],
+input[type="password"] {
+    -webkit-appearance: none;
+    outline: none;
+}
+
+body,
+th,
+td,
+button,
+input,
+select,
+textarea {
+    font-family: $font-family;
+    font-size: 12px;
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@media ( max-width: 767px) {
+    html {
+        overflow-y: auto;
+    }
+    body,
+    th,
+    td,
+    button,
+    input,
+    select,
+    textarea {
+        font-size: 14px;
+    }
+}
+
+body {
+    line-height: 1.6;
+    position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+}
+
+a,
+area {
+    outline: none;
+    blr: expression(this.onFocus=this.blur())
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    &:hover {
+        text-decoration: underline;
+        outline: none;
+    }
+    &.ie6:hover {
+        zoom: 1;
+    }
+    &:focus {
+        outline: none;
+    }
+    &:hover,
+    &:active {
+        outline: none;
+    }
+}
+
+:focus {
+    outline: none;
+}
+
+sub,
+sup {
+    vertical-align: baseline;
+}
+
+button,
+input[type="button"],
+input[type="submit"] {
+    line-height: normal !important;
+}
+
+
+/*img*/
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+a img,
+img {
+    -ms-interpolation-mode: bicubic;
+}
+
+
+/*IE下a:hover 背景闪烁*/
+
+*html {
+    overflow: -moz-scrollbars-vertical;
+    zoom:expression(function(ele) {
+        ele.style.zoom="1";
+        document.execCommand("BackgroundImageCache", false, true)
+    }(this))
+}
+
+
+/*HTML5 reset*/
+
+header,
+footer,
+section,
+aside,
+details,
+menu,
+article,
+section,
+nav,
+address,
+hgroup,
+figure,
+figcaption,
+legend {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+time {
+    display: inline;
+}
+
+audio,
+canvas,
+video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1
+}
+
+audio:not([controls]) {
+    display: none;
+}
+
+legend {
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 40px;
+    border: 0;
+    border-bottom: 1px solid $border-color;
+}
+
+legend small {
+    font-size: 15px;
+    color: #999;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+fieldset {
+    border-width: 0;
+    padding: 0.35em 0.625em 0.75em;
+    margin: 0 2px;
+    border: 1px solid $border-color;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+input[type="search"] {
+    -webkit-appearance: textfield;
+    /* 1 */
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+
+/*清除浮动
+	Name:			style_clearfix
+	Example:		class="clearfix|cl"
+	Explain:		clearfix（简写cl）避免因子元素浮动而导致的父元素高度缺失能问题
+*/
+.clearfix:after {
+    content: "\20";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.clearfix {
+    zoom: 1;
+}

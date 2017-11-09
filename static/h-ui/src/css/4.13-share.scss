@@ -1,0 +1,72 @@
+/*4.13 分享到
+	Name:			mod_share
+	Example:
+	Explain:	分享到
+*/
+
+
+/*4.13.1 百度分享*/
+
+.bdsharebuttonbox.Hui-share a.bds_more,
+.bdsharebuttonbox.Hui-share a.bds_weixin,
+.bdsharebuttonbox.Hui-share a.bds_qzone,
+.bdsharebuttonbox.Hui-share a.bds_sqq,
+.bdsharebuttonbox.Hui-share a.bds_tsina,
+.bdsharebuttonbox.Hui-share a.bds_tqq,
+.bdsharebuttonbox.Hui-share a.bds_douban {
+    display: inline-block;
+    background: none;
+    padding-left: 0;
+    text-decoration: none;
+    margin: 0;
+    margin-right: 6px;
+    height: auto;
+    line-height: auto
+}
+
+.bdsharebuttonbox.Hui-share a:hover {
+    text-decoration: none
+}
+
+.bdsharebuttonbox.Hui-share .share-text {
+    display: inline-block;
+    margin-right: 6px;
+    color: #999;
+    cursor: default;
+    float: left
+}
+
+.bdsharebuttonbox.bdshare-button-style0-16.Hui-share a,
+.bdsharebuttonbox.bdshare-button-style0-16.Hui-share .share-text,
+.bdsharebuttonbox.bdshare-button-style0-16.Hui-share .Hui-iconfont {
+    line-height: 16px
+}
+
+.bdsharebuttonbox.bdshare-button-style0-16.Hui-share .share-text,
+.bdsharebuttonbox.bdshare-button-style0-16.Hui-share .Hui-iconfont {
+    font-size: 16px
+}
+
+.bdsharebuttonbox.bdshare-button-style0-24.Hui-share a,
+.bdsharebuttonbox.bdshare-button-style0-24.Hui-share .share-text,
+.bdsharebuttonbox.bdshare-button-style0-24.Hui-share .Hui-iconfont {
+    line-height: 24px
+}
+
+.bdsharebuttonbox.bdshare-button-style0-24.Hui-share .share-text,
+.bdsharebuttonbox.bdshare-button-style0-24.Hui-share .Hui-iconfont {
+    font-size: 24px
+}
+
+
+/*4.13.2 jiathis分享*/
+
+.Hui-share.jiathis_style_24x24 .jtico {
+    background: none;
+    padding-left: 0!important
+}
+
+.Hui-share.jiathis_style_24x24 .jiathis_separator {
+    margin-left: 0;
+    margin-right: 6px
+}

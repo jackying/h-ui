@@ -1,0 +1,121 @@
+/*3.2 代码
+	Name:			style_pre
+	Example:		<code></code>,<pre class="prettyprint linenums">转义过的代码</pre>
+	Explain:		code：行内代码，pre：基本代码块;包装代码片段，.prettyprint颜色增强/.linenums显示行号
+*/
+
+code {
+    padding: 0 3px 2px;
+    font-family: Monaco, Menlo, Consolas, "Courier New", monospace
+}
+
+pre .title,
+pre .keyword,
+pre .body,
+pre .des {
+    color: #333
+}
+
+
+/*关键词*/
+
+pre {
+    display: block;
+    font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+    padding: 9.5px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    line-height: 20px;
+    word-break: break-all;
+    word-wrap: break-word;
+    white-space: pre;
+    white-space: pre-wrap;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #333;
+    ol.linenums {
+        margin: 0 0 0 33px;
+        li {
+            padding-left: 12px;
+            color: #bbb;
+            line-height: 18px;
+            text-shadow: 0 1px 0 #fff;
+        }
+    }
+}
+.prettyprint {
+    margin-bottom: 20px;
+    padding: 8px;
+    background-color: #f7f7f9;
+    border: 1px solid #e1e1e8;
+    .com {
+        color: #998;
+        font-style: italic
+    }
+    /*注释*/
+    .tag {
+        color: #007
+    }
+    /*标签*/
+    .lit {
+        color: #195f91
+    }
+    .pun,
+    .opn,
+    .clo {
+        color: #93a1a1
+    }
+    /*等于*/
+    .fun {
+        color: #dc322f
+    }
+    .str,
+    .atv {
+        color: #D14
+    }
+    /*值*/
+    .kwd,
+    .tag {
+        color: #1e347b
+    }
+    .typ,
+    .atn,
+    .dec,
+    .var {
+        color: teal
+    }
+    /*文档声明，属性*/
+    .pln {
+        color: #48484c
+    }
+    &.linenums {
+        box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0
+    }
+}
+
+.pre-scrollable {
+    max-height: 340px;
+    overflow-y: scroll
+}
+
+ol.linenums {
+    list-style: decimal outside none;
+    margin-left: 20px;
+    li {
+        line-height: 28px;
+        padding-left: 10px
+    }
+}
+@media (max-width: 767px) {
+    pre ol.linenums {
+        margin-left: 0;
+        list-style: none;
+        li {
+            padding-left: 0
+        }
+    }
+    .prettyprint.linenums {
+        box-shadow: inset 0px 0 0 #fbfbfc, inset 0px 0 0 #ececf0
+    }
+}

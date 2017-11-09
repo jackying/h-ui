@@ -1,0 +1,158 @@
+/*4.3.1 下拉菜单
+	Name:			mod_dropDown
+	Example:
+	<span class="dropDown">
+		<a class="dropDown_A" href="#">下拉菜单</a>
+		<ul class="dropDown-menu menu radius box-shadow">
+			<li><a href="#">菜单一</a></li>
+			<li><a href="#">菜单二</a></li>
+		</ul>
+	</span>
+	Explain:		如需要在不同的地方显示不同的样式，请在<span class="dropDown"> 追加class，采用覆盖的方式重写默认样式。
+
+*/
+
+.dropDown {
+    display: inline-block;
+    &:focus{
+        outline: 0;
+    }
+    .dropDown_A {
+        display: inline-block
+    }
+    .dropDown-menu {
+        display: none;
+        transition: all 0.3s ease 0s;
+        &:focus {
+            outline: 0;
+        }
+        li.arrow {
+            position: absolute;
+            display: block;
+            width: 12px;
+            height: 8px;
+            margin-top: -13px;
+            margin-left: 20%;
+            line-height: 0;
+            background: url(../images/dropDown/icon-jt.png) no-repeat 0 0
+        }
+    }
+    /*鼠标经过*/
+    &.hover .dropDown_A,
+    &.open .dropDown_A {
+        text-decoration: none;
+        background-color: rgba(255, 255, 255, 0.2);
+        
+    }
+    &.open .dropDown_A{
+        .menu_dropdown-arrow {
+            transition-duration: 0.3s;
+            transition-property: all;
+            _background-position: 0 0;
+            transform: rotate(180deg)
+        }
+    }
+    >.dropDown-menu {
+        display: none;
+    }
+    /*打开菜单*/
+    &.open {
+        position: relative;
+        z-index: 990;
+        /*默认左对齐*/
+        >.dropDown-menu {
+            position: absolute;
+            z-index: 1000;
+            display: inline-block;
+            top: 100%;
+            left: -1px;
+            min-width: 100%;
+            background-color: #fff;
+            border: solid 1px #f2f2f2
+        }
+        /*右对齐*/
+        &.right>.dropDown-menu {
+            right: -1px!important;
+            left: auto!important
+        }
+    }
+}
+
+.menu {
+    background-color: #fff;
+    border: solid 1px #f2f2f2;
+    display: inline-block;
+    &.radius {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0
+    }
+    &.box-shadow {
+        border-top: none
+    }
+    >li{
+        position: relative;
+        clear: both;
+        float: left;
+        >a {
+            display: block;
+            border-bottom: solid 1px #f2f2f2;
+            padding: 5px 20px;
+            line-height: 1.8;
+            text-align: left;
+            font-weight: normal;
+            white-space: nowrap;
+            &:hover,
+            &:focus {
+                text-decoration: none;
+                background-color: #fafafa
+            }
+            .arrow {
+                position: absolute;
+                top: 50%;
+                margin-top: -10px;
+                right: 5px;
+                line-height: 20px;
+                height: 20px;
+                color: #999
+            }
+        }
+
+        &.open>a {
+            text-decoration: none;
+            background-color: #fafafa;
+        }
+
+        &:last-child>a {
+            border-bottom: none
+        }
+
+        &.menu {
+            display: none;
+            &.open {
+                display: inline-block;
+                position: absolute;
+                left: 100%;
+                top: -1px;
+                min-width: 100%
+            }
+        }
+        /*禁用菜单*/
+
+        &.disabled>a {
+            color: #999;
+            text-decoration: none;
+            cursor: no-drop;
+            background-color: transparent
+        }
+        /*线条*/
+
+        .divider {
+            display: block;
+            height: 0px;
+            line-height: 0px;
+            margin: 9px 0;
+            overflow: hidden;
+            border-top: solid 1px #eee
+        }
+    }
+}

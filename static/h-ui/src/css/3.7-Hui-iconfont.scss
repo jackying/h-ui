@@ -1,0 +1,14 @@
+/*3.7 图标
+    H-ui采用Font Awesome 3.2.1的整套图标，因为是图标字体，所以可以像控制字体那样随心所欲改变这些图标的颜色、大小、阴影以及任何CSS能控制的属性
+*/
+
+.iconpic {
+    display: inline-block;
+    vertical-align: sub;
+    *vertical-align: middle;
+    _vertical-align: middle;
+    width: 16px;
+    height: 16px;
+    background-position: center;
+    background-repeat: no-repeat
+}

@@ -1,0 +1,43 @@
+/*4.16 滚动
+	Name:			mod_rolling
+	Example:		<div class="rollpicshow"><ul><li>……</li></ul></div>
+*/
+
+.marquee {
+    height: 22px;
+    overflow: hidden;
+    line-height: 22px
+}
+.rollpic{
+    .prev,
+    .next {
+        display: block;
+        height: 38px;
+        width: 38px;
+        cursor: pointer;
+        float: left;
+        background: url(../images/rollpic/unslider-arrow.png) no-repeat 0 0;
+        margin-top: 70px
+    }
+    .prev {
+        background-position: 0 0;
+        margin-right: 5px;
+        &:hover {
+            background-position: 0 -38px
+        }
+    }
+    .next {
+        background-position: 0 -76px;
+        margin-left: 5px;
+        &:hover {
+            background-position: 0 -114px
+        }
+    }
+    .rollpicshow {
+        float: left;
+        border: solid 1px #ddd;
+        li {
+            padding: 10px
+        }
+    }
+}

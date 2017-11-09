@@ -1,0 +1,30 @@
+/*4.5 选项卡
+	Name:			module_tab
+	Sample:
+	<div id="tab_demo" class="HuiTab">
+      <div class="tabBar cl"><span>选项卡一</span><span>选项卡二</span><span>自适应宽度</span></div>
+      <div class="tabCon">内容一</div>
+      <div class="tabCon">内容二</div>
+      <div class="tabCon">内容三</div>
+    </div>
+*/
+
+.tabBar {
+    border-bottom: 2px solid #222;
+    span {
+        background-color: #e8e8e8;
+        cursor: pointer;
+        float: left;
+        font-weight: bold;
+        height: 30px;
+        line-height: 30px;
+        padding: 0 15px;
+        &.current {
+            background-color: #222;
+            color: #fff;
+        }
+    }
+}
+.tabCon {
+    display: none;
+}

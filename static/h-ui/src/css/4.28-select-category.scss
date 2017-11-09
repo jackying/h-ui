@@ -1,0 +1,42 @@
+/*4.28 分类检索
+	Name:			mod_select-category
+	Sample:
+<div class="select-category">
+	<div class="item clearfix">
+		<dl>
+			<dt class="dt">选择区域：</dt>
+			<dd class="dd">
+				<a href="#" title="北京市">北京市</a>  
+            </dd>
+		</dl>
+	</div>
+</div>
+*/
+
+.select-category {
+    .item {
+        padding: 5px;
+        position: relative;
+        border-bottom: solid 1px #ddd;
+        .dt {
+            width: 90px;
+            float: left;
+            white-space: nowrap;
+        }
+        .dd {
+            margin-left: 100px;
+            text-align: left;
+            font-size: 14px;
+            height: auto;
+            a {
+                display: inline-block;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                margin-right: 10px;
+                padding: 0 5px;
+                text-decoration: none
+            }
+        }
+    }
+}

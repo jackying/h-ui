@@ -1,0 +1,259 @@
+/*2.2 响应式隐藏显示
+	Name:			style_Layout
+	Explain:		左右两栏|左中右三栏|上中下
+	Last Modify:	guojunhui
+*/
+
+.visible-xs,
+.visible-sm,
+.visible-md,
+.visible-lg,
+.visible-xs-block,
+.visible-xs-inline,
+.visible-xs-inline-block,
+.visible-sm-block,
+.visible-sm-inline,
+.visible-sm-inline-block,
+.visible-md-block,
+.visible-md-inline,
+.visible-md-inline-block,
+.visible-lg-block,
+.visible-lg-inline,
+.visible-lg-inline-block {
+    display: none !important;
+}
+
+@media ( max-width: 767px) {
+    .visible-xs {
+        display: block !important;
+    }
+    table.visible-xs {
+        display: table;
+    }
+    tr.visible-xs {
+        display: table-row !important;
+    }
+    th.visible-xs,
+    td.visible-xs {
+        display: table-cell !important;
+    }
+    .hidden-xs {
+        display: none !important;
+    }
+    .visible-xs-block {
+        display: block !important;
+    }
+    .visible-xs-inline {
+        display: inline !important;
+    }
+    .visible-xs-inline-block {
+        display: inline-block !important;
+    }
+}
+
+@media ( min-width: 768px) and (max-width: 991px) {
+    .visible-sm {
+        display: block !important;
+    }
+    table.visible-sm {
+        display: table
+    }
+    tr.visible-sm {
+        display: table-row !important;
+    }
+    th.visible-sm,
+    td.visible-sm {
+        display: table-cell !important;
+    }
+    .hidden-sm {
+        display: none !important;
+    }
+    .visible-sm-block {
+        display: block !important;
+    }
+    .visible-sm-inline {
+        display: inline !important;
+    }
+    .visible-sm-inline-block {
+        display: inline-block !important;
+    }
+}
+
+@media ( min-width: 992px) and (max-width: 1199px) {
+    .visible-md {
+        display: block !important;
+    }
+    table.visible-md {
+        display: table;
+    }
+    tr.visible-md {
+        display: table-row !important;
+    }
+    th.visible-md,
+    td.visible-md {
+        display: table-cell !important;
+    }
+    .hidden-md {
+        display: none !important;
+    }
+    .visible-md-block {
+        display: block !important;
+    }
+    .visible-md-inline {
+        display: inline !important;
+    }
+    .visible-md-inline-block {
+        display: inline-block !important;
+    }
+}
+
+@media ( min-width: 1200px) {
+    .visible-lg {
+        display: block !important;
+    }
+    table.visible-lg {
+        display: table
+    }
+    tr.visible-lg {
+        display: table-row !important;
+    }
+    th.visible-lg,
+    td.visible-lg {
+        display: table-cell !important;
+    }
+    .hidden-lg {
+        display: none !important;
+    }
+    .visible-lg-block {
+        display: block !important;
+    }
+    .visible-lg-inline {
+        display: inline !important;
+    }
+    .visible-lg-inline-block {
+        display: inline-block !important;
+    }
+}
+
+.visible-print {
+    display: none !important;
+}
+
+.visible-print-block {
+    display: none !important;
+}
+
+.visible-print-inline {
+    display: none !important;
+}
+
+.visible-print-inline-block {
+    display: none !important;
+}
+
+@media print {
+    .visible-print {
+        display: block !important;
+    }
+    table.visible-print {
+        display: table;
+    }
+    tr.visible-print {
+        display: table-row !important;
+    }
+    th.visible-print,
+    td.visible-print {
+        display: table-cell !important;
+    }
+    .visible-print-block {
+        display: block !important;
+    }
+    .visible-print-inline {
+        display: inline !important;
+    }
+    .visible-print-inline-block {
+        display: inline-block !important;
+    }
+    .hidden-print {
+        display: none !important;
+    }
+}
+
+
+/*2.3 常用布局
+	Name:			style_Layout
+	Explain:		左右两栏|左中右三栏|上中下
+	Last Modify:	guojunhui
+*/
+
+.Hui-wraper,
+.wp {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.sd {
+    float: right;
+}
+
+.ct2 .mn {
+    float: left;
+}
+
+.ct2 .sd {
+    float: right;
+}
+
+.ct2_r .leftmenu {
+    float: left;
+}
+
+.ct2_r .mn {
+    float: right;
+}
+
+.ct3 .app {
+    float: left;
+    margin-right: 20px;
+}
+
+.ct3 .mn {
+    float: left;
+    border-left: solid 1px #ddd;
+}
+
+.ct3 .sd {
+    float: right;
+}
+
+.w-1000 {
+    width: 1000px;
+}
+
+.w-980 {
+    width: 980px;
+}
+
+.w-300 {
+    width: 300px;
+}
+
+.w-200 {
+    width: 200px;
+}
+
+@media (max-width: 1000px) {
+    .Hui-wraper,
+    .wp,
+    {
+        width: auto!important;
+        padding: 0 15px!important;
+    }
+}
+
+@media print {
+    .Hui-wraper {
+        width: auto;
+    }
+}
