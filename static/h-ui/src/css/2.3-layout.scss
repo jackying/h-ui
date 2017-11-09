@@ -1,0 +1,80 @@
+/*2.3 常用布局
+	Name:			style_Layout
+	Explain:		左右两栏|左中右三栏|上中下
+	Last Modify:	guojunhui
+*/
+
+.Hui-wraper,
+.wp {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.sd {
+    float: right;
+}
+
+.ct2{
+    .mn {
+        float: left;
+    }
+    .sd {
+        float: right;
+    }
+}
+
+
+.ct2_r {
+    .leftmenu {
+        float: left;
+    }
+    .mn {
+        float: right;
+    }
+}
+
+
+.ct3 {
+    .app {
+        float: left;
+        margin-right: 20px;
+    }
+    .mn {
+        float: left;
+        border-left: solid 1px #ddd;
+    }
+    .sd {
+        float: right;
+    }
+}
+
+.w-1000 {
+    width: 1000px;
+}
+
+.w-980 {
+    width: 980px;
+}
+
+.w-300 {
+    width: 300px;
+}
+
+.w-200 {
+    width: 200px;
+}
+
+@media (max-width: 1000px) {
+    .Hui-wraper,
+    .wp{
+        width: auto!important;
+        padding: 0 15px!important;
+    }
+}
+
+@media print {
+    .Hui-wraper {
+        width: auto;
+    }
+}
