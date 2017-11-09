@@ -319,14 +319,40 @@ sup{top:-0.5em}sub{bottom:-0.25em}
 	Example:		<div class="content"><p>……</p></div>
 	Explain:		内容样式
 */
-.content{position:relative;font-size:17px;line-height:1.8;overflow:hidden;text-align:left;word-break: break-all;word-wrap: break-word}
-.content h3{font-size:18px}
-.content h4{font-size:16px}
-.content p{margin-bottom: 1.5rem;text-align: justify;word-break:break-all}
-.content p.text-c{ text-align:center}
-	.indent{ text-indent:2em}
-.content img{max-width:100%}
-.content ul{text-indent:2em}
+.content {
+	position: relative;
+	font-size: 17px;
+	line-height: 1.8;
+	overflow: hidden;
+	text-align: left;
+	word-break: break-all;
+	word-wrap: break-word;
+	h3 {
+		font-size: 18px;
+	}
+	h4 {
+		font-size: 16px;
+	}
+	p {
+		margin-bottom: 1.5rem;
+		text-align: justify;
+		word-break: break-all;
+		&.text-c {
+			text-align: center;
+		}
+	}
+	img {
+		max-width: 100%;
+	}
+	ul {
+		text-indent: 2em;
+	}
+}
+
+.indent {
+	text-indent: 2em;
+}
+
 @media (max-width: 767px) {
 	.content{ font-size:16px}
 }
@@ -386,11 +412,19 @@ ol.inline{
         >a {
             display: block;
             margin: -11px -15px
-        }
+		}
+		.date {
+			display: none
+		}
+		.Hui-iconfont {
+			background-size: 9px auto;
+			margin-top: -7px;
+			position: absolute;
+			right: 15px;
+			top: 50%
+		}
     }
 	.night .list-view > .item{border-bottom: 1px solid #1F1F1F}
-	.list-view > .item .date{display:none}
-	.list-view > .item .Hui-iconfont {background-size:9px auto;margin-top:-7px;position: absolute;right:15px;top: 50%}
 }
 
 /*排行榜*/
@@ -450,25 +484,107 @@ ol.inline{
 .size-XXL{}/*加大*/
 .size-XXXL{}/*超大*/
 
-.input-text,.btn,.input-text.size-M,.btn.size-M{ font-size:14px; height:31px;*height:auto;line-height:1.42857;padding:4px}/*默认为M，可以不写，可以理解为：均码*/
-a.btn,a.btn.size-M,span.btn,span.btn.size-M{ line-height:21px}
-.btn,.btn.size-M{ padding:4px 12px}
+.input-text,
+.btn,
+.input-text.size-M,
+.btn.size-M {
+	font-size: 14px;
+	height: 31px;
+	*height: auto;
+	line-height: 1.42857;
+	padding: 4px
+}
 
-.input-text.size-MINI,.btn.size-MINI{font-size:12px; height:23px;padding:1px 2px;line-height:1.42857}/*迷你*/
-a.btn.size-MINI,span.btn.size-MINI{ line-height:21px}
-.btn.size-MINI{ padding:1px 4px}
 
-.input-text.size-S,.btn.size-S{font-size:12px; height:27px;padding:3px;line-height:1.42857}/*小*/
-a.btn.size-S,span.btn.size-S{ line-height:19px}
-.btn.size-S{ padding:3px 8px}
+/*默认为M，可以不写，可以理解为：均码*/
 
-.input-text.size-L,.btn.size-L{font-size:16px; height:41px; padding:8px}/*大*/
-a.btn.size-L,span.btn.size-L{ line-height:23px}
-.btn.size-L{ padding:8px 16px}
+a.btn,
+a.btn.size-M,
+span.btn,
+span.btn.size-M {
+	line-height: 21px
+}
 
-.input-text.size-XL,.btn.size-XL{font-size:18px; height:48px; padding:10px}/*特大*/
-a.btn.size-XL,span.btn.size-XL{ line-height:26px}
-.btn.size-XL{ padding:10px 24px}
+.btn,
+.btn.size-M {
+	padding: 4px 12px
+}
+
+.input-text.size-MINI,
+.btn.size-MINI {
+	font-size: 12px;
+	height: 23px;
+	padding: 1px 2px;
+	line-height: 1.42857
+}
+
+
+/*迷你*/
+
+a.btn.size-MINI,
+span.btn.size-MINI {
+	line-height: 21px
+}
+
+.btn.size-MINI {
+	padding: 1px 4px
+}
+
+.input-text.size-S,
+.btn.size-S {
+	font-size: 12px;
+	height: 27px;
+	padding: 3px;
+	line-height: 1.42857
+}
+
+
+/*小*/
+
+a.btn.size-S,
+span.btn.size-S {
+	line-height: 19px
+}
+
+.btn.size-S {
+	padding: 3px 8px
+}
+
+.input-text.size-L,
+.btn.size-L {
+	font-size: 16px;
+	height: 41px;
+	padding: 8px
+}
+
+
+/*大*/
+
+a.btn.size-L,
+span.btn.size-L {
+	line-height: 23px
+}
+
+.btn.size-L {
+	padding: 8px 16px
+}
+
+.input-text.size-XL,
+.btn.size-XL {
+	font-size: 18px;
+	height: 48px;
+	padding: 10px
+}
+
+
+/*特大*/
+a.btn.size-XL,
+span.btn.size-XL {
+	line-height: 26px
+}
+.btn.size-XL {
+	padding: 10px 24px
+}
 
 @media (max-width: 767px) {
 	.responsive .input-text.size-MINI,.responsive .btn.size-MINI{height:24px}
