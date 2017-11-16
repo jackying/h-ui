@@ -1179,7 +1179,7 @@ table th{text-align:left; font-weight:400}
 .table .table{background-color:#fff}
 
 /*带横向分割线*/
-.table-border{border-top:1px solid #ddd}
+.table-border{border-top:1px solid rgb(102, 65, 65)}
 .table-border th,.table-border td{border-bottom:1px solid #ddd}
 
 /*th带背景*/
@@ -1229,6 +1229,21 @@ table th{text-align:left; font-weight:400}
 .table th.text-l,.table td.text-l{text-align:left!important}/*单独列居左*/
 .table th.text-c,.table td.text-c{text-align:center!important}/*单独列居中*/
 .table th.text-r,.table td.text-r{text-align:right!important}/*单独列居右*/
+
+/*圆角*/
+.table.radius thead th:first-child {
+	border-top-left-radius: 4px;
+}
+.table.radius thead th:last-child {
+	border-top-right-radius: 4px;
+}
+.table.radius tr:last-child td:first-child {
+	border-bottom-left-radius: 4px;
+}
+
+.table.radius tr:last-child td:last-child {
+	border-bottom-right-radius: 4px;
+}
 
 /*datatable*/
 table.dataTable {border-collapse: separate;border-spacing: 0;clear: both}

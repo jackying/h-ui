@@ -149,7 +149,7 @@ h6 {
 a,
 area {
     outline: none;
-    blr: expression(this.onFocus=this.blur())
+    //blr: expression(this.onFocus=this.blur())
 }
 
 a {
@@ -202,13 +202,13 @@ img {
 
 /*IE下a:hover 背景闪烁*/
 
-*html {
+/**html {
     overflow: -moz-scrollbars-vertical;
     zoom:expression(function(ele) {
         ele.style.zoom="1";
         document.execCommand("BackgroundImageCache", false, true)
     }(this))
-}
+}*/
 
 
 /*HTML5 reset*/

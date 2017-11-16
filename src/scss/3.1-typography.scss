@@ -1,3 +1,10 @@
+$primary-color:#5a98de;
+$secondary-color:#3bb4f2;
+$success-color:#5eb95e;
+$warning-color: #f37b1d;
+$danger-color: #dd514c;
+$error-color: #c00;
+
 /*3.1.1 标题
 	Example：
 	<h1>h1. 大标题<small>小标题</small></h1>
@@ -7,18 +14,91 @@
     <h5>h5. 大标题<small>小标题</small></h5>
     <h6>h6. 大标题<small>小标题</small></h6>
 */
-h1,h2,h3,h4,h5,h6{font-weight:500;line-height:1.1;color:inherit}
-h1 small,h2 small,h3 small,h4 small,h5 small,h6 small,h1 .small,h2 .small,h3 .small,h4 .small,h5 .small,h6 .small{font-weight:400;line-height:1;color:#999}
-h1,h2,h3{padding-top:20px;padding-bottom:10px}
-h1 small,h2 small,h3 small,h1 .small,h2 .small,h3 .small{font-size:65%}
-h4,h5,h6{margin-top:10px;margin-bottom:10px}
-h4 small,h5 small,h6 small,h4 .small,h5 .small,h6 .small{font-size:75%}
-h1{font-size:36px}
-h2{font-size:30px}
-h3{font-size:24px}
-h4{font-size:18px}
-h5{font-size:14px}
-h6{font-size:12px}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 500;
+	line-height: 1.1;
+	color: inherit;
+}
+
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small,
+h1 .small,
+h2 .small,
+h3 .small,
+h4 .small,
+h5 .small,
+h6 .small {
+	font-weight: 400;
+	line-height: 1;
+	color: #999;
+}
+
+h1,
+h2,
+h3 {
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+
+h1 small,
+h2 small,
+h3 small,
+h1 .small,
+h2 .small,
+h3 .small {
+	font-size: 65%;
+}
+
+h4,
+h5,
+h6 {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+h4 small,
+h5 small,
+h6 small,
+h4 .small,
+h5 .small,
+h6 .small {
+	font-size: 75%;
+}
+
+h1 {
+	font-size: 36px;
+}
+
+h2 {
+	font-size: 30px;
+}
+
+h3 {
+	font-size: 24px;
+}
+
+h4 {
+	font-size: 18px;
+}
+
+h5 {
+	font-size: 14px;
+}
+
+h6 {
+	font-size: 12px;
+}
+
 
 /*3.1.2 强调
 	Example:
@@ -32,97 +112,546 @@ h6{font-size:12px}
 	<del>带删除线的文本</del>
 	<pre class="prettyprint linenums">预格式化的文本</pre>
 */
-p{margin-bottom:10px}	/*段落*/
-small{font-size:85%}	/*小型文本*/
-b,strong {font-weight: bold}	/*重要的文本，加粗*/
-em{font-style:italic}	/*被强调的文本*/
-i{}	/*斜体*/
-u{}	/*加下划线*/
-cite{font-style:normal}	/*引用*/
-mark{color:#000;background:#ff0}/*突出显示文本*/
-var{}	/*变量*/
-kbd{}	/*键盘文本*/
-code{}	/*计算机代码文本*/
-dfn{font-style: italic}	/*一个定义项目*/
-del{font-family:Simsun}	/*删除线*/
-code,kbd,pre,samp {font-family: monospace, serif;font-size: 1em}
-pre{white-space: pre-wrap}	/*预格式化的文本*/
-.uppercase{text-transform:uppercase} /*文字大写*/
-.lowercase{text-transform:lowercase} /*文字小写*/
-.capitalize{text-transform:capitalize} /*首字母大写*/
-.en{font-family:Arial!important}
+
+p {
+	margin-bottom: 10px;
+}
+
+
+/*段落*/
+
+small {
+	font-size: 85%;
+}
+
+
+/*小型文本*/
+
+b,
+strong {
+	font-weight: bold;
+}
+
+
+/*重要的文本，加粗*/
+
+em {
+	font-style: italic;
+}
+
+
+/*被强调的文本*/
+
+
+
+/*斜体*/
+
+
+
+
+/*加下划线*/
+
+cite {
+	font-style: normal;
+}
+
+
+/*引用*/
+
+mark {
+	color: #000;
+	background: #ff0;
+}
+
+
+/*突出显示文本*/
+
+
+
+
+/*变量*/
+
+
+
+/*键盘文本*/
+
+
+
+/*计算机代码文本*/
+
+dfn {
+	font-style: italic;
+}
+
+
+/*一个定义项目*/
+
+del {
+	font-family: Simsun;
+}
+
+
+/*删除线*/
+
+code,
+kbd,
+pre,
+samp {
+	font-family: monospace, serif;
+	font-size: 1em;
+}
+
+pre {
+	white-space: pre-wrap;
+}
+
+
+/*预格式化的文本*/
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+
+/*文字大写*/
+
+.lowercase {
+	text-transform: lowercase;
+}
+
+
+/*文字小写*/
+
+.capitalize {
+	text-transform: capitalize;
+}
+
+
+/*首字母大写*/
+
+.en {
+	font-family: Arial!important;
+}
+
+
 /*3.1.3 对齐
 	Name:			style_text-align
 	Example:		class="text-l|text-r|text-c|va-t|va-m|va-b"
 	Explain:		.text-水平对齐 （.text-l左对齐|.text-r右对齐|.text-c居中对齐）
 					.va-上下对齐 （.va-t 居上对齐|.va-m 居中对齐|.va-b 居下对齐）
 */
-.text-l{text-align:left}.text-r{text-align:right}.text-c{text-align:center}
-.va *{vertical-align:sub!important;*vertical-align:middle!important;_vertical-align:middle!important}
-.va-t{vertical-align:top!important}.va-m{vertical-align:middle!important}.va-b{vertical-align:bottom!important}
+
+.text-l {
+	text-align: left;
+}
+
+.text-r {
+	text-align: right;
+}
+
+.text-c {
+	text-align: center;
+}
+
+.va * {
+	vertical-align: sub!important;
+	*vertical-align: middle!important;
+	_vertical-align: middle!important;
+}
+
+.va-t {
+	vertical-align: top!important;
+}
+
+.va-m {
+	vertical-align: middle!important
+}
+
+.va-b {
+	vertical-align: bottom!important
+}
+
+
 /*3.1.4 定位
 	Name:			style_position
 	Example:		class="pos-r|pos-a|pos-f"
 	Explain:		.pos-r 相对定位|.pos-a 绝对定位|.pos-f 固定
 */
-.pos-r{position:relative}.pos-a{position:absolute}.pos-f{position:fixed}
+
+.pos-r {
+	position: relative
+}
+
+.pos-a {
+	position: absolute
+}
+
+.pos-f {
+	position: fixed
+}
+
+
 /*3.1.5 浮动
 	Name:			style_float
 	Example:		class="l|r"
 	Explain:		.l 左浮动|.r 右浮动
 */
-.l,.f-l{float:left!important;_display:inline}
-.r,.f-r{float:right!important;_display:inline}
+
+.l,
+.f-l {
+	float: left!important;
+	_display: inline
+}
+
+.r,
+.f-r {
+	float: right!important;
+	_display: inline
+}
 
 [class*="span"].r,
-[class*="span"].f-r{float:right}
+[class*="span"].f-r {
+	float: right
+}
+
 
 /*控制元素对定位的位置：居左|居右|j居上|居下*/
-.pos-left{left:0; right:auto}
-.pos-right{right:0; left:auto}
-.pos-top{top:0; bottom:auto}
-.pos-bottom{top:auto; bottom:0}
+
+.pos-left {
+	left: 0;
+	right: auto
+}
+
+.pos-right {
+	right: 0;
+	left: auto
+}
+
+.pos-top {
+	top: 0;
+	bottom: auto
+}
+
+.pos-bottom {
+	top: auto;
+	bottom: 0
+}
+
 
 /*3.1.6 文字单行溢出省略号
 	Name:			style_text-overflow
 	Example:		class="text-overflow"
 */
-.text-overflow{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+.text-overflow {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap
+}
+
+
 /*3.1.7 线条
 	Name:			style_line
 	Example:		class="line"
 */
-.line{font-size:0; line-height:0; border-top: solid 1px #eee; float: none}
+
+.line {
+	font-size: 0;
+	line-height: 0;
+	border-top: solid 1px #eee;
+	float: none
+}
+
+
 /*3.1.8 外边距
 	Name:			style_margin
 	Example:		class="mt-5|mt-10..."
 	Explain:		.mt表示上边距|.mb表示下边距|.ml表示左边距|.mr表示右边距
 */
-.mt-5{margin-top:5px}.mt-10{margin-top:10px}.mt-15{margin-top:15px}.mt-20{margin-top:20px}.mt-25{margin-top:25px}.mt-30{margin-top:30px}.mt-35{margin-top:35px}.mt-40{margin-top:40px}.mt-50{margin-top:50px}
-.mb-5{margin-bottom:5px}.mb-10{margin-bottom:10px}.mb-15{margin-bottom:15px}.mb-20{margin-bottom:20px}.mb-30{margin-bottom:30px}.mb-40{margin-bottom:40px}.mb-50{margin-bottom:50px}
-.ml-5{margin-left:5px}.ml-10{margin-left:10px}.ml-15{margin-left:15px}.ml-20{margin-left:20px}.ml-30{margin-left:30px}.ml-40{margin-left:40px}.ml-50{margin-left:50px}
-.mr-5{margin-right:5px}.mr-10{margin-right:10px}.mr-15{margin-right:15px}.mr-20{margin-right:20px}.mr-30{margin-right:30px}.mr-40{margin-right:40px}.mr-50{margin-right:50px}
+
+.mt-5 {
+	margin-top: 5px
+}
+
+.mt-10 {
+	margin-top: 10px
+}
+
+.mt-15 {
+	margin-top: 15px
+}
+
+.mt-20 {
+	margin-top: 20px
+}
+
+.mt-25 {
+	margin-top: 25px
+}
+
+.mt-30 {
+	margin-top: 30px
+}
+
+.mt-35 {
+	margin-top: 35px
+}
+
+.mt-40 {
+	margin-top: 40px
+}
+
+.mt-50 {
+	margin-top: 50px
+}
+
+.mb-5 {
+	margin-bottom: 5px
+}
+
+.mb-10 {
+	margin-bottom: 10px
+}
+
+.mb-15 {
+	margin-bottom: 15px
+}
+
+.mb-20 {
+	margin-bottom: 20px
+}
+
+.mb-30 {
+	margin-bottom: 30px
+}
+
+.mb-40 {
+	margin-bottom: 40px
+}
+
+.mb-50 {
+	margin-bottom: 50px
+}
+
+.ml-5 {
+	margin-left: 5px
+}
+
+.ml-10 {
+	margin-left: 10px
+}
+
+.ml-15 {
+	margin-left: 15px
+}
+
+.ml-20 {
+	margin-left: 20px
+}
+
+.ml-30 {
+	margin-left: 30px
+}
+
+.ml-40 {
+	margin-left: 40px
+}
+
+.ml-50 {
+	margin-left: 50px
+}
+
+.mr-5 {
+	margin-right: 5px
+}
+
+.mr-10 {
+	margin-right: 10px
+}
+
+.mr-15 {
+	margin-right: 15px
+}
+
+.mr-20 {
+	margin-right: 20px
+}
+
+.mr-30 {
+	margin-right: 30px
+}
+
+.mr-40 {
+	margin-right: 40px
+}
+
+.mr-50 {
+	margin-right: 50px
+}
+
+
 /*3.1.9 内填充
 	Name:			style_padding
 	Example:		class="pt-5|pt-10|……"
 	Explain:		.pt表示上填充|.pb表示下填充|.pl表示左填充|.pr表示右填充
 */
-.pt-5{padding-top:5px}.pt-10{padding-top:10px}.pt-15{padding-top:15px}.pt-20{padding-top:20px}.pt-25{padding-top:25px}.pt-30{padding-top:30px}
-.pb-5{padding-bottom:5px}.pb-10{padding-bottom:10px}.pb-15{padding-bottom:15px}.pb-20{padding-bottom:20px}.pb-25{padding-bottom:25px}.pb-30{padding-bottom:30px}
-.pl-5{padding-left:5px}.pl-10{padding-left:10px}.pl-15{padding-left:15px}.pl-20{padding-left:20px}.pl-25{padding-left:25px}.pl-30{padding-left:30px}
-.pr-5{padding-right:5px}.pr-10{padding-right:10px}.pr-15{padding-right:15px}.pr-20{padding-right:20px}.pr-25{padding-right:25px}.pr-30{padding-right:30px}
-.pd-5{padding:5px}.pd-10{padding:10px}.pd-15{padding:15px}.pd-20{padding:20px}.pd-25{padding:25px}.pd-30{padding:30px}.pd-40{padding:40px}
+
+.pt-5 {
+	padding-top: 5px
+}
+
+.pt-10 {
+	padding-top: 10px
+}
+
+.pt-15 {
+	padding-top: 15px
+}
+
+.pt-20 {
+	padding-top: 20px
+}
+
+.pt-25 {
+	padding-top: 25px
+}
+
+.pt-30 {
+	padding-top: 30px
+}
+
+.pb-5 {
+	padding-bottom: 5px
+}
+
+.pb-10 {
+	padding-bottom: 10px
+}
+
+.pb-15 {
+	padding-bottom: 15px
+}
+
+.pb-20 {
+	padding-bottom: 20px
+}
+
+.pb-25 {
+	padding-bottom: 25px
+}
+
+.pb-30 {
+	padding-bottom: 30px
+}
+
+.pl-5 {
+	padding-left: 5px
+}
+
+.pl-10 {
+	padding-left: 10px
+}
+
+.pl-15 {
+	padding-left: 15px
+}
+
+.pl-20 {
+	padding-left: 20px
+}
+
+.pl-25 {
+	padding-left: 25px
+}
+
+.pl-30 {
+	padding-left: 30px
+}
+
+.pr-5 {
+	padding-right: 5px
+}
+
+.pr-10 {
+	padding-right: 10px
+}
+
+.pr-15 {
+	padding-right: 15px
+}
+
+.pr-20 {
+	padding-right: 20px
+}
+
+.pr-25 {
+	padding-right: 25px
+}
+
+.pr-30 {
+	padding-right: 30px
+}
+
+.pd-5 {
+	padding: 5px
+}
+
+.pd-10 {
+	padding: 10px
+}
+
+.pd-15 {
+	padding: 15px
+}
+
+.pd-20 {
+	padding: 20px
+}
+
+.pd-25 {
+	padding: 25px
+}
+
+.pd-30 {
+	padding: 30px
+}
+
+.pd-40 {
+	padding: 40px
+}
+
+
 /*3.1.10 边框，css3圆角
 	Name:			style-border
 	Example:		class="bk_gray radius"
 	Explain:		.bk_gray 边框|radius 圆角|round 椭圆 | circle 圆形
 */
-.bk-gray{border:solid 1px #eee}
-.radius{border-radius:4px}
-.size-MINI.radius{ border-radius:3px}
-.size-L.radius{ border-radius:5px}
-.size-XL.radius{ border-radius:6px}
-.round{border-radius:50%; overflow:hidden}
+
+.bk-gray {
+	border: solid 1px #eee
+}
+
+.radius {
+	border-radius: 4px
+}
+
+.size-MINI.radius {
+	border-radius: 3px
+}
+
+.size-L.radius {
+	border-radius: 5px
+}
+
+.size-XL.radius {
+	border-radius: 6px
+}
+
+.round {
+	border-radius: 50%;
+	overflow: hidden
+}
+
 
 /*3.1.11 css3阴影
 	Name:			style_shadow
@@ -130,125 +659,384 @@ pre{white-space: pre-wrap}	/*预格式化的文本*/
 	Explain:		box_shadow 块级元素阴影，全局样式，可用在表格，文本框，文本域，div等块级元素上。
 					text-shadow 文字阴影
 */
-.box-shadow{-webkit-box-shadow:0 1px 2px rgba(0,0,0,0.1);box-shadow:0 1px 2px rgba(0,0,0,0.1)}
-.text-shadow{-webkit-text-shadow:0 0 2px rgba(0,0,0,0.2);text-shadow:0 0 2px rgba(0,0,0,0.2)}
+
+.box-shadow {
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1)
+}
+
+.text-shadow {
+	-webkit-text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+	text-shadow: 0 0 2px rgba(0, 0, 0, 0.2)
+}
+
+
 /*3.1.12 行内分割竖线
 	Name:			style_pipe
 	Example:		<span class="pipe">|</span>
 */
-.pipe{margin:0 5px;color:#CCC;font-size:10px!important}
+
+.pipe {
+	margin: 0 5px;
+	color: #CCC;
+	font-size: 10px!important
+}
+
+
 /*3.1.13 文字尺寸
 	Name:			style_font-size
 	Example:		class="f-12|f-14|f-16|f-18|f-20|f-24|f-26|f-28|f-30"
 	Explain:		12px字体|14px字体|16px字体|18px字体|20px字体|24px字体|26px字体|28px字体|30px字体
 */
-.f-12{font-size:12px}.f-14{font-size:14px}.f-16{font-size:16px}.f-18{font-size:18px}.f-20{font-size:20px}.f-22 { font-size: 22px }.f-24{font-size:24px}.f-26{font-size:26px}.f-28{font-size:28px}.f-30{font-size:30px}
+
+.f-12 {
+	font-size: 12px
+}
+
+.f-14 {
+	font-size: 14px
+}
+
+.f-16 {
+	font-size: 16px
+}
+
+.f-18 {
+	font-size: 18px
+}
+
+.f-20 {
+	font-size: 20px
+}
+
+.f-22 {
+	font-size: 22px
+}
+
+.f-24 {
+	font-size: 24px
+}
+
+.f-26 {
+	font-size: 26px
+}
+
+.f-28 {
+	font-size: 28px
+}
+
+.f-30 {
+	font-size: 30px
+}
+
+
 /*3.1.14 文字行距
 	Name:			mod_line-height
 	Example:		class="lh-16|lh-18|lh-20|lh-22|lh-24|lh-26|lh-28|lh-30"
 	Explain:		16px行高|18px行高|20px行高|22px行高|24px行高|26px行高|30px行高
 */
-.lh-16{line-height:16px}.lh-18{line-height:18px}.lh-20{line-height:20px}.lh-22{line-height:22px}.lh-24{line-height:24px}.lh-26{line-height:26px}.lh-28{line-height:28px}.lh-30{line-height:30px}
+
+.lh-16 {
+	line-height: 16px
+}
+
+.lh-18 {
+	line-height: 18px
+}
+
+.lh-20 {
+	line-height: 20px
+}
+
+.lh-22 {
+	line-height: 22px
+}
+
+.lh-24 {
+	line-height: 24px
+}
+
+.lh-26 {
+	line-height: 26px
+}
+
+.lh-28 {
+	line-height: 28px;
+}
+
+.lh-30 {
+	line-height: 30px;
+}
+
+
 /*2.0以前的兼容版本*/
-.l16{line-height:16px}.l18{line-height:18px}.l20{line-height:20px}.l22{line-height:22px}.l-24{line-height:24px}.l-26{line-height:26px}.l-28{line-height:28px}.l-30{line-height:30px}
+
+.l16 {
+	line-height: 16px;
+}
+
+.l18 {
+	line-height: 18px;
+}
+
+.l20 {
+	line-height: 20px;
+}
+
+.l22 {
+	line-height: 22px;
+}
+
+.l-24 {
+	line-height: 24px;
+}
+
+.l-26 {
+	line-height: 26px;
+}
+
+.l-28 {
+	line-height: 28px;
+}
+
+.l-30 {
+	line-height: 30px;
+}
+
 
 /*3.1.15 文字颜色
 	Name:			style_color
 	Example:		class="c-primary|c-sub|c-success|c-danger|c-warning|c-333|c-666|c-999|c-red|c-green|c-blue|c-white|c-black|c-orange"
 	Explain:		主要颜色|次主色|强调色—成功|强调色—危险|强调色—警告色|强调色—错误色|次主色—浅黑|辅助色—灰色|标准色—红色|标准色—绿色|标准色—蓝色|标准色—白色|标准色—黑色|标准色—橙色
 */
+
+
 /*全局默认链接颜色*/
-body{ background-color:#fff; color:#333}
-.bg-fff{ background-color:#fff}
-a{color:#333}
-a:hover,.active a{color:#06c}
+
+body {
+	background-color: #fff;
+	color: #333;
+}
+
+.bg-fff {
+	background-color: #fff;
+}
+
+a {
+	color: #333;
+}
+
+a:hover,
+.active a {
+	color: #06c;
+}
+
 
 /*主要颜色*/
+
 .c-primary,
 .c-primary a,
 a.c-primary {
-    color: $primary-color
+	color: $primary-color;
 }
+
 .c-primary a:hover,
 a.c-primary:hover {
-    color: $primary-color
+	color: $primary-color;
 }
+
+
 /*次主色*/
-.c-secondary,.c-secondary a,a.c-secondary{color:#555}
-.c-secondary a:hover,a.c-secondary:hover{ color:#555}
+
+.c-secondary,
+.c-secondary a,
+a.c-secondary {
+	color: #555;
+}
+
+.c-secondary a:hover,
+a.c-secondary:hover {
+	color: #555;
+}
+
 
 /*强调色—成功*/
+
 .c-success,
 .c-success a,
 a.c-success {
-    color: $secondary-color;
-}
-.c-success a:hover,
-a.c-success:hover {
-    color: $secondary-color
+	color: $secondary-color;
 }
 
+.c-success a:hover,
+a.c-success:hover {
+	color: $secondary-color
+}
+
+
 /*强调色—危险*/
+
 .c-danger,
 .c-danger a,
 a.c-danger {
-    color: $danger-color
-}
-.c-danger a:hover,
-a.c-danger:hover {
-    color: $danger-color
+	color: $danger-color
 }
 
+.c-danger a:hover,
+a.c-danger:hover {
+	color: $danger-color
+}
+
+
 /*强调色—警告*/
+
 .c-warning,
 .c-warning a,
 a.c-warning {
-    color: $warning-color;
-}
-.c-warning a:hover,
-a.c-warning:hover {
-    color: $warning-color;
+	color: $warning-color;
 }
 
+.c-warning a:hover,
+a.c-warning:hover {
+	color: $warning-color;
+}
+
+
 /*强调色—错误*/
+
 .c-error,
 .c-error a,
 a.c-error {
-    color: $error-color;
+	color: $error-color;
 }
+
 .c-error a:hover,
 a.c-error:hover {
-    color: $error-color;
+	color: $error-color;
 }
 
+
 /*辅助色—浅黑*/
-.c-333,.c-333 a,a.c-333{color:#333}
-.c-333 a:hover,a.c-333:hover{ color:#333}
+
+.c-333,
+.c-333 a,
+a.c-333 {
+	color: #333
+}
+
+.c-333 a:hover,
+a.c-333:hover {
+	color: #333
+}
+
 
 /*辅助色—灰色*/
-.c-666,.c-666 a,a.c-666{color:#666}
-.c-666 a:hover,a.c-666:hover{ color:#666}
-.c-999,.c-999 a,a.c-999{color:#999}
-.c-999 a:hover,a.c-999:hover{color:#999}
+
+.c-666,
+.c-666 a,
+a.c-666 {
+	color: #666
+}
+
+.c-666 a:hover,
+a.c-666:hover {
+	color: #666
+}
+
+.c-999,
+.c-999 a,
+a.c-999 {
+	color: #999
+}
+
+.c-999 a:hover,
+a.c-999:hover {
+	color: #999
+}
+
 
 /*标准色—红色*/
-.c-red,.c-red a,a.c-red{color:red}
-.c-red a:hover,a.c-red:hover{ color:red}
+
+.c-red,
+.c-red a,
+a.c-red {
+	color: red
+}
+
+.c-red a:hover,
+a.c-red:hover {
+	color: red
+}
+
+
 /*标准色—绿色*/
-.c-green,.c-green a,a.c-green{color:green}
-.c-red a:hover,a.c-red:hover{color:green}
+
+.c-green,
+.c-green a,
+a.c-green {
+	color: green
+}
+
+.c-red a:hover,
+a.c-red:hover {
+	color: green
+}
+
+
 /*标准色—蓝色*/
-.c-blue,.c-blue a,a.c-blue{color:blue}
-.c-blue a:hover,a.c-blue:hover{color:blue}
+
+.c-blue,
+.c-blue a,
+a.c-blue {
+	color: blue
+}
+
+.c-blue a:hover,
+a.c-blue:hover {
+	color: blue
+}
+
+
 /*标准色—白色*/
-.c-white,.c-white a,a.c-white{color:white}
-.c-white a:hover,a.c-white:hover{color:white}
+
+.c-white,
+.c-white a,
+a.c-white {
+	color: white
+}
+
+.c-white a:hover,
+a.c-white:hover {
+	color: white
+}
+
+
 /*标准色—黑色*/
-.c-black,.c-black a{color:black}
-.c-black a:hover,a.c-black:hover{color:black}
+
+.c-black,
+.c-black a {
+	color: #000;
+}
+
+.c-black a:hover,
+a.c-black:hover {
+	color: #000;
+}
+
+
 /*标准色—橙色*/
-.c-orange,.c-orange a,a.c-orange{color:orange}
-.c-orange a:hover,a.c-orange:hover{color:orange}
+
+.c-orange,
+.c-orange a,
+a.c-orange {
+	color: orange;
+}
+
+.c-orange a:hover,
+a.c-orange:hover {
+	color: orange;
+}
+
 
 /*3.1.16 文字颜色强调	从2.0起废弃3.1.16 文字强调，字体颜色全部放入到3.1.15
 	Example:		class="text-muted|text-primary|text-warning|text-error|text-danger|text-success|text-info"
@@ -260,17 +1048,37 @@ a.c-error:hover {
 	Example:		<abbr title="User Interface" class="initialism">UI</abbr>
 	Explain:
 */
-abbr[title],abbr[data-original-title]{cursor:help;border-bottom:1px dotted #999}
-abbr.initialism{font-size:90%;text-transform:uppercase}
+
+abbr[title],
+abbr[data-original-title] {
+	cursor: help;
+	border-bottom: 1px dotted #999
+}
+
+abbr.initialism {
+	font-size: 90%;
+	text-transform: uppercase
+}
+
+
 /*3.1.18 地址
 	Example:		<address>北京市海淀区上地……</address>
 	Explain:
 */
-address{display:block;margin-bottom:20px;font-style:normal;line-height:20px}
+
+address {
+	display: block;
+	margin-bottom: 20px;
+	font-style: normal;
+	line-height: 20px
+}
+
+
 /*3.1.19 引用
 	Example:		<blockquote>这是引用的内容</blockquote>
 	Explain:
 */
+
 blockquote {
 	padding: 0 0 0 15px;
 	margin: 0 0 20px;
@@ -285,7 +1093,6 @@ blockquote {
 		display: block;
 		line-height: 20px;
 		color: #999;
-		&:before {}
 	}
 	&.text-r {
 		padding-right: 15px;
@@ -296,7 +1103,6 @@ blockquote {
 			&:before {
 				content: '';
 			}
-			&:after {}
 		}
 	}
 }
@@ -306,19 +1112,47 @@ blockquote.text-r small {
 	text-align: right;
 }
 
-q:before,q:after,blockquote:before,blockquote:after{content:""}
-q {/*短的引用*/quotes: "\201C" "\201D" "\2018" "\2019"}
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+	content: ""
+}
+
+q {
+	/*短的引用*/
+	quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+
 /*3.1.20 上标，下标
 	Example:		<sup>2</sup>	<sub>2<sub>
 	Explain:		上标|下标
 */
-sub,sup{position:relative;font-size:75%;line-height:0;vertical-align:baseline}
-sup{top:-0.5em}sub{bottom:-0.25em}
+
+sub,
+sup {
+	position: relative;
+	font-size: 75%;
+	line-height: 0;
+	vertical-align: baseline;
+}
+
+sup {
+	top: -0.5em;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+
 /*3.1.21 内容样式
 	Name:			style_content
 	Example:		<div class="content"><p>……</p></div>
 	Explain:		内容样式
 */
+
 .content {
 	position: relative;
 	font-size: 17px;
@@ -354,12 +1188,23 @@ sup{top:-0.5em}sub{bottom:-0.25em}
 }
 
 @media (max-width: 767px) {
-	.content{ font-size:16px}
+	.content {
+		font-size: 16px
+	}
 }
+
 @media (max-width: 480px) {
-	.content img{max-width:100%!important; height:auto!important;width:expression(this.width > 320 ? "320px" : this.width)!important}
-	*html .content img{width:expression(this.width>320&&this.width>this.height?320:auto)}
+	.content img {
+		max-width: 100%!important;
+		height: auto!important;
+		//width: expression(this.width > 320 ? "320px": this.width)!important
+	}
+	//*html .content img {
+		//width: expression(this.width>320&&this.width>this.height?320:auto)
+	//}
 }
+
+
 /*3.1.22 列表
 	Name:			style_ulolli
 	Example:
@@ -375,43 +1220,43 @@ sup{top:-0.5em}sub{bottom:-0.25em}
 </ol>
 	Explain:
 */
-ul.unstyled,
-ol.unstyled{
-    margin-left:0;
-    list-style:none
-}
+
 ul.inline,
-ol.inline{
-    margin-left:0;
-    list-style:none;
-    > li{
-        display:inline-block;
-        *display:inline;
-        padding-right:5px;
-        padding-left:5px;
-        *zoom:1
-    }
+ol.inline {
+	margin-left: 0;
+	list-style: none;
+	>li {
+		display: inline-block;
+		*display: inline;
+		padding-right: 5px;
+		padding-left: 5px;
+		*zoom: 1
+	}
 }
 
 .list-view>.item {
-    padding: 10px;
-    position: relative;
-    overflow: hidden;
-    /*禁止换行*/
-    .date {
-        font-size: 12px;
-        font-family: Arial;
-        color: #999
-    }
+	padding: 10px;
+	position: relative;
+	overflow: hidden;
+	/*禁止换行*/
+	.date {
+		font-size: 12px;
+		font-family: Arial;
+		color: #999;
+	}
 }
 
 
 /*横向手机 竖向平板*/
+
 @media (max-width: 767px) {
-    .list-view > .item{ font-size:18px; padding:11px 15px;border-bottom: 1px solid #eee;
-        >a {
-            display: block;
-            margin: -11px -15px
+	.list-view>.item {
+		font-size: 18px;
+		padding: 11px 15px;
+		border-bottom: 1px solid #eee;
+		>a {
+			display: block;
+			margin: -11px -15px
 		}
 		.date {
 			display: none
@@ -421,68 +1266,102 @@ ol.inline{
 			margin-top: -7px;
 			position: absolute;
 			right: 15px;
-			top: 50%
+			top: 50%;
 		}
-    }
-	.night .list-view > .item{border-bottom: 1px solid #1F1F1F}
+	}
+	.night .list-view>.item {
+		border-bottom: 1px solid #1F1F1F;
+	}
 }
 
+
 /*排行榜*/
+
+
 /*<ol class="list-view list-top"><li class="item"><em class="num">1</em><a href="#">排行榜列表</a><span class="date">12</span></li></ol>*/
-.list-top > .item{
-    padding-left: 30px;
-    .num {
-        position: absolute;
-        top: 11px;
-        display: block;
-        width: 20px;
-        height: 20px;
-        color: #fff;
-        background-color: #5a98de;
-        text-align: center;
-    }
+
+.list-top>.item {
+	padding-left: 30px;
+	.num {
+		position: absolute;
+		top: 11px;
+		display: block;
+		width: 20px;
+		height: 20px;
+		color: #fff;
+		background-color: #5a98de;
+		text-align: center;
+	}
 }
+
 
 /*3.1.23 描述
 	Name:			style_dldtdd
 	Example:		<dl class="dl-horizontal cl"><dt>H-ui</dt><dd>基于Bootstrap框架的改进扩展的前端框架</dd></dl>
 	Explain:		.dl-horizontal 水平描述，默认不加为垂直模式。
 */
+
 .dl-horizontal {
-    dt {
-        float: left;
-        width: 160px;
-        overflow: hidden;
-        clear: left;
-        text-align: right;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-    dd {
-        margin-left: 180px;
-    }
+	dt {
+		float: left;
+		width: 160px;
+		overflow: hidden;
+		clear: left;
+		text-align: right;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	dd {
+		margin-left: 180px;
+	}
 }
+
 
 /*3.1.24 隐藏 显示
   Name:				style_display
   Example:    <div class="hide">隐藏的内容</div> <div class="show">显示的内容</div>
   Explain:    		.hide 隐藏 / .show 显示
 */
-.hide{display:none}[hidden]{display: none}
-.hidden{display:none!important;visibility:hidden!important}
-.f-hide{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0}
-[class*="span"].hide,.row-fluid [class*="span"].hide{display:none}
-.show{display:block}
-.invisible{visibility:hidden}
+
+.hide {
+	display: none;
+}
+
+[hidden] {
+	display: none;
+}
+
+.hidden {
+	display: none!important;
+	visibility: hidden!important;
+}
+
+.f-hide {
+	font: 0/0 a;
+	color: transparent;
+	text-shadow: none;
+	background-color: transparent;
+	border: 0;
+}
+
+[class*="span"].hide,
+.row-fluid [class*="span"].hide {
+	display: none;
+}
+
+.show {
+	display: block;
+}
+
+.invisible {
+	visibility: hidden;
+}
+
 
 /*3.1.25 尺寸	新增尺寸全局类名，用于表单、按钮、表格、头像、标签等元素上，要与元素一起配合使用，方能看到效果*/
-.size-MINI{}/*迷你*/
-.size-S{}/*小*/
-.size-M{}/*中 缺省默认尺寸，可以不写，可以理解为：均码*/
-.size-L{}/*L*/
-.size-XL{}/*大*/
-.size-XXL{}/*加大*/
-.size-XXXL{}/*超大*/
+
+/*中 缺省默认尺寸，可以不写，可以理解为：均码*/
+/*超大*/
 
 .input-text,
 .btn,
@@ -492,7 +1371,7 @@ ol.inline{
 	height: 31px;
 	*height: auto;
 	line-height: 1.42857;
-	padding: 4px
+	padding: 4px;
 }
 
 
@@ -502,12 +1381,12 @@ a.btn,
 a.btn.size-M,
 span.btn,
 span.btn.size-M {
-	line-height: 21px
+	line-height: 21px;
 }
 
 .btn,
 .btn.size-M {
-	padding: 4px 12px
+	padding: 4px 12px;
 }
 
 .input-text.size-MINI,
@@ -515,7 +1394,7 @@ span.btn.size-M {
 	font-size: 12px;
 	height: 23px;
 	padding: 1px 2px;
-	line-height: 1.42857
+	line-height: 1.42857;
 }
 
 
@@ -523,11 +1402,11 @@ span.btn.size-M {
 
 a.btn.size-MINI,
 span.btn.size-MINI {
-	line-height: 21px
+	line-height: 21px;
 }
 
 .btn.size-MINI {
-	padding: 1px 4px
+	padding: 1px 4px;
 }
 
 .input-text.size-S,
@@ -535,7 +1414,7 @@ span.btn.size-MINI {
 	font-size: 12px;
 	height: 27px;
 	padding: 3px;
-	line-height: 1.42857
+	line-height: 1.42857;
 }
 
 
@@ -543,18 +1422,18 @@ span.btn.size-MINI {
 
 a.btn.size-S,
 span.btn.size-S {
-	line-height: 19px
+	line-height: 19px;
 }
 
 .btn.size-S {
-	padding: 3px 8px
+	padding: 3px 8px;
 }
 
 .input-text.size-L,
 .btn.size-L {
 	font-size: 16px;
 	height: 41px;
-	padding: 8px
+	padding: 8px;
 }
 
 
@@ -562,34 +1441,59 @@ span.btn.size-S {
 
 a.btn.size-L,
 span.btn.size-L {
-	line-height: 23px
+	line-height: 23px;
 }
 
 .btn.size-L {
-	padding: 8px 16px
+	padding: 8px 16px;
 }
 
 .input-text.size-XL,
 .btn.size-XL {
 	font-size: 18px;
 	height: 48px;
-	padding: 10px
+	padding: 10px;
 }
 
 
 /*特大*/
+
 a.btn.size-XL,
 span.btn.size-XL {
-	line-height: 26px
+	line-height: 26px;
 }
+
 .btn.size-XL {
-	padding: 10px 24px
+	padding: 10px 24px;
 }
 
 @media (max-width: 767px) {
-	.responsive .input-text.size-MINI,.responsive .btn.size-MINI{height:24px}
-	.responsive .input-text.size-S,.responsive .btn.size-S{ font-size:14px; height:30px}
-	.responsive .input-text,.btn,.responsive .input-text.size-M,.responsive .btn.size-M{ font-size:16px; height:36px}
-	.responsive .input-text.size-L,.responsive .btn.size-L{ font-size:18px; height:42px}
-	.responsive .input-text.size-XL,.responsive .btn.size-XL{ font-size:20px; height:48px}
+	.responsive{
+		.input-text.size-MINI,
+		.btn.size-MINI {
+			height: 24px;
+		}
+		.input-text.size-S,
+		.btn.size-S {
+			font-size: 14px;
+			height: 30px;
+		}
+		.input-text,
+		.btn,
+		.input-text.size-M,
+		.btn.size-M {
+			font-size: 16px;
+			height: 36px;
+		}
+		.input-text.size-L,
+		.btn.size-L {
+			font-size: 18px;
+			height: 42px;
+		}
+		.input-text.size-XL,
+		.btn.size-XL {
+			font-size: 20px;
+			height: 48px;
+		}
+	}
 }

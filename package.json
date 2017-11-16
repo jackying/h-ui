@@ -1,0 +1,32 @@
+{
+  "name": "h-ui",
+  "version": "1.0.0",
+  "description": "H-ui前端框架",
+  "main": ".eslintrc.js",
+  "directories": {
+    "example": "examples",
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jackying/h-ui.git"
+  },
+  "keywords": [
+    "H-ui"
+  ],
+  "author": "jackying",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jackying/h-ui/issues"
+  },
+  "homepage": "https://github.com/jackying/h-ui#readme",
+  "dependencies": {
+    "jquery": "^1.12.4",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4",
+    "zepto": "^1.2.0"
+  }
+}
