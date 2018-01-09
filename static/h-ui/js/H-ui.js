@@ -1,8 +1,8 @@
 /*-----------H-ui前端框架-------------
-* H-ui.js v3.1.9
+* H-ui.js v3.1.10
 * http://www.h-ui.net/
 * Created & Modified by guojunhui
-* Date modified 2017.11.13
+* Date modified 2017.12.19
 *
 * Copyright 2013-2017 北京颖杰联创科技有限公司 All rights reserved.
 * Licensed under MIT license.
@@ -4314,7 +4314,10 @@ function HuiaddFavorite(obj) {
 		try {
 			window.sidebar.addPanel(name, site, "");
 		} catch(e) {
-			$.Huimodalalert("加入收藏失败，请使用Ctrl+D进行添加", 2000);
+			$("body").Huimodalalert({
+				content: '加入收藏失败，请使用Ctrl+D进行添加',
+				speed: 2000,
+			});
 		}
 	}
 }
@@ -4333,7 +4336,10 @@ function Huisethome(obj){
 				netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
 				}
 			catch(e){
-				$.Huimodalalert("此操作被浏览器拒绝！\n请在浏览器地址栏输入\"about:config\"并回车\n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。",2000);
+				$("body").Huimodalalert({
+					content: "此操作被浏览器拒绝！\n请在浏览器地址栏输入\"about:config\"并回车\n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。",
+					speed: 2000,
+				});
 			}
 			var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
 			prefs.setCharPref('browser.startup.homepage',url);
@@ -4825,6 +4831,76 @@ function displaynavbar(obj){
 /* =======================================================================
  * jQuery.Huimodalalert.js alert
  * ========================================================================*/
+ !function ($) {
+	$.fn.Huimodalalert = function (options, callback) {
+		var defaults = {
+			btn: ['确定'],
+			content:'弹窗内容',
+			speed: "0",
+			area: ['400', 'auto'],
+		};
+		var options = $.extend(defaults, options);
+		this.each(function () {
+			var that = $(this);
+			var w= 0,h=0,t=0,l=0;
+			if (options.area[0]=='auto'){
+				w ='400px';
+				l = -(400 / 2) + 'px';
+			}else{
+				w = options.area[0] + 'px';
+				l = -(options.area[0] / 2) + 'px';
+			}
+			if (options.area[1] == 'auto') {
+				h = 'auto';
+			} else {
+				h = options.area[1] + 'px';
+			}
+			
+
+			var htmlstr = 
+				'<div id="Huimodalalert" class="modal modal-alert radius" style="width:' + w + ';height:' + h + ';margin-left:' + l +'">' + 
+				'<div class="modal-alert-info">' + options.content + '</div>' + 
+				'<div class="modal-footer">'+
+					'<button class="btn btn-primary radius">' + options.btn[0]+'</button>'+
+				'</div>' + 
+			'</div>'+
+			'<div id="Huimodalmask" class="Huimodalmask"></div>';
+
+			if ($("#Huimodalalert").length > 0) {
+				$("#Huimodalalert,#Huimodalmask").remove();
+			}
+			if (options.speed==0){
+				$(document.body).addClass("modal-open").append(htmlstr);
+				$("#Huimodalalert").fadeIn();
+			}else{
+				$(document.body).addClass("modal-open").append(htmlstr);
+				$("#Huimodalalert").find(".modal-footer").remove();
+				$("#Huimodalalert").fadeIn();
+				setTimeout(function(){
+					$("#Huimodalalert").fadeOut("normal",function () {
+						huimodalhide();
+					});
+				}, options.speed);
+			}
+			
+			var button = that.find(".modal-footer .btn");
+			button.on("click",function(){
+				$("#Huimodalalert").fadeOut("normal", function () {
+					huimodalhide();
+				});
+			});
+
+			function huimodalhide(){
+				$("#Huimodalalert,#Huimodalmask").remove();
+				$(document.body).removeClass("modal-open");
+				if (callback) {
+					callback();
+				}
+			}
+		});
+	}
+}(window.jQuery);
+
 !function($) {
 	$.Huimodalalert = function(info, speed) {
 		if ($(".modal-alert").length > 0) {

@@ -981,7 +981,12 @@ function modaldemo(){
 }
 //消息框
 function modalalertdemo(){
-	$.Huimodalalert('我是消息框，2秒后我自动滚蛋！',2000);
+	$("body").Huimodalalert({
+			content: '我是消息框，2秒后我自动滚蛋！',
+			speed: 2000,
+		}, function () {
+		alert("我已滚蛋");
+	});
 }
 $(function(){
 	$(".input-text,.textarea").Huifocusblur();
