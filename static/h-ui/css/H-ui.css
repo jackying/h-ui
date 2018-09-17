@@ -3,9 +3,9 @@
 * H-ui.css v3.1.7
 * http://www.h-ui.net/
 * Created & Modified by guojunhui
-* Date modified 2018.07.10
+* Date modified 2018.08.07
 *
-* Copyright 2013-2017 北京颖杰联创科技有限公司 All rights reserved.
+* Copyright 2013-2018 北京颖杰联创科技有限公司 All rights reserved.
 * Licensed under MIT license.
 * http://opensource.org/licenses/MIT
 *
@@ -308,7 +308,7 @@ input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit
 	Name:			style_container
 	Example:
 	<div class="responsive">
-	<div class="row cl" role="grid">
+	<div class="row clearfix" role="grid">
 	  <div class="col-1">……</div>
 	  ……
 	</div>
@@ -710,6 +710,11 @@ input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit
   min-height: 1px;
   padding-left: 0;
   padding-right: 0;
+	box-sizing:border-box;
+	-webkit-transition:all 0.3s ease-in;
+	-moz-transition:all 0.3s ease-in;
+	-o-transition:all 0.3s ease-in;
+	transition:all 0.3s ease-in;
 }
 .col-24-xs-1, .col-24-xs-2, .col-24-xs-3, .col-24-xs-4, .col-24-xs-5, .col-24-xs-6,
 .col-24-xs-7, .col-24-xs-8, .col-24-xs-9, .col-24-xs-10, .col-24-xs-11, .col-24-xs-12,
@@ -2567,7 +2572,7 @@ input[type="radio"],input[type="checkbox"] {line-height: normal; margin-top:-4px
 /*方法一、修改源生*/
 .select-box{border:solid 1px #ddd;box-sizing:border-box;vertical-align:middle; width:100%; display:inline-block}
 	.select{border:solid 1px #ddd;box-sizing:border-box;cursor: pointer;line-height:normal;font-weight: normal;width:100%; white-space:nowrap}
-.select-box .select{ border:none}
+.select-box .select{ border:none; background-color: transparent;}
 .select-box.inline,
 .select-box.inline .select{ width:auto}
 
@@ -4262,11 +4267,24 @@ H-ui采用Font Awesome 3.2.1的整套图标，因为是图标字体，所以可�
       <div class="tabCon">内容三</div>
     </div>
 */
-.tabBar {border-bottom: 2px solid #222}
-.tabBar span {background-color: #e8e8e8;cursor: pointer;display: inline-block;float: left;
-font-weight: bold;height: 30px;line-height: 30px;padding: 0 15px}
-.tabBar span.current{background-color: #222;color: #fff}
-.tabCon {display: none}
+.tabBar {
+	border-bottom: 1px solid #e8e8e8;
+}
+.tabBar span {
+	cursor: pointer;
+	display: inline-block;
+	float: left;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 20px;
+	border-bottom: solid 2px #fff;
+}
+.tabBar span.current {
+	border-bottom-color: #1890ff;
+}
+.tabCon {
+	display: none;
+}
 
 /*4.6 标签与标号
 	Name:			style_label
@@ -4649,8 +4667,14 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus{color: #fff;text-deco
 	</div>
 */
 .panel{ background-color:#fff; border:solid 1px transparent}
-	.panel-header{ border-bottom:solid 1px transparent; padding:8px 15px; font-size:14px; font-weight:700; margin-bottom:-1px}/*面板标题*/
-	.panel-body{ padding:15px}/*面板内容*/
+	.panel-header {
+		border-bottom:solid 1px #eee;
+		padding:8px 20px;
+		font-size:16px;
+		font-weight:700;
+		margin-bottom:-1px;
+	}/*面板标题*/
+	.panel-body{ padding:20px}/*面板内容*/
 	.panel-footer{background-color: #f5f5f5;border-top: 1px solid #ddd;padding:5px 20px}/*面板页脚*/
 /*默认面板*/
 .panel-default{border-color:#ddd}
@@ -4800,8 +4824,17 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus{color: #fff;text-deco
 	.tags a:hover{color:#F00; text-decoration:underline}
 
 	/*4.19.3 tag云标签*/
-	#tagyun {position:relative}
-	#tagyun a {position:absolute;top:0px;left:0px;font-weight:bold;text-decoration:none;padding:3px 6px}
+	#tagyun {
+		position:relative;
+	}
+	#tagyun a {
+		position: absolute;
+		top: 0;
+		left: 0;
+		font-weight: bold;
+		text-decoration: none;
+		padding: 3px 6px;
+	}
 
 /*4.20 折叠
 	Name:			mod_Huifold
@@ -4811,8 +4844,21 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus{color: #fff;text-deco
 	  ……
 	</ul>
 */
-.Huifold .item{position:relative}
-.Huifold .item h4{margin:0;font-weight:bold;position:relative;border-top: 1px solid #fff;font-size:15px;line-height:22px;padding:7px 10px;background-color:#eee;cursor:pointer;padding-right:30px}
+.Huifold .item {
+	position:relative;
+}
+.Huifold .item h4 {
+	margin:0;
+	font-weight:bold;
+	position:relative;
+	border-top: 1px solid #fff;
+	font-size:15px;
+	line-height:22px;
+	padding:7px 10px;
+	background-color:#eee;
+	cursor:pointer;
+	padding-right:30px;
+}
 .Huifold .item h4 b{position:absolute;display: block; cursor:pointer;right:10px;top:7px;width:16px;height:16px; text-align:center; color:#666}
 .Huifold .item .info{display:none;padding:10px}
 
@@ -4849,7 +4895,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus{color: #fff;text-deco
 	  </li>
 	</ul>
 */
-.commentList .item{list-style: none outside none;margin: 1.6rem 0 0}
+.commentList .item{list-style: none outside none;margin: 1.6rem 0 0;padding-right: 64px;}
 .commentList .avatar{border: 1px solid transparent;float: left}
 	.comment-main{position:relative;margin-left:64px;border:1px solid #dedede;border-radius:2px}
 	.comment-main:before,
@@ -4863,7 +4909,11 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus{color: #fff;text-deco
 		.comment-author{font-weight:700;color:#999}
 		.comment-body{padding:15px;overflow:hidden}
 		.comment-body>:last-child{margin-bottom:0}
-.commentList .comment-flip .avatar {float: right}
+.commentList .item.comment-flip {
+	padding-left: 64px;
+	padding-right: 0;
+}
+.commentList .item.comment-flip .avatar {float: right}
 	.comment-flip .comment-main{margin-left: 0; margin-right: 64px}
 	.comment-flip .comment-main:before {border-left-color: #dedede;border-right-color: transparent}
 	.comment-flip .comment-main:before,
@@ -4944,7 +4994,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus{color: #fff;text-deco
 .tooltip.bottom-right .tooltip-arrow {top: 0;right: 5px;border-width: 0 5px 5px;border-bottom-color: #000}
 
 /*4.26 popover 效果
-	Name:			mod_popover
+	Name:     mod_popover
 */
 .popover {position: absolute;top: 0;left: 0;z-index: 1060;display: none;max-width: 276px;padding: 1px;font-size: 14px;font-weight: normal;line-height: 1.42857143;text-align: left;white-space: normal;background-color: #fff;-webkit-background-clip: padding-box;background-clip: padding-box;border: 1px solid #ccc;border: 1px solid rgba(0, 0, 0, .2);border-radius: 6px;-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .2);box-shadow: 0 5px 10px rgba(0, 0, 0, .2)}
 .popover.top {margin-top: -10px}
@@ -4966,9 +5016,17 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus{color: #fff;text-deco
 .popover.left > .arrow:after {right: 1px;bottom: -10px;content: " ";border-right-width: 0;border-left-color: #fff}
 
 /*4.27 datetimepicker日期插件
-	Name:			mod_datetimepicker
+	Name:     mod_datetimepicker
 	Sample:
 */
+.datetimepicker-input {
+	background:#fff url(../images/datetimepicker/datetimepicker.gif) no-repeat right;
+	padding-right: 20px;
+	box-sizing: border-box;
+}
+.datetimepicker-input::-ms-clear {
+	display:none;
+}
 .datetimepicker {padding: 4px;margin-top: 1px;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;direction: ltr;position: absolute;top: 100%;left: 0;z-index: 1000;display: none;float: left;min-width: 160px;padding: 5px 0;margin: 2px 0 0;font-size: 14px;list-style: none;background-color: #ffffff;border: 1px solid #cccccc;border: 1px solid rgba(0, 0, 0, 0.15);border-radius: 4px;-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);background-clip: padding-box}
 .datetimepicker-inline {width: 220px}
 .datetimepicker.datetimepicker-rtl {direction: rtl}
@@ -5054,7 +5112,14 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus{color: #fff;text-deco
 	background-image: -webkit-linear-gradient(top, #0088cc, #0044cc);
 	background-image: -o-linear-gradient(top, #0088cc, #0044cc);
 	background-image: linear-gradient(top, #0088cc, #0044cc);
-	background-repeat: repeat-x;filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088cc', endColorstr='#0044cc', GradientType=0);border-color: #0044cc #0044cc #002a80;border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);color: #fff;text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25)}
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088cc', endColorstr='#0044cc', GradientType=0);
+	border-color: #0044cc #0044cc #002a80;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+	color: #fff;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25)
+}
 
 .datetimepicker table tr td.active:hover,
 .datetimepicker table tr td.active:hover:hover,
@@ -5111,7 +5176,13 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus{color: #fff;text-deco
 	background-image: -o-linear-gradient(top, #0088cc, #0044cc);
 	background-image: linear-gradient(top, #0088cc, #0044cc);
 	background-repeat: repeat-x;
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088cc', endColorstr='#0044cc', GradientType=0);border-color: #0044cc #0044cc #002a80;border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);color: #fff;text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25)}
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088cc', endColorstr='#0044cc', GradientType=0);
+	border-color: #0044cc #0044cc #002a80;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+	color: #fff;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
 
 .datetimepicker table tr td span.active:hover,
 .datetimepicker table tr td span.active:hover:hover,
@@ -5151,7 +5222,11 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus{color: #fff;text-deco
 .datetimepicker tfoot th:hover {background: #eee}
 .input-append.date .add-on i,
 .input-prepend.date .add-on i,
-.input-group.date .input-group-addon span {cursor: pointer;width: 14px;height: 14px}
+.input-group.date .input-group-addon span {
+	cursor: pointer;
+	width: 14px;
+	height: 14px;
+}
 
 /*4.27 分类检索
 	Name:			mod_select-category
@@ -5161,13 +5236,12 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus{color: #fff;text-deco
 		<dl>
 			<dt class="dt">选择区域：</dt>
 			<dd class="dd">
-				<a href="#" title="北京市">北京市</a>
-            </dd>
+        <a href="#" title="北京市">北京市</a>
+      </dd>
 		</dl>
 	</div>
 </div>
 */
-.select-category{}
 .select-category .item{padding:5px; position:relative; border-bottom:solid 1px #ddd}
 .select-category .item .dt{ width:90px; float:left;white-space:nowrap}
 .select-category .item .dd{ margin-left:100px; text-align:left; font-size:14px; height:auto}
@@ -5175,7 +5249,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus{color: #fff;text-deco
 
 /*4.28 sortable拖动*/
 .ui-state-highlight{ height:50px; margin-top:20px;border:1px solid #fcefa1;background:#fbf9ee;color:#363636}
-.sortable-control{ cursor:move}
+.sortable-control {cursor:move}
 
 /*4.29 ColorPicker 颜色控件*/
 
@@ -5184,12 +5258,24 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus{color: #fff;text-deco
 	Name:			page
 */
 
-/*5.1 错误页-404*/
-.page-404{ color:#afb5bf; padding-top:60px; padding-bottom:90px}
-.page-404 .error-title{font-size:80px}
-.page-404 .error-title .iconfont{font-size:80px}
-.page-404 .error-description{font-size:24px}
-.page-404 .error-info{font-size:14px}
+/*5.1 错误页*/
+.page-error {
+	color: #afb5bf;
+	padding-top: 60px;
+	padding-bottom: 90px;
+}
+.page-error .error-title {
+	font-size: 80px;
+}
+.page-error .error-title .iconfont {
+	font-size:80px;
+}
+.page-error .error-description {
+	font-size: 24px;
+}
+.page-error .error-info {
+	font-size:14px;
+}
 
 /*5.2 博客列表页*/
 .page-blog-list{}
