@@ -770,7 +770,7 @@
 								<td>1.0</td>
 								<td>格式化字符串。</td>
 							</tr>
-			
+
 							<tr>
 								<td>jQuery.iCheck.js</td>
 								<td>1.0</td>
@@ -840,7 +840,7 @@
 					</table>
 				</div>
 			</div>
-			
+
 			<div class="panel panel-default mt-20">
 				<div class="panel-header clearfix">
 					<span class="f-l">lib中的第三方插件</span>
@@ -908,7 +908,7 @@
 							</tr>
 							<tr>
 								<td>html5shiv.js</td>
-								<td><3.7.0/td> 
+								<td><3.7.0/td>
 								<td>html5插件，让低版本IE支持html5元素</td>
 							</tr>
 							<tr>
@@ -990,10 +990,10 @@ function modalalertdemo(){
 }
 $(function(){
 	$(".input-text,.textarea").Huifocusblur();
-	
+
 	//幻灯片
 	jQuery("#slider-3 .slider").slide({mainCell:".bd ul",titCell:".hd li",trigger:"click",effect:"leftLoop",autoPlay:true,delayTime:700,interTime:3000,pnLoop:false,titOnClassName:"active"});
-	
+
 	$(".panel").Huifold({
 		titCell:'.panel-header',
 		mainCell:'.panel-body',
@@ -1002,17 +1002,17 @@ $(function(){
 		className:"selected",
 		speed:"first",
 	});
-	
-	//邮箱提示	
+
+	//邮箱提示
 	$("#email").emailsuggest();
-	
+
 	//checkbox 美化
 	$('.skin-minimal input').iCheck({
 		checkboxClass: 'icheckbox-blue',
 		radioClass: 'iradio-blue',
 		increaseArea: '20%'
 	});
-	
+
 	//日期插件
 	$("#datetimepicker").datetimepicker({
     	format: 'yyyy-mm-dd',
@@ -1023,7 +1023,7 @@ $(function(){
 	}).on('hide',function(e) {
 		//此处可以触发日期校验。
 	});
-	
+
 	/*+1 -1效果*/
 	$("#spinner-demo").Huispinner({
 		value:1,
@@ -1031,12 +1031,12 @@ $(function(){
 		maxValue:99,
 		dis:1
 	});
-	
+
 	$(".textarea").Huitextarealength({
 		minlength:10,
 		maxlength:200.
 	});
-	
+
 	$("#demoform").validate({
 		rules:{
 			email:{
@@ -1064,7 +1064,7 @@ $(function(){
 				required:true,
 			},
 			datetimepicker:{
-				required:true,	
+				required:true,
 			},
 			checkbox2:{
 				required:true,
@@ -1093,15 +1093,15 @@ $(function(){
 	$("#HuiTab-demo1").Huitab({
 		index:0
 	});
-	
+
 	$("#Huitags-demo1").Huitags();
-	
+
 	//返回顶部
 	$.Huitotop();
-	
+
 	//hover效果
 	$('.maskWraper').Huihover();
-	
+
 	//星级评价
 	$("#star-1").raty({
 		hints: ['1','2', '3', '4', '5'],//自定义分数
@@ -1125,7 +1125,7 @@ $(function(){
 		//distance: 15, //距离延迟
 		placeholder: "ui-state-highlight", //占位符样式
 		update: function(event, ui){
-			
+
 		}
 	}).disableSelection();
 
@@ -1146,4 +1146,4 @@ $(function(){
 </script>
 </body>
 </html>
-<!--H-ui前端框架提供前端技术支持 h-ui.net @2017-01-01 -->
+<!--H-ui前端框架提供前端技术支持 h-ui.net @2018-09-17 -->
