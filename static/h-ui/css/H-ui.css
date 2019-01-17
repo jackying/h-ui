@@ -1,11 +1,11 @@
 @charset "utf-8";
 /* -----------H-ui前端框架-------------
-* H-ui.css v3.1.7
+* H-ui.css v3.1.8
 * http://www.h-ui.net/
 * Created & Modified by guojunhui
-* Date modified 2018.08.07
+* Date modified 2019.01.17
 *
-* Copyright 2013-2018 北京颖杰联创科技有限公司 All rights reserved.
+* Copyright 2013-2019 北京颖杰联创科技有限公司 All rights reserved.
 * Licensed under MIT license.
 * http://opensource.org/licenses/MIT
 *
@@ -490,8 +490,10 @@ input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit
 .col-xs-offset-0 {margin-left: 0}
 
 @media (max-width:767px){
-	.responsive [class^="col-"],.responsive [class*=" col-"]{float:none!important;width:auto!important}
-	.responsive [class^="col-offset-"],.responsive [class*=" col-offset-"]{ margin-left:0!important}
+	.responsive [class^="col-"],
+	.responsive [class*=" col-"] {float:none!important;width:auto!important}
+	.responsive [class^="col-offset-"],
+	.responsive [class*=" col-offset-"]{ margin-left:0!important}
 }
 @media(min-width:768px){
 	.col-sm-1,.col-sm-10,.col-sm-11,.col-sm-12,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9{float:left}
@@ -1894,7 +1896,12 @@ ul.inline > li,ol.inline > li{display:inline-block;*display:inline;padding-right
 .size-XXL{}/*加大*/
 .size-XXXL{}/*超大*/
 
-.input-text,.btn,.input-text.size-M,.btn.size-M{ font-size:14px; height:31px;*height:auto;line-height:1.42857;padding:4px}/*默认为M，可以不写，可以理解为：均码*/
+.input-text,.btn,.input-text.size-M,.btn.size-M {
+  font-size:14px;
+  height:31px;
+  *height:auto;
+  line-height:1.42857;
+  padding:4px 10px;}/*默认为M，可以不写，可以理解为：均码*/
 a.btn,a.btn.size-M,span.btn,span.btn.size-M{ line-height:21px}
 .btn,.btn.size-M{ padding:4px 12px}
 
@@ -1915,11 +1922,18 @@ a.btn.size-XL,span.btn.size-XL{ line-height:26px}
 .btn.size-XL{ padding:10px 24px}
 
 @media (max-width: 767px) {
-	.responsive .input-text.size-MINI,.responsive .btn.size-MINI{height:24px}
-	.responsive .input-text.size-S,.responsive .btn.size-S{ font-size:14px; height:30px}
-	.responsive .input-text,.btn,.responsive .input-text.size-M,.responsive .btn.size-M{ font-size:16px; height:36px}
-	.responsive .input-text.size-L,.responsive .btn.size-L{ font-size:18px; height:42px}
-	.responsive .input-text.size-XL,.responsive .btn.size-XL{ font-size:20px; height:48px}
+	.responsive .input-text.size-MINI,
+	.responsive .btn.size-MINI {height:24px}
+	.responsive .input-text.size-S,
+	.responsive .btn.size-S{ font-size:14px; height:30px}
+	.responsive .input-text,
+	.responsive .btn,
+	.responsive .input-text.size-M,
+	.responsive .btn.size-M{ font-size:16px; height:36px}
+	.responsive .input-text.size-L,
+	.responsive .btn.size-L{ font-size:18px; height:42px}
+	.responsive .input-text.size-XL,
+	.responsive .btn.size-XL{ font-size:20px; height:48px}
 }
 
 /*3.2 代码
@@ -2392,10 +2406,7 @@ input[type="radio"],input[type="checkbox"] {line-height: normal; margin-top:-4px
 .has-switch label.size-S{padding-bottom:3px;padding-top:3px;font-size:12px;line-height:18px}
 .has-switch span.size-L,.has-switch label.size-L{padding-bottom:9px;padding-top:9px;font-size:16px;line-height:normal}
 .has-switch label{text-align:center;margin-top:-1px;margin-bottom:-1px;z-index:100;width:34%;border-left:1px solid #ccc;border-right:1px solid #ccc;color:#fff;text-shadow:0 -1px 0 rgba(0,0,0,0.25);background-color:#f5f5f5;
-	background-image:-moz-linear-gradient(top,#fff,#e6e6e6);
 	background-image:-webkit-gradient(linear,0 0,0 100%,from(#fff),to(#e6e6e6));
-	background-image:-webkit-linear-gradient(top,#fff,#e6e6e6);
-	background-image:-o-linear-gradient(top,#fff,#e6e6e6);
 	background-image:linear-gradient(to bottom,#fff,#e6e6e6);
 	background-repeat:repeat-x;
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff',endColorstr='#ffe6e6e6',GradientType=0);
@@ -2423,10 +2434,7 @@ input[type="radio"],input[type="checkbox"] {line-height: normal; margin-top:-4px
 	border-bottom-left-radius:4px
 }
 .has-switch span.switch-right{color:#333;text-shadow:0 1px 1px rgba(255,255,255,0.75);background-color:#f0f0f0;
-	background-image:-moz-linear-gradient(top,#e6e6e6,#fff);
 	background-image:-webkit-gradient(linear,0 0,0 100%,from(#e6e6e6),to(#fff));
-	background-image:-webkit-linear-gradient(top,#e6e6e6,#fff);
-	background-image:-o-linear-gradient(top,#e6e6e6,#fff);
 	background-image:linear-gradient(to bottom,#e6e6e6,#fff);
 	background-repeat:repeat-x;
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffe6e6e6',endColorstr='#ffffffff',GradientType=0);
@@ -2443,10 +2451,7 @@ input[type="radio"],input[type="checkbox"] {line-height: normal; margin-top:-4px
 .has-switch span.switch-right.active{background-color:#e6e6e6 \9}
 .has-switch span.switch-primary,
 .has-switch span.switch-left{color:#fff;text-shadow:0 -1px 0 rgba(0,0,0,0.25);background-color:#005fcc;
-	background-image:-moz-linear-gradient(top,#04c,#08c);
 	background-image:-webkit-gradient(linear,0 0,0 100%,from(#04c),to(#08c));
-	background-image:-webkit-linear-gradient(top,#04c,#08c);
-	background-image:-o-linear-gradient(top,#04c,#08c);
 	background-image:linear-gradient(to bottom,#04c,#08c);
 	background-repeat:repeat-x;
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0044cc',endColorstr='#ff0088cc',GradientType=0);
@@ -2472,10 +2477,7 @@ input[type="radio"],input[type="checkbox"] {line-height: normal; margin-top:-4px
 .has-switch span.switch-primary.active,
 .has-switch span.switch-left.active{background-color:#069 \9}
 .has-switch span.switch-info{color:#fff;text-shadow:0 -1px 0 rgba(0,0,0,0.25);background-color:#41a7c5;
-	background-image:-moz-linear-gradient(top,#2f96b4,#5bc0de);
 	background-image:-webkit-gradient(linear,0 0,0 100%,from(#2f96b4),to(#5bc0de));
-	background-image:-webkit-linear-gradient(top,#2f96b4,#5bc0de);
-	background-image:-o-linear-gradient(top,#2f96b4,#5bc0de);
 	background-image:linear-gradient(to bottom,#2f96b4,#5bc0de);
 	background-repeat:repeat-x;
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff2f96b4',endColorstr='#ff5bc0de',GradientType=0);
@@ -2493,10 +2495,7 @@ input[type="radio"],input[type="checkbox"] {line-height: normal; margin-top:-4px
 .has-switch span.switch-info:active,
 .has-switch span.switch-info.active{background-color:#31b0d5 \9}
 .has-switch span.switch-success{color:#fff;text-shadow:0 -1px 0 rgba(0,0,0,0.25);background-color:#58b058;
-	background-image:-moz-linear-gradient(top,#51a351,#62c462);
 	background-image:-webkit-gradient(linear,0 0,0 100%,from(#51a351),to(#62c462));
-	background-image:-webkit-linear-gradient(top,#51a351,#62c462);
-	background-image:-o-linear-gradient(top,#51a351,#62c462);
 	background-image:linear-gradient(to bottom,#51a351,#62c462);
 	background-repeat:repeat-x;
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff51a351',endColorstr='#ff62c462',GradientType=0);
@@ -2514,10 +2513,7 @@ input[type="radio"],input[type="checkbox"] {line-height: normal; margin-top:-4px
 .has-switch span.switch-success:active,
 .has-switch span.switch-success.active{background-color:#42b142 \9}
 .has-switch span.switch-warning{color:#fff;text-shadow:0 -1px 0 rgba(0,0,0,0.25);background-color:#f9a123;
-	background-image:-moz-linear-gradient(top,#f89406,#fbb450);
 	background-image:-webkit-gradient(linear,0 0,0 100%,from(#f89406),to(#fbb450));
-	background-image:-webkit-linear-gradient(top,#f89406,#fbb450);
-	background-image:-o-linear-gradient(top,#f89406,#fbb450);
 	background-image:linear-gradient(to bottom,#f89406,#fbb450);
 	background-repeat:repeat-x;
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff89406',endColorstr='#fffbb450',GradientType=0);
@@ -2535,10 +2531,7 @@ input[type="radio"],input[type="checkbox"] {line-height: normal; margin-top:-4px
 .has-switch span.switch-warning:active,
 .has-switch span.switch-warning.active{background-color:#fa9f1e \9}
 .has-switch span.switch-danger{color:#fff;text-shadow:0 -1px 0 rgba(0,0,0,0.25);background-color:#d14641;
-	background-image:-moz-linear-gradient(top,#bd362f,#ee5f5b);
 	background-image:-webkit-gradient(linear,0 0,0 100%,from(#bd362f),to(#ee5f5b));
-	background-image:-webkit-linear-gradient(top,#bd362f,#ee5f5b);
-	background-image:-o-linear-gradient(top,#bd362f,#ee5f5b);
 	background-image:linear-gradient(to bottom,#bd362f,#ee5f5b);
 	background-repeat:repeat-x;
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffbd362f',endColorstr='#ffee5f5b',GradientType=0);
@@ -2692,11 +2685,16 @@ label,.placeholder{font-size:14px}
 .form legend{font-size:20px}/*表单名称*/
 .form .row{margin-top:15px}/*表单行*/
 	.form-label{display:block; color:#555}/*表单标题*/
-	.formControls{position:relative}/*表单控制区*/
-	.formControls > *{vertical-align:middle}
+	.formControls,
+	.form-controls{position:relative}/*表单控制区*/
+	.formControls > *,
+	.form-controls > *{vertical-align:middle}
 	.placeholder{position:absolute; left:4px; top:4px;color:#c6c6c6; cursor:text}/*表单默认值*/
-.form-horizontal .form-label{margin-top:3px;cursor:text;text-align:right}
-.form-horizontal .Validform_checktip{ margin-top:5px}
+.form-horizontal .form-label{cursor:text;text-align:right;line-height: 28px;}
+.form-horizontal .form-controls {
+  line-height: 28px;
+}
+.form-horizontal .Validform_checktip{ margin-top:5px;}
 /*设置placeholder颜色*/
 ::-webkit-input-placeholder {color:#b3b3b3}/* WebKit browsers */
 :-moz-placeholder {color:#b3b3b3}/* Mozilla Firefox 4 to 18 */
@@ -3869,9 +3867,9 @@ H-ui采用Font Awesome 3.2.1的整套图标，因为是图标字体，所以可�
 /*4.2.1 导航条
 	Name:			mod_nav
 	Example:
-<header class="navbar-wrapper">
+<header class="Hui-navbar">
 	<nav class="nav navbar-nav nav-collapse" role="navigation" id="Hui-navbar">
-		<ul class="cl">
+		<ul class="clearfix">
 			<li class="current"><a href="/">首页</a></li>
 			<li><a href="#">核心</a></li>
 			<li><a href="#">扩展</a></li>
@@ -3901,7 +3899,7 @@ H-ui采用Font Awesome 3.2.1的整套图标，因为是图标字体，所以可�
 	Explain: 鼠标经过状态a:hover，当前选中状态li:current。
 */
 /*导航条*/
-.navbar-wrapper{ height: 45px}
+.Hui-navbar{ height: 45px}
 .navbar{ position:relative; z-index:1030; background-color: #fff}
 .navbar-black{ background-color: #222}
 .navbar-fixed-top{ position:fixed; top:0;left: 0; right: 0; z-index:1030}
@@ -3929,7 +3927,7 @@ H-ui采用Font Awesome 3.2.1的整套图标，因为是图标字体，所以可�
   }
   .navbar-nav > ul > li,.navbar-nav > ul > li > a{line-height:44px;font-size:14px}
   @media (max-width: 767px) {
-    .navbar-wrapper{ height: 45px!important}
+    .Hui-navbar{ height: 45px!important}
     .logo{ margin-right: 0}
     .navbar .logo{height: 44px!important;line-height: 44px!important}
     .navbar-nav{display: none; float: none!important}
@@ -3968,7 +3966,8 @@ H-ui采用Font Awesome 3.2.1的整套图标，因为是图标字体，所以可�
 }
 
   /*面包导航*/
-  .nav-toggle,a.nav-toggle{position:absolute; top:0px; right:15px; font-size: 20px; color:#999; padding:6px 11px;background-color:rgba(0,0,0,0.5);color:#fff;-webkit-tap-highlight-color: rgba(0,0,0,0);
+  .nav-toggle,a.nav-toggle{position:absolute; top:0px; right:15px; font-size: 20px; color:#999; padding:6px 11px;background-color:rgba(0,0,0,0.5);color:#fff;
+		-webkit-tap-highlight-color: rgba(0,0,0,0);
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -4182,7 +4181,7 @@ H-ui采用Font Awesome 3.2.1的整套图标，因为是图标字体，所以可�
 /*鼠标经过*/
 .dropDown.hover .dropDown_A,
 .dropDown.open .dropDown_A{text-decoration:none;background-color:rgba(255,255,255,0.2)}
-.dropDown.open .dropDown_A .menu_dropdown-arrow{transition-duration:0.3s ;transition-property:all;_background-position:0 0;transform: rotate(180deg)}
+.dropDown.open .dropDown_A .Hui-admin-menu-dropdown-arrow{transition-duration:0.3s ;transition-property:all;_background-position:0 0;transform: rotate(180deg)}
 
 .menu{background-color:#fff;border:solid 1px #f2f2f2; display: inline-block}
 .menu.radius{border-top-left-radius:0;border-top-right-radius:0}
@@ -4261,7 +4260,7 @@ H-ui采用Font Awesome 3.2.1的整套图标，因为是图标字体，所以可�
 	Name:			module_slider
 	Sample:
 	<div id="tab_demo" class="HuiTab">
-      <div class="tabBar cl"><span>选项卡一</span><span>选项卡二</span><span>自适应宽度</span></div>
+      <div class="tabBar clearfix"><span>选项卡一</span><span>选项卡二</span><span>自适应宽度</span></div>
       <div class="tabCon">内容一</div>
       <div class="tabCon">内容二</div>
       <div class="tabCon">内容三</div>
@@ -4616,7 +4615,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus{color: #fff;text-deco
 				<label class="mr-20"><input type="radio" class="radio" value="2" name="radio-feedback" id="feedback-2"> 体验反馈</label>
 				<label class="mr-20"><input type="radio" class="radio" value="3" name="radio-feedback" id="feedback-3"> 好点子</label>
 			</div>
-			<div class="formControls mt-20">
+			<div class="form-controls mt-20">
 				<textarea class="textarea valid" onKeyUp="$.Huitextarealength(this,500)" placeholder="吐槽点什么...最少输入10个字符"></textarea>
 				<p class="textarea-numberbar"><em class="textarea-length">0</em>/500</p>
 			</div>
@@ -5067,10 +5066,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus{color: #fff;text-deco
 .datetimepicker table tr td.today:hover,
 .datetimepicker table tr td.today.disabled,
 .datetimepicker table tr td.today.disabled:hover {background-color: #fde19a;background-image: -moz-linear-gradient(top, #fdd49a, #fdf59a);
-	background-image: -ms-linear-gradient(top, #fdd49a, #fdf59a);
 	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fdd49a), to(#fdf59a));
-	background-image: -webkit-linear-gradient(top, #fdd49a, #fdf59a);
-	background-image: -o-linear-gradient(top, #fdd49a, #fdf59a);
 	background-image: linear-gradient(top, #fdd49a, #fdf59a);
 	background-repeat: repeat-x;filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fdd49a', endColorstr='#fdf59a', GradientType=0);border-color: #fdf59a #fdf59a #fbed50;border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);filter: progid:DXImageTransform.Microsoft.gradient(enabled=false)}
 
@@ -5106,11 +5102,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus{color: #fff;text-deco
 .datetimepicker table tr td.active:hover,
 .datetimepicker table tr td.active.disabled,
 .datetimepicker table tr td.active.disabled:hover {background-color: #006dcc;
-	background-image: -moz-linear-gradient(top, #0088cc, #0044cc);
-	background-image: -ms-linear-gradient(top, #0088cc, #0044cc);
 	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0044cc));
-	background-image: -webkit-linear-gradient(top, #0088cc, #0044cc);
-	background-image: -o-linear-gradient(top, #0088cc, #0044cc);
 	background-image: linear-gradient(top, #0088cc, #0044cc);
 	background-repeat: repeat-x;
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088cc', endColorstr='#0044cc', GradientType=0);
@@ -5169,11 +5161,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus{color: #fff;text-deco
 .datetimepicker table tr td span.active:hover,
 .datetimepicker table tr td span.active.disabled,
 .datetimepicker table tr td span.active.disabled:hover {background-color: #006dcc;
-	background-image: -moz-linear-gradient(top, #0088cc, #0044cc);
-	background-image: -ms-linear-gradient(top, #0088cc, #0044cc);
 	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0044cc));
-	background-image: -webkit-linear-gradient(top, #0088cc, #0044cc);
-	background-image: -o-linear-gradient(top, #0088cc, #0044cc);
 	background-image: linear-gradient(top, #0088cc, #0044cc);
 	background-repeat: repeat-x;
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088cc', endColorstr='#0044cc', GradientType=0);
@@ -5255,7 +5243,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus{color: #fff;text-deco
 
 
 /*5 页面
-	Name:			page
+	Name:    page
 */
 
 /*5.1 错误页*/
