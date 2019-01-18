@@ -11,19 +11,19 @@
 !function($) {
 	$.Huiloading =  {
 		show:function(messages){
-			if ($(".loading-wraper").length > 0) {
-				$(".loading-wraper").remove();
+			if ($(".loading-wrapper").length > 0) {
+				$(".loading-wrapper").remove();
 			}
-			if( messages == null ) messages = '';  
-			var htmlstr = '<div class="loading-wraper"><div class="loading-content"><i class="iconpic iconpic-loading"></i> <span>'+messages+'</span></div></div>';
+			if( messages == null ) messages = '';
+			var htmlstr = '<div class="loading-wrapper"><div class="loading-content"><i class="iconpic iconpic-loading"></i> <span>'+messages+'</span></div></div>';
 			$(document.body).append(htmlstr);
-			var w = $(".loading-wraper .loading-content").width()+40;
-			$(".loading-wraper .loading-content").css({
+			var w = $(".loading-wrapper .loading-content").width()+40;
+			$(".loading-wrapper .loading-content").css({
 				"margin-left":-(w/2)+"px",
 			});
 		},
 		hide:function(){
-			$(".loading-wraper").remove();
+			$(".loading-wrapper").remove();
 		}
 	}
 } (window.jQuery);

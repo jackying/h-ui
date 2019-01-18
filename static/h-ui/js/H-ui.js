@@ -1,8 +1,8 @@
 /*-----------H-ui前端框架-------------
-* H-ui.js v3.1.10
+* H-ui.js v3.1.11
 * http://www.h-ui.net/
 * Created & Modified by guojunhui
-* Date modified 2019.01.17
+* Date modified 2019.01.18
 *
 * Copyright 2013-2019 北京颖杰联创科技有限公司 All rights reserved.
 * Licensed under MIT license.
@@ -2906,19 +2906,19 @@ function stopDefault(e) {
 !function($) {
 	$.Huiloading =  {
 		show:function(messages){
-			if ($(".loading-wraper").length > 0) {
-				$(".loading-wraper").remove();
+			if ($(".loading-wrapper").length > 0) {
+				$(".loading-wrapper").remove();
 			}
 			if( messages == null ) messages = '';
-			var htmlstr = '<div class="loading-wraper"><div class="loading-content"><i class="iconpic iconpic-loading"></i> <span>'+messages+'</span></div></div>';
+			var htmlstr = '<div class="loading-wrapper"><div class="loading-content"><i class="iconpic iconpic-loading"></i> <span>'+messages+'</span></div></div>';
 			$(document.body).append(htmlstr);
-			var w = $(".loading-wraper .loading-content").width()+40;
-			$(".loading-wraper .loading-content").css({
+			var w = $(".loading-wrapper .loading-content").width()+40;
+			$(".loading-wrapper .loading-content").css({
 				"margin-left":-(w/2)+"px",
 			});
 		},
 		hide:function(){
-			$(".loading-wraper").remove();
+			$(".loading-wrapper").remove();
 		}
 	}
 } (window.jQuery);
@@ -4314,7 +4314,10 @@ function HuiaddFavorite(obj) {
 		try {
 			window.sidebar.addPanel(name, site, "");
 		} catch(e) {
-			$.Huimodalalert("加入收藏失败，请使用Ctrl+D进行添加", 2000);
+      $("body").Huimodalalert({
+        content: '加入收藏失败，请使用Ctrl+D进行添加',
+        speed: 2000,
+      });
 		}
 	}
 }
@@ -4333,7 +4336,10 @@ function Huisethome(obj){
 				netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
 				}
 			catch(e){
-				$.Huimodalalert("此操作被浏览器拒绝！\n请在浏览器地址栏输入\"about:config\"并回车\n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。",2000);
+        $("body").Huimodalalert({
+          content: "此操作被浏览器拒绝！\n请在浏览器地址栏输入\"about:config\"并回车\n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。",
+          speed: 2000,
+        });
 			}
 			var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
 			prefs.setCharPref('browser.startup.homepage',url);
@@ -4489,7 +4495,7 @@ function displaynavbar(obj){
 		var defaults = {
 			titCell:'.item .Huifold-header',
 			mainCell:'.item .Huifold-body',
-			type:1,//1	只打开一个，可以全部关闭;2	必须有一个打开;3	可打开多个
+			type: 1, //1	只打开一个，可以全部关闭;2	必须有一个打开;3	可打开多个
 			trigger:'click',
 			className:"selected",
 			speed:'first',
@@ -4825,26 +4831,73 @@ function displaynavbar(obj){
 /* =======================================================================
  * jQuery.Huimodalalert.js alert
  * ========================================================================*/
-!function($) {
-	$.Huimodalalert = function(info, speed) {
-		if ($(".modal-alert").length > 0) {
-			$(".modal-alert").remove();
-		}
-		if (speed == 0 || typeof(speed) == "undefined") {
-			$(document.body).append('<div id="modal-alert" class="modal modal-alert radius">' + '<div class="modal-alert-info">' + info + '</div>' + '<div class="modal-footer"> <button class="btn btn-primary radius" onClick="$.Huimodal_alert.hide()">确定</button></div>' + '</div>');
-			$("#modal-alert").fadeIn();
-		} else {
-			$(document.body).append('<div id="modal-alert" class="modal modal-alert radius">' + '<div class="modal-alert-info">' + info + '</div>' + '</div>');
-			$("#modal-alert").fadeIn();
-			setTimeout($.Huimodalalert.hide, speed);
-		}
-	}
-	$.Huimodalalert.hide = function() {
-		$("#modal-alert").fadeOut("normal",function() {
-			$("#modal-alert").remove();
-		});
-	}
-} (window.jQuery);
+!function ($) {
+  $.fn.Huimodalalert = function (options, callback) {
+    var defaults = {
+      btn: ['确定'],
+      content:'弹窗内容',
+      speed: "0",
+      area: ['400', 'auto'],
+    };
+    var options = $.extend(defaults, options);
+    this.each(function () {
+      var that = $(this);
+      var w= 0,h=0,t=0,l=0;
+      if (options.area[0]=='auto'){
+        w ='400px';
+        l = -(400 / 2) + 'px';
+      }else{
+        w = options.area[0] + 'px';
+        l = -(options.area[0] / 2) + 'px';
+      }
+      if (options.area[1] == 'auto') {
+        h = 'auto';
+      } else {
+        h = options.area[1] + 'px';
+      }
+      var htmlstr =
+      '<div id="Huimodalalert" class="modal modal-alert radius" style="width:' + w + ';height:' + h + ';margin-left:' + l +'">' +
+        '<div class="modal-alert-info">' + options.content + '</div>' +
+        '<div class="modal-footer">'+
+          '<button class="btn btn-primary radius">' + options.btn[0]+'</button>'+
+        '</div>' +
+      '</div>'+
+      '<div id="Huimodalmask" class="Huimodalmask"></div>';
+
+      if ($("#Huimodalalert").length > 0) {
+        $("#Huimodalalert,#Huimodalmask").remove();
+      }
+      if (options.speed==0){
+        $(document.body).addClass("modal-open").append(htmlstr);
+        $("#Huimodalalert").fadeIn();
+      }else{
+        $(document.body).addClass("modal-open").append(htmlstr);
+        $("#Huimodalalert").find(".modal-footer").remove();
+        $("#Huimodalalert").fadeIn();
+        setTimeout(function(){
+          $("#Huimodalalert").fadeOut("normal",function () {
+            huimodalhide();
+          });
+        }, options.speed);
+      }
+
+      var button = that.find(".modal-footer .btn");
+      button.on("click",function(){
+        $("#Huimodalalert").fadeOut("normal", function () {
+          huimodalhide();
+        });
+      });
+
+      function huimodalhide(){
+        $("#Huimodalalert,#Huimodalmask").remove();
+        $(document.body).removeClass("modal-open");
+        if (callback) {
+          callback();
+        }
+      }
+    });
+  }
+}(window.jQuery);
 
 /* =======================================================================
  * jQuery.Huialert.js alert
