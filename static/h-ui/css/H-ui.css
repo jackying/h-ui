@@ -1,9 +1,9 @@
 @charset "utf-8";
 /* -----------H-ui前端框架-------------
-* H-ui.css v3.1.10
+* H-ui.css v3.1.11
 * http://www.h-ui.net/
 * Created & Modified by guojunhui
-* Date modified 2019.01.18
+* Date modified 2019.02.14
 *
 * Copyright 2013-2019 北京颖杰联创科技有限公司 All rights reserved.
 * Licensed under MIT license.
@@ -4028,7 +4028,7 @@ H-ui采用Font Awesome 3.2.1的整套图标，因为是图标字体，所以可�
 	<div class="topnav"><div class="cl"><div class="l">您好，欢迎来到Hui！</div><div class="r"><span class="r_nav">[ <a rel="nofollow" href="javascript:login();">登录</a> ]</span><span class="pipe">|</span><span class="r_nav">[ <a href="javascript:register();" rel="nofollow">注册</a> ]</span><span class="pipe">|</span><span class="r_nav"><a title="收藏" href="javascript:addFavorite();">收藏本站</a></span><span class="pipe">|</span><span class="r_nav"><a href="javascript:void(0)" onclick="setHome(this);" title="设为首页">设为首页</a></span></div></div></div>
 
 */
-.topnav{height:30px;line-height:30px;background-color;#f7f7f7;border-bottom:1px solid #EBEBEB; font-size:12px}
+.topnav{height:30px;line-height:30px;background-color:#f7f7f7;border-bottom:1px solid #EBEBEB; font-size:12px}
 .topbar{background-color: #ECECEC;border-bottom:1px solid #ddd}
 .topbar a{margin-right:5px}
 .r_nav{display:inline-block; color:#999}
