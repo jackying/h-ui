@@ -1,9 +1,9 @@
 @charset "utf-8";
 /* -----------H-ui前端框架-------------
-* H-ui.css v3.1.11
+* H-ui.css v3.1.12
 * http://www.h-ui.net/
 * Created & Modified by guojunhui
-* Date modified 2019.02.14
+* Date modified 2019.02.18
 *
 * Copyright 2013-2019 北京颖杰联创科技有限公司 All rights reserved.
 * Licensed under MIT license.
@@ -2135,7 +2135,7 @@ table.dataTable thead .sorting_desc {background-image:url(../images/dataTable/so
        -moz-transition:all 0.2s linear 0s;
          -o-transition:all 0.2s linear 0s;
             transition:all 0.2s linear 0s}
-.textarea{ height:100px; resize:none; font-size:14px; padding:4px}
+.textarea{ height:100px; resize:none; font-size:14px; padding:4px; word-break: break-all;}
 	.textarea-numberbar{ position:absolute; right:20px; bottom:5px; z-index:1; margin-bottom:0}
 	.textarea-length{ font-style:normal}
 .input-text:hover,
