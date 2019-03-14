@@ -1,7 +1,3 @@
-/*1 重定义浏览器默认样式
-	Name:			style_reset
-	Explain:		重定义浏览器默认样式
-*/
 $primary-color:#5a98de;
 $secondary-color:#3bb4f2;
 $success-color:#5eb95e;
@@ -13,7 +9,7 @@ $font-family: "'Microsoft Yahei','Hiragino Sans GB','Helvetica Neue',Helvetica,t
 
 $border-color: #e5e5e5;
 * {
-    word-wrap: break-word;
+  word-wrap: break-word;
 }
 
 html,
@@ -41,8 +37,8 @@ textarea,
 th,
 td,
 fieldset {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 ul,
@@ -53,14 +49,14 @@ dl {
 
 html,
 body {
-    *position: static;
+  *position: static;
 }
 
 html {
-    font-family: sans-serif;
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 address,
@@ -71,8 +67,8 @@ dfn,
 em,
 th,
 var {
-    font-style: normal;
-    font-weight: 400;
+  font-style: normal;
+  font-weight: 400;
 }
 
 input,
@@ -81,17 +77,17 @@ textarea,
 select,
 optgroup,
 option {
-    font-family: inherit;
-    font-size: inherit;
-    font-style: inherit;
-    font-weight: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
 }
 
 input,
 button {
-    overflow: visible;
-    vertical-align: middle;
-    outline: none;
+  overflow: visible;
+  vertical-align: middle;
+  outline: none;
 }
 
 input[type="submit"],
@@ -99,8 +95,8 @@ input[type="reset"],
 input[type="button"],
 input[type="text"],
 input[type="password"] {
-    -webkit-appearance: none;
-    outline: none;
+  -webkit-appearance: none;
+  outline: none;
 }
 
 body,
@@ -110,31 +106,31 @@ button,
 input,
 select,
 textarea {
-    font-family: $font-family;
-    font-size: 12px;
-    color: #333;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  font-family: $font-family;
+  font-size: 12px;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @media ( max-width: 767px) {
-    html {
-        overflow-y: auto;
-    }
-    body,
-    th,
-    td,
-    button,
-    input,
-    select,
-    textarea {
-        font-size: 14px;
-    }
+  html {
+    overflow-y: auto;
+  }
+  body,
+  th,
+  td,
+  button,
+  input,
+  select,
+  textarea {
+    font-size: 14px;
+  }
 }
 
 body {
-    line-height: 1.6;
-    position: relative;
+  line-height: 1.6;
+  position: relative;
 }
 
 h1,
@@ -143,51 +139,47 @@ h3,
 h4,
 h5,
 h6 {
-    font-size: 100%;
+  font-size: 100%;
 }
 
 a,
 area {
-    outline: none;
-    //blr: expression(this.onFocus=this.blur())
+  outline: none;
 }
 
 a {
-    text-decoration: none;
-    cursor: pointer;
-    &:hover {
-        text-decoration: underline;
-        outline: none;
-    }
-    &.ie6:hover {
-        zoom: 1;
-    }
-    &:focus {
-        outline: none;
-    }
-    &:hover,
-    &:active {
-        outline: none;
-    }
+  text-decoration: none;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+    outline: none;
+  }
+  &.ie6:hover {
+    zoom: 1;
+  }
+  &:focus {
+    outline: none;
+  }
+  &:hover,
+  &:active {
+    outline: none;
+  }
 }
 
 :focus {
-    outline: none;
+  outline: none;
 }
 
 sub,
 sup {
-    vertical-align: baseline;
+  vertical-align: baseline;
 }
 
 button,
 input[type="button"],
 input[type="submit"] {
-    line-height: normal !important;
+  line-height: normal !important;
 }
-
-
-/*img*/
 
 img {
     border: 0;
@@ -196,7 +188,7 @@ img {
 
 a img,
 img {
-    -ms-interpolation-mode: bicubic;
+  -ms-interpolation-mode: bicubic;
 }
 
 
