@@ -1,241 +1,241 @@
 /*4.2.1 导航条
-	Name:			mod_nav
-	Example:
+Name:			mod_nav
+Example:
 <header class="navbar-wrapper">
-	<nav class="nav navbar-nav nav-collapse" role="navigation" id="Hui-navbar">
-		<ul class="cl">
-			<li class="current"><a href="/">首页</a></li>
-			<li><a href="#">核心</a></li>
-			<li><a href="#">扩展</a></li>
-			<li class="dropDown dropDown_hover"><a href="#" class="dropDown_A">一级导航 <i class="Hui-iconfont">&#xe6d5;</i></a>
-				<ul class="dropDown-menu menu radius box-shadow">
-					<li><a href="#">二级导航</a></li>
-					<li><a href="#">二级导航<i class="arrow Hui-iconfont">&#xe6d7;</i></a>
-						<ul class="menu">
-							<li><a href="javascript:;">三级菜单<i class="arrow Hui-iconfont">&#xe6d7;</i></a>
-								<ul class="menu">
-									<li><a href="javascript:;">四级菜单</a></li>
-									<li><a href="javascript:;">四级菜单</a></li>
-									<li><a href="javascript:;">四级菜单</a></li>
-								</ul>
-							</li>
-							<li><a href="#">三级导航</a></li>
-						</ul>
-					</li>
-					<li><a href="#">二级导航</a></li>
-					<li class="disabled"><a href="javascript:;">二级菜单</a></li>
-				</ul>
-			</li>
-			<li><a href="#">联系我们</a></li>
-		</ul>
-	</nav>
+<nav class="nav navbar-nav nav-collapse" role="navigation" id="Hui-navbar">
+	<ul class="cl">
+		<li class="current"><a href="/">首页</a></li>
+		<li><a href="#">核心</a></li>
+		<li><a href="#">扩展</a></li>
+		<li class="dropDown dropDown_hover"><a href="#" class="dropDown_A">一级导航 <i class="Hui-iconfont">&#xe6d5;</i></a>
+			<ul class="dropDown-menu menu radius box-shadow">
+				<li><a href="#">二级导航</a></li>
+				<li><a href="#">二级导航<i class="arrow Hui-iconfont">&#xe6d7;</i></a>
+					<ul class="menu">
+						<li><a href="javascript:;">三级菜单<i class="arrow Hui-iconfont">&#xe6d7;</i></a>
+							<ul class="menu">
+								<li><a href="javascript:;">四级菜单</a></li>
+								<li><a href="javascript:;">四级菜单</a></li>
+								<li><a href="javascript:;">四级菜单</a></li>
+							</ul>
+						</li>
+						<li><a href="#">三级导航</a></li>
+					</ul>
+				</li>
+				<li><a href="#">二级导航</a></li>
+				<li class="disabled"><a href="javascript:;">二级菜单</a></li>
+			</ul>
+		</li>
+		<li><a href="#">联系我们</a></li>
+	</ul>
+</nav>
 </header>
-	Explain: 鼠标经过状态a:hover，当前选中状态li:current。
+Explain: 鼠标经过状态a:hover，当前选中状态li:current。
 */
 
 
 /*导航条*/
 
 .navbar-wrapper {
-    height: 45px
+  height: 45px
 }
 
 .navbar {
-    position: relative;
-    z-index: 1030;
-    background-color: #fff;
-    .container {
-        position: relative;
-        .navbar-userbar {
-            right: 0px
-        }
-    }
+  position: relative;
+  z-index: 1030;
+  background-color: #fff;
+  .container {
+      position: relative;
+      .navbar-userbar {
+          right: 0px
+      }
+  }
 }
 
 .navbar-black {
-    background-color: #222;
+  background-color: #222;
 }
 
 .navbar-fixed-top {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1030;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030;
 }
 
 
 /*logo*/
 
 .logo {
-    display: inline-block;
-    text-decoration: none;
-    cursor: pointer;
-    background-repeat: no-repeat;
-    background-position: left center;
-    background-size: auto 100%
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: auto 100%
 }
 
 a.logo:hover {
-    text-decoration: none
+  text-decoration: none
 }
 
 .navbar .logo {
-    height: 44px;
-    line-height: 44px;
-    margin-right: 10px;
-    float: left
+  height: 44px;
+  line-height: 44px;
+  margin-right: 10px;
+  float: left
 }
 
 .navbar-logo,
 .navbar-logo-m {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 .navbar-slogan {
-    font-size: 12px;
-    cursor: default;
+  font-size: 12px;
+  cursor: default;
 }
 
 /*导航*/
 .nav {
-    z-index: 1;
-    > ul {
-        font-size: 0;
-        line-height: 0;
-        >li {
-            position: relative;
-            float: left;
-            text-align: center;
-            >a {
-                display: inline-block;
-                text-align: center;
-                padding: 0 20px;
-            }
-            >a:hover,
-            &.current>a {
-                background-color: rgba(255, 255, 255, 0.2);
-                text-decoration: none;
-                -webkit-transition: background-color 0.3s ease 0s;
-                -moz-transition: background-color 0.3s ease 0s;
-                -o-transition: background-color 0.3s ease 0s;
-                -ms-transition: background-color 0.3s ease 0s;
-                transition: background-color 0.3s ease 0s
-            }
-        }
-        >li,
-        >li > a {
-            line-height: 44px;
-            font-size: 14px
-        }
-    }
+  z-index: 1;
+  > ul {
+      font-size: 0;
+      line-height: 0;
+      >li {
+          position: relative;
+          float: left;
+          text-align: center;
+          >a {
+              display: inline-block;
+              text-align: center;
+              padding: 0 20px;
+          }
+          >a:hover,
+          &.current>a {
+              background-color: rgba(255, 255, 255, 0.2);
+              text-decoration: none;
+              -webkit-transition: background-color 0.3s ease 0s;
+              -moz-transition: background-color 0.3s ease 0s;
+              -o-transition: background-color 0.3s ease 0s;
+              -ms-transition: background-color 0.3s ease 0s;
+              transition: background-color 0.3s ease 0s
+          }
+      }
+      >li,
+      >li > a {
+          line-height: 44px;
+          font-size: 14px
+      }
+  }
 }
 
 
 @media (max-width: 767px) {
-    .navbar-wrapper {
-        height: 45px!important
-    }
-    .logo {
-        margin-right: 0
-    }
-    .navbar .logo {
-        height: 44px!important;
-        line-height: 44px!important
-    }
-    .navbar-nav {
-        display: none;
-        float: none!important;
-        > ul > li {
-            width: 100%;
-            text-align: left;
-            border-bottom: solid 1px #eee;
-            >a {
-                display: block;
-                padding: 0 15px;
-                text-align: left
-            }
-            &.dropDown.open>.dropDown-menu {
-                display: none
-            }
-            &.dropDown>.dropDown_A>.Hui-iconfont {
-                display: none
-            }
-        }
-        > ul > li,
-        > ul > li >a {
-            height: 44px!important;
-            line-height: 44px!important
-        }
-    }
+  .navbar-wrapper {
+      height: 45px!important
+  }
+  .logo {
+      margin-right: 0
+  }
+  .navbar .logo {
+      height: 44px!important;
+      line-height: 44px!important
+  }
+  .navbar-nav {
+      display: none;
+      float: none!important;
+      > ul > li {
+          width: 100%;
+          text-align: left;
+          border-bottom: solid 1px #eee;
+          >a {
+              display: block;
+              padding: 0 15px;
+              text-align: left
+          }
+          &.dropDown.open>.dropDown-menu {
+              display: none
+          }
+          &.dropDown>.dropDown_A>.Hui-iconfont {
+              display: none
+          }
+      }
+      > ul > li,
+      > ul > li >a {
+          height: 44px!important;
+          line-height: 44px!important
+      }
+  }
 
-    .nav-collapse>ul,
-    .nav-collapse>ul>li {
-        width: 100%;
-        display: block
-    }
-    .js-nav-active .nav-collapse {
-        position: absolute;
-        display: block;
-        float: none;
-        clear: both;
-        max-height: 0;
-        clip: rect(0 0 0 0);
-        margin-left: -15px;
-        margin-right: -15px;
-        overflow: hidden;
-        -webkt-transition: max-height 284ms ease 0s;
-        -moz-transition: max-height 284ms ease 0s;
-        -o-transition: max-height 284ms ease 0s;
-        -ms-transition: max-height 284ms ease 0s;
-        transition: max-height 284ms ease 0s;
-        &.closed {
-            max-height: none
-        }
-    }
-    .nav-collapse.opened {
-        max-height: 9999px
-    }
+  .nav-collapse>ul,
+  .nav-collapse>ul>li {
+      width: 100%;
+      display: block
+  }
+  .js-nav-active .nav-collapse {
+      position: absolute;
+      display: block;
+      float: none;
+      clear: both;
+      max-height: 0;
+      clip: rect(0 0 0 0);
+      margin-left: -15px;
+      margin-right: -15px;
+      overflow: hidden;
+      -webkt-transition: max-height 284ms ease 0s;
+      -moz-transition: max-height 284ms ease 0s;
+      -o-transition: max-height 284ms ease 0s;
+      -ms-transition: max-height 284ms ease 0s;
+      transition: max-height 284ms ease 0s;
+      &.closed {
+          max-height: none
+      }
+  }
+  .nav-collapse.opened {
+      max-height: 9999px
+  }
 }
 
 
 /*导航条风格-黑色*/
 
 .navbar-black {
-    background-color: #222;
-    border-bottom: #080808 1px solid;
-    -moz-box-shadow: 0 0 4px #333333;
-    -webkit-box-shadow: 0 0 4px #333333;
-    box-shadow: 0 0 4px #333333;
-    .logo {
-        color: #fff
-    }
-    .navbar-logo-m {
-        color: #eee
-    }
-    .navbar-userbar {
-        color: #fff;
-    }
-    .navbar-nav{
-        > ul > li,
-        > ul > li > a{
-            color: #fff;
-        }
-        > ul > li > a:hover,
-        > ul > li.current > a {
-            color: #fff;
-        }
-    }
+  background-color: #222;
+  border-bottom: #080808 1px solid;
+  -moz-box-shadow: 0 0 4px #333333;
+  -webkit-box-shadow: 0 0 4px #333333;
+  box-shadow: 0 0 4px #333333;
+  .logo {
+      color: #fff
+  }
+  .navbar-logo-m {
+      color: #eee
+  }
+  .navbar-userbar {
+      color: #fff;
+  }
+  .navbar-nav{
+      > ul > li,
+      > ul > li > a{
+          color: #fff;
+      }
+      > ul > li > a:hover,
+      > ul > li.current > a {
+          color: #fff;
+      }
+  }
 }
 
 @media (max-width: 767px) {
-    .navbar-black .navbar-nav>ul>li {
-        border-bottom: solid 1px #222;
-        > a:hover,
-        &.current>a {
-            background: #777;
-        }
-    }
+  .navbar-black .navbar-nav>ul>li {
+      border-bottom: solid 1px #222;
+      > a:hover,
+      &.current>a {
+          background: #777;
+      }
+  }
 }
 
 
@@ -243,328 +243,328 @@ a.logo:hover {
 
 .nav-toggle,
 a.nav-toggle {
-    position: absolute;
-    top: 0px;
-    right: 15px;
-    font-size: 20px;
-    color: #999;
-    padding: 6px 11px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
-    &:hover {
-        text-decoration: none;
-        color: #fff
-    }
+  position: absolute;
+  top: 0px;
+  right: 15px;
+  font-size: 20px;
+  color: #999;
+  padding: 6px 11px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  &:hover {
+      text-decoration: none;
+      color: #fff
+  }
 }
 
 /*2.1.9 版本之前的导航条代码*/
 
 .mainnav {
-    z-index: 1;
-    background-color: #222;
-    >ul {
-        font-size: 0;
-        line-height: 0;
-        >li {
-            display: inline-block;
-            color: #fff;
-            font-size: 14px;
-            font-weight: bold
-        }
-        >li,
-        >li>a {
-            height: 40px;
-            line-height: 40px;
-        }
-        /*链接颜色*/
-        >li>a {
-            display: inline-block;
-            padding: 0 20px;
-            color: #fff;
-            text-align: center
-        }
-        
-        /*交互颜色*/
-        >li>a:hover,
-        >li.current>a {
-            color: #fff;
-            text-decoration: none;
-            background-color: #000;
-            -webkit-transition: background-color 0.3s ease 0s;
-            -moz-transition: background-color 0.3s ease 0s;
-            -o-transition: background-color 0.3s ease 0s;
-            -ms-transition: background-color 0.3s ease 0s;
-            transition: background-color 0.3s ease 0s
-        }
-    }
+  z-index: 1;
+  background-color: #222;
+  >ul {
+      font-size: 0;
+      line-height: 0;
+      >li {
+          display: inline-block;
+          color: #fff;
+          font-size: 14px;
+          font-weight: bold
+      }
+      >li,
+      >li>a {
+          height: 40px;
+          line-height: 40px;
+      }
+      /*链接颜色*/
+      >li>a {
+          display: inline-block;
+          padding: 0 20px;
+          color: #fff;
+          text-align: center
+      }
+
+      /*交互颜色*/
+      >li>a:hover,
+      >li.current>a {
+          color: #fff;
+          text-decoration: none;
+          background-color: #000;
+          -webkit-transition: background-color 0.3s ease 0s;
+          -moz-transition: background-color 0.3s ease 0s;
+          -o-transition: background-color 0.3s ease 0s;
+          -ms-transition: background-color 0.3s ease 0s;
+          transition: background-color 0.3s ease 0s
+      }
+  }
 }
 
 .Hui-nav-toggle,
 a.Hui-nav-toggle {
-    position: absolute;
-    top: 0px;
-    right: 15px;
-    font-size: 20px;
-    color: #999;
-    padding: 6px 11px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    &:hover {
-        text-decoration: none;
-        color: #fff
-    }
+  position: absolute;
+  top: 0px;
+  right: 15px;
+  font-size: 20px;
+  color: #999;
+  padding: 6px 11px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  &:hover {
+      text-decoration: none;
+      color: #fff
+  }
 }
 
 @media (max-width: 767px) {
-    .mainnav>ul>li {
-        font-size: 1.125em
-    }
+  .mainnav>ul>li {
+      font-size: 1.125em
+  }
 }
 
 @media (max-width: 480px) {
-    .mainnav>ul>li {
-        text-align: center;
-        width: 20%;
-        >a {
-            padding: 0;
-            padding: 0;
-            display: block
-        }
-    }
+  .mainnav>ul>li {
+      text-align: center;
+      width: 20%;
+      >a {
+          padding: 0;
+          padding: 0;
+          display: block
+      }
+  }
 }
 
 
 /*4.2.2 面包屑导航
-	Name:			mod_breadcrumb
-	Example:
+Name:			mod_breadcrumb
+Example:
 <nav class="breadcrumb">
-  <div class="container">
-    <i class="Hui-iconfont">&#xe67f;</i> <a href="/" class="c-primary">首页</a><span class="c-gray en">&gt;</span><a href="#">组件</a><span class="c-gray en">&gt;</span><span class="c-gray">当前页面</span>
-  </div>
+<div class="container">
+  <i class="Hui-iconfont">&#xe67f;</i> <a href="/" class="c-primary">首页</a><span class="c-gray en">&gt;</span><a href="#">组件</a><span class="c-gray en">&gt;</span><span class="c-gray">当前页面</span>
+</div>
 </nav>
 */
 
 .breadcrumb {
-    border-bottom: 1px solid #E5E5E5;
-    line-height: 39px;
-    height: 39px;
-    overflow: hidden;
-    span {
-        padding: 0 5px
-    }
+  border-bottom: 1px solid #E5E5E5;
+  line-height: 39px;
+  height: 39px;
+  overflow: hidden;
+  span {
+      padding: 0 5px
+  }
 }
 
 @media (max-width: 767px) {
-    .breadcrumb>.container {
-        padding: 0
-    }
+  .breadcrumb>.container {
+      padding: 0
+  }
 }
 
 
 /*4.2.3 翻页导航
-	Name:			mod_pageNav
-	Example:		<div class="pageNav" id="pageNav"></div>
-	Explain:		需要调用pagenav.cn.js
+Name:			mod_pageNav
+Example:		<div class="pageNav" id="pageNav"></div>
+Explain:		需要调用pagenav.cn.js
 
 */
 
 .pageNav {
-    float: none;
-    clear: both;
-    font-size: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 18px 0;
-    text-align: center;
-    span,
-    a,
-    b {
-        font-size: 14px;
-        margin-right: 5px;
-        overflow: hidden;
-        padding: 3px 8px
-    }
-    a {
-        border: 1px solid #CCDBE4;
-        cursor: pointer
-    }
-    b {
-        color: #000
-    }
-    .mor {
-        padding: 3px;
-        font-weight: bold
-    }
+  float: none;
+  clear: both;
+  font-size: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 18px 0;
+  text-align: center;
+  span,
+  a,
+  b {
+      font-size: 14px;
+      margin-right: 5px;
+      overflow: hidden;
+      padding: 3px 8px
+  }
+  a {
+      border: 1px solid #CCDBE4;
+      cursor: pointer
+  }
+  b {
+      color: #000
+  }
+  .mor {
+      padding: 3px;
+      font-weight: bold
+  }
 }
 
 /*4.2.4 顶部导航
-	Name:			mod_topnav
-	Sample:
-	<div class="topnav"><div class="cl"><div class="l">您好，欢迎来到Hui！</div><div class="r"><span class="r_nav">[ <a rel="nofollow" href="javascript:login();">登录</a> ]</span><span class="pipe">|</span><span class="r_nav">[ <a href="javascript:register();" rel="nofollow">注册</a> ]</span><span class="pipe">|</span><span class="r_nav"><a title="收藏" href="javascript:addFavorite();">收藏本站</a></span><span class="pipe">|</span><span class="r_nav"><a href="javascript:void(0)" onclick="setHome(this);" title="设为首页">设为首页</a></span></div></div></div>
+Name:			mod_topnav
+Sample:
+<div class="topnav"><div class="cl"><div class="l">您好，欢迎来到Hui！</div><div class="r"><span class="r_nav">[ <a rel="nofollow" href="javascript:login();">登录</a> ]</span><span class="pipe">|</span><span class="r_nav">[ <a href="javascript:register();" rel="nofollow">注册</a> ]</span><span class="pipe">|</span><span class="r_nav"><a title="收藏" href="javascript:addFavorite();">收藏本站</a></span><span class="pipe">|</span><span class="r_nav"><a href="javascript:void(0)" onclick="setHome(this);" title="设为首页">设为首页</a></span></div></div></div>
 
 */
 
 .topnav {
-    height: 30px;
-    line-height: 30px;
-    background-color: #f7f7f7;
-    border-bottom: 1px solid #EBEBEB;
-    font-size: 12px;
+  height: 30px;
+  line-height: 30px;
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #EBEBEB;
+  font-size: 12px;
 }
 
 .topbar {
-    background-color: #ECECEC;
-    border-bottom: 1px solid #ddd;
-    a {
-        margin-right: 5px
-    }
+  background-color: #ECECEC;
+  border-bottom: 1px solid #ddd;
+  a {
+      margin-right: 5px
+  }
 }
 
 .r_nav {
-    display: inline-block;
-    color: #999
+  display: inline-block;
+  color: #999
 }
 
 
 /*4.2.5 向导
-	Name:			mod_steps
-	Sample:
-	<div class="four steps">
-	  <span class="step">第一步</span>
-	  <span class="active step">第二步</span>
-	  <span class="disabled step">第三步</span>
-	  <span class="disabled step">第四步</span>
-	</div>
+Name:			mod_steps
+Sample:
+<div class="four steps">
+  <span class="step">第一步</span>
+  <span class="active step">第二步</span>
+  <span class="disabled step">第三步</span>
+  <span class="disabled step">第四步</span>
+</div>
 */
 
 .steps,
 .steps .step {
-    display: inline-block;
-    position: relative;
-    padding: 1em 2em 1em 3em;
-    vertical-align: top;
-    background-color: #FFF;
-    color: #888;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-transition: opacity .1s ease,
-    color .1s ease,
-    -webkit-box-shadow .1s ease;
-    transition: opacity .1s ease,
-    color .1s ease,
-    box-shadow .1s ease;
-    &:after{
-        position: absolute;
-        z-index: 2;
-        content: '';
-        top: 0;
-        right: -1.45em;
-        border-bottom: 1.5em solid transparent;
-        border-left: 1.5em solid #FFF;
-        border-top: 1.5em solid transparent;
-        width: 0;
-        height: 0;
-        -webkit-transition: opacity .1s ease,color .1s ease, -webkit-box-shadow .1s ease;
-        transition: opacity .1s ease,color .1s ease,box-shadow .1s ease;
-    }
+  display: inline-block;
+  position: relative;
+  padding: 1em 2em 1em 3em;
+  vertical-align: top;
+  background-color: #FFF;
+  color: #888;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: opacity .1s ease,
+  color .1s ease,
+  -webkit-box-shadow .1s ease;
+  transition: opacity .1s ease,
+  color .1s ease,
+  box-shadow .1s ease;
+  &:after{
+      position: absolute;
+      z-index: 2;
+      content: '';
+      top: 0;
+      right: -1.45em;
+      border-bottom: 1.5em solid transparent;
+      border-left: 1.5em solid #FFF;
+      border-top: 1.5em solid transparent;
+      width: 0;
+      height: 0;
+      -webkit-transition: opacity .1s ease,color .1s ease, -webkit-box-shadow .1s ease;
+      transition: opacity .1s ease,color .1s ease,box-shadow .1s ease;
+  }
 }
 
 
 .steps {
-    cursor: pointer;
-    font-size: 0;
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, .1);
-    border-radius: .3125rem;
-    line-height: 1;
-    .step:first-child {
-        padding-left: 1.35em;
-        border-radius: .3125em 0 0 .3125em;
-    }
-    .step:last-child {
-        border-radius: 0 .3125em .3125em 0
-    }
-    .step:only-child {
-        border-radius: .3125em
-    }
-    .step:last-child {
-        margin-right: 0
-    }
-    .step:last-child:after {
-        display: none
-    }
-    .step:hover,
-    .step.hover {
-        background-color: #F7F7F7;
-        color: rgba(0, 0, 0, .8);
-        &:after {
-            border-left-color: #F7F7F7
-        }
-    }
+  cursor: pointer;
+  font-size: 0;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, .1);
+  border-radius: .3125rem;
+  line-height: 1;
+  .step:first-child {
+      padding-left: 1.35em;
+      border-radius: .3125em 0 0 .3125em;
+  }
+  .step:last-child {
+      border-radius: 0 .3125em .3125em 0
+  }
+  .step:only-child {
+      border-radius: .3125em
+  }
+  .step:last-child {
+      margin-right: 0
+  }
+  .step:last-child:after {
+      display: none
+  }
+  .step:hover,
+  .step.hover {
+      background-color: #F7F7F7;
+      color: rgba(0, 0, 0, .8);
+      &:after {
+          border-left-color: #F7F7F7
+      }
+  }
 
-    .step.down,
-    .step:active {
-        background-color: #F0F0F0;
-        &:after{
-            border-left-color: #F0F0F0;
-        }
-    }
-    .step.active {
-        cursor: auto;
-        background-color: #428BCA;
-        color: #FFF;
-        font-weight: 700;
-        &:after {
-            border-left-color: #428BCA
-        }
-    }
-    .step.disabled {
-        cursor: auto;
-        background-color: #FFF;
-        color: #CBCBCB;
-        &:after {
-            border: 0;
-            background-color: #FFF;
-            top: .42em;
-            right: -1em;
-            width: 2.15em;
-            height: 2.15em;
-            -webkit-transform: rotate(-45deg);
-            -ms-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-            box-shadow: -1px -1px 0 0 rgba(0, 0, 0, .1) inset
-        }
-    }
+  .step.down,
+  .step:active {
+      background-color: #F0F0F0;
+      &:after{
+          border-left-color: #F0F0F0;
+      }
+  }
+  .step.active {
+      cursor: auto;
+      background-color: #428BCA;
+      color: #FFF;
+      font-weight: 700;
+      &:after {
+          border-left-color: #428BCA
+      }
+  }
+  .step.disabled {
+      cursor: auto;
+      background-color: #FFF;
+      color: #CBCBCB;
+      &:after {
+          border: 0;
+          background-color: #FFF;
+          top: .42em;
+          right: -1em;
+          width: 2.15em;
+          height: 2.15em;
+          -webkit-transform: rotate(-45deg);
+          -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+          box-shadow: -1px -1px 0 0 rgba(0, 0, 0, .1) inset
+      }
+  }
 }
 
 
 .attached.steps {
-    margin: 0;
-    border-radius: .3125em .3125em 0 0;
-    .step:first-child {
-        border-radius: .3125em 0 0
-    }
-    .step:last-child {
-        border-radius: 0 .3125em 0 0
-    }
+  margin: 0;
+  border-radius: .3125em .3125em 0 0;
+  .step:first-child {
+      border-radius: .3125em 0 0
+  }
+  .step:last-child {
+      border-radius: 0 .3125em 0 0
+  }
 }
 
 .bottom.attached.steps {
-    margin-top: -1px;
-    border-radius: 0 0 .3125em .3125em;
-    .step:first-child {
-        border-radius: 0 0 0 .3125em;
-    }
-    .step:last-child {
-        border-radius: 0 0 .3125em
-    }
+  margin-top: -1px;
+  border-radius: 0 0 .3125em .3125em;
+  .step:first-child {
+      border-radius: 0 0 0 .3125em;
+  }
+  .step:last-child {
+      border-radius: 0 0 .3125em
+  }
 
 }
 
@@ -578,39 +578,39 @@ a.Hui-nav-toggle {
 .six.steps,
 .seven.steps,
 .eight.steps {
-    display: block
+  display: block
 }
 
 .one.steps>.step {
-    width: 100%
+  width: 100%
 }
 
 .two.steps>.step {
-    width: 50%
+  width: 50%
 }
 
 .three.steps>.step {
-    width: 33.333%
+  width: 33.333%
 }
 
 .four.steps>.step {
-    width: 25%
+  width: 25%
 }
 
 .five.steps>.step {
-    width: 20%
+  width: 20%
 }
 
 .six.steps>.step {
-    width: 16.666%
+  width: 16.666%
 }
 
 .seven.steps>.step {
-    width: 14.285%
+  width: 14.285%
 }
 
 .eight.steps>.step {
-    width: 12.5%
+  width: 12.5%
 }
 
 
@@ -618,7 +618,7 @@ a.Hui-nav-toggle {
 
 .small.step,
 .small.steps .step {
-    font-size: .8rem
+  font-size: .8rem
 }
 
 
@@ -626,7 +626,7 @@ a.Hui-nav-toggle {
 
 .step,
 .steps .step {
-    font-size: 1rem
+  font-size: 1rem
 }
 
 
@@ -634,7 +634,7 @@ a.Hui-nav-toggle {
 
 .large.step,
 .large.steps .step {
-    font-size: 1.25rem
+  font-size: 1.25rem
 }
 
 
@@ -642,175 +642,175 @@ a.Hui-nav-toggle {
 
 
 /*兼容写法
-	Sample:
-	<div class="steps-ie cl">
-	  <a class="step-ie active" href="#">第一步<em class="arrow"></em></a>
-	  <a class="step-ie" href="#">第二步<em class="arrow"></em></a>
-	  <a class="step-ie" href="#">第三步<em class="arrow"></em></a>
-	</div>
+Sample:
+<div class="steps-ie cl">
+  <a class="step-ie active" href="#">第一步<em class="arrow"></em></a>
+  <a class="step-ie" href="#">第二步<em class="arrow"></em></a>
+  <a class="step-ie" href="#">第三步<em class="arrow"></em></a>
+</div>
 */
 
 .steps-ie,
 .step-ie,
 .step-ie .arrow {
-    height: 44px;
-    line-height: 44px
+  height: 44px;
+  line-height: 44px
 }
 
 .steps-ie {
-    background-color: #eaf4fd;
-    border: solid 1px #afcfcc
+  background-color: #eaf4fd;
+  border: solid 1px #afcfcc
 }
 
 .step-ie {
-    position: relative;
-    float: left;
-    cursor: pointer;
-    padding: 0 20px 0 40px;
-    background: url(../images/steps/step_bg.png) repeat-x 0 center
+  position: relative;
+  float: left;
+  cursor: pointer;
+  padding: 0 20px 0 40px;
+  background: url(../images/steps/step_bg.png) repeat-x 0 center
 }
 
 .step-ie .arrow {
-    position: absolute;
-    right: -21px;
-    top: 0;
-    width: 21px;
-    height: 44px;
-    display: block;
-    cursor: pointer;
-    background: url(../images/steps/step_arrow.png) no-repeat 0 center;
-    z-index: 50
+  position: absolute;
+  right: -21px;
+  top: 0;
+  width: 21px;
+  height: 44px;
+  display: block;
+  cursor: pointer;
+  background: url(../images/steps/step_arrow.png) no-repeat 0 center;
+  z-index: 50
 }
 
 .step-ie.active {
-    background-image: url(../images/steps/step_bg-active.png);
-    color: #fff;
-    z-index: 100
+  background-image: url(../images/steps/step_bg-active.png);
+  color: #fff;
+  z-index: 100
 }
 
 .step-ie.active .arrow {
-    background-image: url(../images/steps/step_arrow-active.png)
+  background-image: url(../images/steps/step_arrow-active.png)
 }
 
 
 /*4.2.6 竖向导向tab导航
-	Sample:
-	<div class="verticalTab">
-	  <a class="" href="#">导航一<em></em></a>
-	  <a class="active" href="#">导航二<em></em></a>
-	  <a href="#">导航三<em></em></a>
-	  <a href="#">导航四<em></em></a>
-	</div>
+Sample:
+<div class="verticalTab">
+  <a class="" href="#">导航一<em></em></a>
+  <a class="active" href="#">导航二<em></em></a>
+  <a href="#">导航三<em></em></a>
+  <a href="#">导航四<em></em></a>
+</div>
 */
 
 .verticalTab {
-    background: #fff url(../images/verticalTab/tab_bg.png) repeat-y 0 0;
-    width: 38px;
-    a {
-        position: relative;
-        display: block;
-        width: 18px;
-        height: auto;
-        text-align: center;
-        position: relative;
-        padding: 26px 10px 6px 10px;
-        background: url(../images/verticalTab/tabNav.png) no-repeat 0 0;
-        &.active {
-            background-image: url(../images/verticalTab/tabNav-active.png);
-            color: #fff;
-            z-index: 99;
-            em {
-                background-image: url(../images/verticalTab/tabNav_right-active.png)
-            }
+  background: #fff url(../images/verticalTab/tab_bg.png) repeat-y 0 0;
+  width: 38px;
+  a {
+    position: relative;
+    display: block;
+    width: 18px;
+    height: auto;
+    text-align: center;
+    position: relative;
+    padding: 26px 10px 6px 10px;
+    background: url(../images/verticalTab/tabNav.png) no-repeat 0 0;
+    &.active {
+        background-image: url(../images/verticalTab/tabNav-active.png);
+        color: #fff;
+        z-index: 99;
+        em {
+            background-image: url(../images/verticalTab/tabNav_right-active.png)
         }
     }
-    em {
-        position: absolute;
-        left: 0;
-        bottom: -20px;
-        width: 38px;
-        height: 20px;
-        background: url(../images/tabNav_right.png) no-repeat 0 0;
-        z-index: 50
-    }
+  }
+  em {
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    width: 38px;
+    height: 20px;
+    background: url(../images/tabNav_right.png) no-repeat 0 0;
+    z-index: 50
+  }
 }
 
 
 /*4.2.6 横向导向tab导航
-	Sample:
-	<ul class="acrossTab">
-	  <li>导航一<i></i><em></em></li>
-	  <li class="active">导航二<i></i><em></em></li>
-	  <li>导航三<i></i><em></em></li>
-	</ul>
+Sample:
+<ul class="acrossTab">
+  <li>导航一<i></i><em></em></li>
+  <li class="active">导航二<i></i><em></em></li>
+  <li>导航三<i></i><em></em></li>
+</ul>
 */
 
 .acrossTab,
 .acrossTab li,
 .acrossTab li em {
-    background-image: url(../images/acrossTab/acrossTab-bg.png)
+  background-image: url(../images/acrossTab/acrossTab-bg.png)
 }
 
 .acrossTab {
+  height: 29px;
+  background-repeat: repeat-x;
+  background-position: 0 0;
+  padding-top: 1px;
+  li {
+    position: relative;
+    float: left;
     height: 29px;
-    background-repeat: repeat-x;
+    line-height: 29px;
+    font-size: 12px;
+    cursor: pointer;
+    padding: 0 30px;
+    white-space: nowrap;
+    color: #282828;
     background-position: 0 0;
-    padding-top: 1px;
-    li {
-        position: relative;
-        float: left;
-        height: 29px;
-        line-height: 29px;
-        font-size: 12px;
-        cursor: pointer;
-        padding: 0 30px;
-        white-space: nowrap;
-        color: #282828;
-        background-position: 0 0;
-        em {
-            position: absolute;
-            width: 23px;
-            height: 29px;
-            right: -20px;
-            top: 0;
-            z-index: 50;
-            background-position: right -30px;
-        }
-        &:hover {
-            background-position: 0 -60px;
-            em {
-                background-position: right -90px
-            }
-        }
-        &.active {
-            background-position: 0 -120px;
-            z-index: 99;
-            em {
-                background-position: right -150px
-            }
-        }
-        i {
-            position: absolute;
-            display: block;
-            width: 13px;
-            height: 13px;
-            top: 50%;
-            margin-top: -6px;
-            right: 5px;
-            font-size: 0;
-            line-height: 0;
-            cursor: pointer;
-            background-image: url(../images/acrossTab/acrossTab-close.png);
-            background-repeat: no-repeat;
-            background-position: 0 0;
-            &:hover {
-                background-position: 0 bottom
-            }
-        }
+    em {
+      position: absolute;
+      width: 23px;
+      height: 29px;
+      right: -20px;
+      top: 0;
+      z-index: 50;
+      background-position: right -30px;
+  }
+    &:hover {
+      background-position: 0 -60px;
+      em {
+        background-position: right -90px
+      }
     }
-    li,
-    li em {
-        background-repeat: no-repeat;
-        background-position: 0 0
+    &.active {
+      background-position: 0 -120px;
+      z-index: 99;
+      em {
+        background-position: right -150px
+      }
     }
+    i {
+      position: absolute;
+      display: block;
+      width: 13px;
+      height: 13px;
+      top: 50%;
+      margin-top: -6px;
+      right: 5px;
+      font-size: 0;
+      line-height: 0;
+      cursor: pointer;
+      background-image: url(../images/acrossTab/acrossTab-close.png);
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      &:hover {
+        background-position: 0 bottom
+      }
+    }
+  }
+  li,
+  li em {
+    background-repeat: no-repeat;
+    background-position: 0 0
+}
 }

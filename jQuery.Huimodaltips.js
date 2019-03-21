@@ -6,6 +6,7 @@
       title: '提示',
       icon: '',
       width: 400,
+      hasClose: false,
     };
     var options = $.extend({}, defaults, options);
 
@@ -20,8 +21,12 @@
       '<div class="modal-dialog" style="width:' + w + '">'+
         '<div class="modal-content radius">'+
           '<div class="modal-header">'+
-            '<div class="modal-title">' + options.title + '</div>'+
-          '</div>'+
+            '<div class="modal-title">' + options.title + '</div>';
+            if(options.hasClose) {
+              htmlstr +=
+              '<a class="close" data-dismiss="modal" aria-hidden="true" href="javascript:void();">×</a>';
+            }
+          htmlstr += '</div>'+
           '<div class="modal-body">'+
             '<div class="modal-tips-icon">' + options.icon + '</div>'+
             '<div class="modal-tips-content">' + options.content + '</div>'+

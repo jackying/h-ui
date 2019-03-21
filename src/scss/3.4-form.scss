@@ -24,7 +24,8 @@
     height: 100px;
     resize: none;
     font-size: 14px;
-    padding: 4px
+    padding: 4px;
+    word-break: break-all;
 }
 
 .textarea-numberbar {
@@ -1096,7 +1097,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
                 background-color: #e6e6e6 \9;
             }
         }
-            
+
         &.switch-primary,
         &.switch-left {
             color: #fff;
@@ -1159,8 +1160,8 @@ only screen and (min-device-pixel-ratio: 1.5) {
                 background-color: #31b0d5 \9
             }
         }
-        
-        
+
+
         &.switch-success {
             color: #fff;
             text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);

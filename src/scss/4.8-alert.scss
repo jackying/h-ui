@@ -1,84 +1,83 @@
 /*4.8 警告
-	Name:       mod_Huialert
-	Example:
-<div class="Huialert Huialert-success|Huialert-danger|Huialert-error|Huialert-info|Huialert-block">
-	<i class="Hui-iconfont">&#xe6a6;</i>
-	警告内容
-	<ul>
-		<li>……</li>
-	</ul>
-</div>
-	Explain:		警告,使用警告框jQuery插件
+  Name:       mod_Huialert
+  Example:
+  <div class="Huialert Huialert-success|Huialert-danger|Huialert-error|Huialert-info|Huialert-block">
+  <i class="Hui-iconfont">&#xe6a6;</i>
+  警告内容
+  <ul>
+  	<li>……</li>
+  </ul>
+  </div>
+  Explain:		警告,使用警告框jQuery插件
 */
 
 .Huialert {
-    position: relative;
-    padding: 8px 35px 8px 14px;
-    margin-bottom: 20px;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-    background-color: #fcf8e3;
-    border: 1px solid #fbeed5;
-    color: #c09853;
-    h4 {
-        color: #c09853;
-        margin: 0;
-    }
-    .Hui-iconfont {
-        position: absolute;
-        top: 9px;
-        right: 10px;
-        line-height: 20px;
-        cursor: pointer;
-        color: #000;
-        opacity: 0.2;
-        _color: #666;
-        &.hover {
-            color: #000;
-            opacity: 0.8
-        }
-    }
-    &.Huialert-success {
-        color: #468847;
-        background-color: #dff0d8;
-        border-color: #d6e9c6;
-        h4 {
-            color: #468847
-        }
-    }
-    &.Huialert-danger {
-        color: #b94a48;
-        background-color: #f2dede;
-        border-color: #eed3d7;
-        h4 {
-            color: #b94a48
-        }
-    }
-    &.Huialert-error {
-        color: #fff;
-        background-color: #f37b1d;
-        border-color: #e56c0c;
-        h4 {
-            color: #fff
-        }
-    }
-    &.Huialert-info {
-        color: #31708f;
-        background-color: #d9edf7;
-        border-color: #bce8f1;
-        h4 {
-            color: #31708f
-        }
-    }
-    &.Huialert-block {
-        padding-top: 14px;
-        padding-bottom: 14px;
-        >p,
-        >ul {
-            margin-bottom: 0
-        }
-        p+p {
-            margin-top: 5px
-        }
-    }
+  position: relative;
+  padding: 8px 35px 8px 14px;
+  margin-bottom: 20px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  background-color: #fcf8e3;
+  border: 1px solid #fbeed5;
+  color: #c09853;
+  h4 {
+      color: #c09853;
+      margin: 0;
+  }
+  .Hui-iconfont {
+      position: absolute;
+      top: 9px;
+      right: 10px;
+      line-height: 20px;
+      cursor: pointer;
+      color: #000;
+      opacity: 0.2;
+      _color: #666;
+      &.hover {
+          color: #000;
+          opacity: 0.8
+      }
+  }
+  &.Huialert-success {
+      color: #468847;
+      background-color: #dff0d8;
+      border-color: #d6e9c6;
+      h4 {
+          color: #468847
+      }
+  }
+  &.Huialert-danger {
+      color: #b94a48;
+      background-color: #f2dede;
+      border-color: #eed3d7;
+      h4 {
+          color: #b94a48
+      }
+  }
+  &.Huialert-error {
+      color: #fff;
+      background-color: #f37b1d;
+      border-color: #e56c0c;
+      h4 {
+          color: #fff
+      }
+  }
+  &.Huialert-info {
+      color: #31708f;
+      background-color: #d9edf7;
+      border-color: #bce8f1;
+      h4 {
+          color: #31708f
+      }
+  }
+  &.Huialert-block {
+      padding-top: 14px;
+      padding-bottom: 14px;
+      >p,
+      >ul {
+          margin-bottom: 0
+      }
+      p+p {
+          margin-top: 5px
+      }
+  }
 }
-

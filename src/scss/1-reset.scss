@@ -191,18 +191,6 @@ img {
   -ms-interpolation-mode: bicubic;
 }
 
-
-/*IE下a:hover 背景闪烁*/
-
-/**html {
-    overflow: -moz-scrollbars-vertical;
-    zoom:expression(function(ele) {
-        ele.style.zoom="1";
-        document.execCommand("BackgroundImageCache", false, true)
-    }(this))
-}*/
-
-
 /*HTML5 reset*/
 
 header,
@@ -219,80 +207,73 @@ hgroup,
 figure,
 figcaption,
 legend {
-    display: block;
-    margin: 0;
-    padding: 0;
+  display: block;
+  margin: 0;
+  padding: 0;
 }
 
 time {
-    display: inline;
+  display: inline;
 }
 
 audio,
 canvas,
 video {
-    display: inline-block;
-    *display: inline;
-    *zoom: 1
+  display: inline-block;
+  *display: inline;
+  *zoom: 1
 }
 
 audio:not([controls]) {
-    display: none;
+  display: none;
 }
 
 legend {
-    width: 100%;
-    margin-bottom: 20px;
-    font-size: 21px;
-    line-height: 40px;
-    border: 0;
-    border-bottom: 1px solid $border-color;
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 21px;
+  line-height: 40px;
+  border: 0;
+  border-bottom: 1px solid $border-color;
 }
 
 legend small {
-    font-size: 15px;
-    color: #999;
+  font-size: 15px;
+  color: #999;
 }
 
 svg:not(:root) {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 fieldset {
-    border-width: 0;
-    padding: 0.35em 0.625em 0.75em;
-    margin: 0 2px;
-    border: 1px solid $border-color;
+  border-width: 0;
+  padding: 0.35em 0.625em 0.75em;
+  margin: 0 2px;
+  border: 1px solid $border-color;
 }
 
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
-    height: auto;
+  height: auto;
 }
 
 input[type="search"] {
-    -webkit-appearance: textfield;
-    /* 1 */
+  -webkit-appearance: textfield;
 }
 
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
-    -webkit-appearance: none;
+  -webkit-appearance: none;
 }
 
-
-/*清除浮动
-	Name:			style_clearfix
-	Example:		class="clearfix|cl"
-	Explain:		clearfix（简写cl）避免因子元素浮动而导致的父元素高度缺失能问题
-*/
 .clearfix:after {
-    content: "\20";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
+  content: "\20";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
 }
 .clearfix {
-    zoom: 1;
+  zoom: 1;
 }

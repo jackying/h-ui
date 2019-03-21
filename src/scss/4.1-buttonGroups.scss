@@ -9,22 +9,21 @@
 </div>
   Explain:
 */
-
 .btn-group {
-    font-size: 0;
-    .btn {
-        margin-left: -1px;
-    }
-    .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
-        border-radius: 0;
-    }
-    >.btn:first-child:not(:last-child):not(.dropdown-toggle) {
-        border-bottom-right-radius: 0;
-        border-top-right-radius: 0;
-    }
-    >.btn:last-child:not(:first-child),
-    >.dropdown-toggle:not(:first-child) {
-        border-bottom-left-radius: 0;
-        border-top-left-radius: 0;
-    }
+  font-size: 0;
+  .btn {
+    margin-left: -1px;
+  }
+  .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+    border-radius: 0;
+  }
+  >.btn:first-child:not(:last-child):not(.dropdown-toggle) {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+  }
+  >.btn:last-child:not(:first-child),
+  >.dropdown-toggle:not(:first-child) {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+  }
 }
