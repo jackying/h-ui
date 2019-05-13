@@ -4,7 +4,7 @@
 * Created & Modified by guojunhui
 * Date modified 2019.01.18
 *
-* Copyright 2013-2019 北京颖杰联创科技有限公司 All rights reserved.
+* Copyright 2013-2019 郭俊辉 All rights reserved.
 * Licensed under MIT license.
 * http://opensource.org/licenses/MIT
 */
@@ -2770,7 +2770,7 @@ function stopDefault(e) {
  * Created & Modified by guojunhui
  * Date modified 2017.06.26
  *
- * Copyright 2017 北京颖杰联创科技有限公司 All rights reserved.
+ * Copyright 2017 郭俊辉 All rights reserved.
  * Licensed under MIT license.
  * http://opensource.org/licenses/MIT
  * ========================================================================*/
@@ -2899,7 +2899,7 @@ function stopDefault(e) {
  * Created & Modified by guojunhui
  * Date modified 2017.07.18
  *
- * Copyright 2017 北京颖杰联创科技有限公司 All rights reserved.
+ * Copyright 2017 郭俊辉 All rights reserved.
  * Licensed under MIT license.
  * http://opensource.org/licenses/MIT
  * ========================================================================*/
@@ -4366,7 +4366,7 @@ function displaynavbar(obj){
  * Created & Modified by guojunhui
  * Date modified 2017.05.05
  *
- * Copyright 2017 北京颖杰联创科技有限公司 All rights reserved.
+ * Copyright 2017 郭俊辉 All rights reserved.
  * Licensed under MIT license.
  * http://opensource.org/licenses/MIT
  * ========================================================================*/
@@ -4394,7 +4394,7 @@ function displaynavbar(obj){
  * Created & Modified by guojunhui
  * Date modified 2017.05.09
  *
- * Copyright 2017 北京颖杰联创科技有限公司 All rights reserved.
+ * Copyright 2017 郭俊辉 All rights reserved.
  * Licensed under MIT license.
  * http://opensource.org/licenses/MIT
  * ========================================================================*/
@@ -4445,7 +4445,7 @@ function displaynavbar(obj){
  * Created & Modified by guojunhui
  * Date modified 2017.10.10
  *
- * Copyright 2017 北京颖杰联创科技有限公司 All rights reserved.
+ * Copyright 2017 郭俊辉 All rights reserved.
  * Licensed under MIT license.
  * http://opensource.org/licenses/MIT
  * ========================================================================*/
@@ -4486,7 +4486,7 @@ function displaynavbar(obj){
  * Created & Modified by guojunhui
  * Date modified 2017.05.05
  *
- * Copyright 2017 北京颖杰联创科技有限公司 All rights reserved.
+ * Copyright 2017 郭俊辉 All rights reserved.
  * Licensed under MIT license.
  * http://opensource.org/licenses/MIT
  * ========================================================================*/
@@ -4543,7 +4543,7 @@ function displaynavbar(obj){
  * Created & Modified by guojunhui
  * Date modified 2017.05.10
  *
- * Copyright 2017 北京颖杰联创科技有限公司 All rights reserved.
+ * Copyright 2017 郭俊辉 All rights reserved.
  * Licensed under MIT license.
  * http://opensource.org/licenses/MIT
  * ========================================================================*/
@@ -4712,7 +4712,7 @@ function displaynavbar(obj){
  * Created & Modified by guojunhui
  * Date modified 2017.05.12
  *
- * Copyright 2017 北京颖杰联创科技有限公司 All rights reserved.
+ * Copyright 2017 郭俊辉 All rights reserved.
  * Licensed under MIT license.
  * http://opensource.org/licenses/MIT
  * ========================================================================*/
@@ -4762,7 +4762,7 @@ function displaynavbar(obj){
  * Created & Modified by guojunhui
  * Date modified 2017.11.13
  *
- * Copyright 2017 北京颖杰联创科技有限公司 All rights reserved.
+ * Copyright 2017 郭俊辉 All rights reserved.
  * Licensed under MIT license.
  * http://opensource.org/licenses/MIT
  * ========================================================================*/
@@ -4921,7 +4921,7 @@ function displaynavbar(obj){
  * Created & Modified by guojunhui
  * Date modified 2017.05.05
  *
- * Copyright 2017 北京颖杰联创科技有限公司 All rights reserved.
+ * Copyright 2017 郭俊辉 All rights reserved.
  * Licensed under MIT license.
  * http://opensource.org/licenses/MIT
  * ========================================================================*/

@@ -4,7 +4,7 @@
  * Created & Modified by guojunhui
  * Date modified 2017.05.09
  *
- * Copyright 2017 北京颖杰联创科技有限公司 All rights reserved.
+ * Copyright 2017 郭俊辉 All rights reserved.
  * Licensed under MIT license.
  * http://opensource.org/licenses/MIT
  * ========================================================================*/
