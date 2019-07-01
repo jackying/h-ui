@@ -1,5 +1,5 @@
 /*-----------H-ui前端框架-------------
-* H-ui.js v3.1.11
+* H-ui.js v3.1.12
 * http://www.h-ui.net/
 * Created & Modified by guojunhui
 * Date modified 2019.01.18
@@ -43,6 +43,7 @@ jQuery.Huitotop.js v2.0
 jQuery.Huimarquee.js
 jQuery.Huispinner.js v2.0
 jQuery.Huiloading.js v1.0
+jQuery.HuicheckAll.js v1.0
 
 Bootstrap.modal.js v3.3.0
 Bootstrap.dropdown.js v3.3.0
@@ -2921,6 +2922,71 @@ function stopDefault(e) {
 			$(".loading-wrapper").remove();
 		}
 	}
+} (window.jQuery);
+
+/* =======================================================================
+ * jQuery.HuicheckAll.js v1.0 Huiloading
+ * http://www.h-ui.net/
+ * Created & Modified by guojunhui
+ * Date modified 2019.07.01
+ *
+ * Copyright 2019 郭俊辉 All rights reserved.
+ * Licensed under MIT license.
+ * http://opensource.org/licenses/MIT
+ * ========================================================================*/
+// 全选与反选 2019.7.1 14:28 @guojunhui
+!function($) {
+  $.fn.HuicheckAll = function(options,callback) {
+    var defaults = {
+      checkboxAll: 'thead input[type="checkbox"]',
+      checkbox: 'tbody input[type="checkbox"]'
+    }
+    var options = $.extend(defaults, options);
+    this.each(function(){
+      var that = $(this);
+      var checkboxAll = that.find(options.checkboxAll);
+      var checkbox = that.find(options.checkbox);
+
+      checkboxAll.on("click",function(){
+        var isChecked = checkboxAll.prop("checked");
+        checkbox.prop("checked", isChecked);
+        var _Num = 0,checkedArr = [];
+        checkbox.each(function(){
+          if($(this).prop("checked")) {
+            checkedArr.push($(this).val());
+            _Num++;
+          }
+        });
+        var checkedInfo = {
+          Number: _Num,
+          checkedArr: checkedArr
+        }
+        if(callback){
+          callback(checkedInfo);
+        }
+      });
+
+      checkbox.on("click",function(){
+        var allLength = checkbox.length;
+        var checkedLength = checkbox.prop("checked").length;
+        allLength == checkedLength ? checkboxAll.prop("checked",true) : checkboxAll.prop("checked",false);
+        var _Num = 0,checkedArr = [];
+        checkbox.each(function(){
+          if($(this).prop("checked")) {
+            checkedArr.push($(this).val());
+            _Num++;
+          }
+        });
+        var checkedInfo = {
+          Number: _Num,
+          checkedArr: checkedArr
+        }
+        if(callback){
+          callback(checkedInfo);
+        }
+      });
+    });
+  }
 } (window.jQuery);
 
 /* =======================================================================
