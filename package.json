@@ -25,7 +25,7 @@
   "homepage": "https://github.com/jackying/h-ui#readme",
   "dependencies": {
     "jquery": "^1.12.4",
-    "webpack": "^3.8.1",
+    "webpack": "^5.75.0",
     "webpack-dev-server": "^3.1.11",
     "zepto": "^1.2.0"
   }
